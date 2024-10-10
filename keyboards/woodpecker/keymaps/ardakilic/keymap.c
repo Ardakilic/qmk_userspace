@@ -95,7 +95,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------| |------+------+------+------+------+------|
  * | LSFT |  Z   |  X   |  C   | V [MSBT2] B | | N [MSBT2] M |  Ö   |  Ç   |  .   |SftEnt|
  * |------+------+------+------+------+------| |------+------+------+------+------+------|
- * | Ctrl |Adj|<>| Win  | Alt  |Lowr|,|Space | |Ent | AltGR| Left | Down |  Up  | Rght |
+ * | Ctrl |Adj|<>| Win  | Alt  |Lowr|,|Space | | Ent  | AltGR| Left | Down |  Up  | Rght |
  * `-----------------------------------------' `-----------------------------------------'
  */
 [_QWERTY] = LAYOUT_woodpecker_grid(
