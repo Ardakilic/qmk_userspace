@@ -95,9 +95,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------| |------+------+------+------+------+------|
  * | Tab  |  Q   |  W   |  E   |  R   |  T   | |  Y   |  U   |  I   |  O   |  P   | Del  |
  * |------+------+------+------+------+------| |------+------+------+------+------+------|
- * |NpdEsc|  A   |  S   |  D   | F [MSBT1] G | | H [MSBT1] J |  K   |  L   |  Ş   |  İ   |
+ * |NpdEsc|  A   |  S   |  D [mbb] F [lmb] G | | H [lmb] J [mbb] K. |  L   |  Ş   |  İ   |
  * |------+------+------+------+------+------| |------+------+------+------+------+------|
- * | LSFT |  Z   |  X   |  C   | V [MSBT2] B | | N [MSBT2] M |  Ö   |  Ç   |  .   |SftEnt|
+ * | LSFT |  Z   |  X   |  C   |  V [rmb] B  | | N [rmb] M   |  Ö   |  Ç   |  .   |SftEnt|
  * |------+------+------+------+------+------| |------+------+------+------+------+------|
  * | Ctrl |Adj|<>| Win  | Alt  |Lowr|,|Space | | Ent  | AltGR| Left | Down |  Up  | Rght |
  * `-----------------------------------------' `-----------------------------------------'
@@ -215,12 +215,16 @@ enum combos {
   C_LEFT_MOUSE_BTN_2,
   C_RIGHT_MOUSE_BTN_1,
   C_RIGHT_MOUSE_BTN_2,
+  C_MIDDLE_MOUSE_BTN_1,
+  C_MIDDLE_MOUSE_BTN_2,
 };
 
 const uint16_t PROGMEM c_left_mouse_btn_1_combo[] = {KC_F, KC_G, COMBO_END};
 const uint16_t PROGMEM c_left_mouse_btn_2_combo[] = {KC_H, KC_J, COMBO_END};
 const uint16_t PROGMEM c_right_mouse_btn_1_combo[] = {KC_V, KC_B, COMBO_END};
 const uint16_t PROGMEM c_right_mouse_btn_2_combo[] = {KC_N, KC_M, COMBO_END};
+const uint16_t PROGMEM c_middle_mouse_btn_1_combo[] = {KC_D, KC_F, COMBO_END};
+const uint16_t PROGMEM c_middle_mouse_btn_2_combo[] = {KC_J, KC_K, COMBO_END};
 
 const uint16_t PROGMEM c_left_layer_enter_combo[] = {KC_F, KC_G, COMBO_END};
 combo_t key_combos[] = {
@@ -228,6 +232,8 @@ combo_t key_combos[] = {
     [C_LEFT_MOUSE_BTN_2] = COMBO(c_left_mouse_btn_2_combo, KC_BTN1),
     [C_RIGHT_MOUSE_BTN_1] = COMBO(c_right_mouse_btn_1_combo, KC_BTN2),
     [C_RIGHT_MOUSE_BTN_2] = COMBO(c_right_mouse_btn_2_combo, KC_BTN2),
+    [C_MIDDLE_MOUSE_BTN_1] = COMBO(c_middle_mouse_btn_1_combo, KC_BTN3),
+    [C_MIDDLE_MOUSE_BTN_2] = COMBO(c_middle_mouse_btn_2_combo, KC_BTN3),
 };
 // END Combo keys
 
