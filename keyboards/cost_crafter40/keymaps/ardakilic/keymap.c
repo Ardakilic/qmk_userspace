@@ -65,8 +65,8 @@ const uint16_t PROGMEM c_tab_combo[] = {KC_Q, KC_W, COMBO_END};
 const uint16_t PROGMEM c_enter_combo[] = {KC_SCLN, KC_SLSH, COMBO_END};
 const uint16_t PROGMEM c_ctrl_combo[] = {KC_X, KC_C, COMBO_END};
 const uint16_t PROGMEM c_alt_combo[] = {KC_C, KC_V, COMBO_END};
-const uint16_t PROGMEM c_raise_combo[] = {MO(_LOWER), KC_SPC, COMBO_END};
-const uint16_t PROGMEM c_adjust_combo[] = {MO(_LOWER), KC_ENT, COMBO_END};
+const uint16_t PROGMEM c_raise_combo[] = {KC_LGUI, KC_SPC, COMBO_END};
+const uint16_t PROGMEM c_adjust_combo[] = {KC_LGUI, KC_ENT, COMBO_END};
 const uint16_t PROGMEM c_numpad_combo[] = {KC_A, KC_Z, COMBO_END};
 
 combo_t key_combos[] = {
@@ -94,7 +94,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * │ALT│CTL│CMD│LWR│SPC│ENT│ ← │ ↓ │ ↑ │ → │
  * └───┴───┴───┴───┴───┴───┴───┴───┴───┴───┘
  *
- * Combos: Q+A=ESC, O+P=DEL, Q+W=TAB, Ş+./⇧=ENT, X+C=CTRL, C+V=ALT, LWR+SPC=RAISE, LWR+ENT=ADJUST, A+Z=NUMPAD
+ * Combos: Q+A=ESC, O+P=DEL, Q+W=TAB, Ş+./⇧=ENT, X+C=CTRL, C+V=ALT, CMD+SPC=RAISE, CMD+ENT=ADJUST, A+Z=NUMPAD
  */
 [_QWERTY] = LAYOUT(
     KC_Q,          KC_W,    KC_E,    KC_R,               KC_T,            KC_Y,    KC_U,     KC_I,    KC_O,    KC_P,
