@@ -111,14 +111,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ├───┼───┼───┼───┼───┼───┼───┼───┼───┼───┤
  * │F11│F12│ * │ ? │ @ │ $ │ { │ } │ < │ > │
  * ├───┼───┼───┼───┼───┼───┼───┼───┼───┼───┤
- * │ % │ ! │ & │   │ ^ │ ( │ ) │ [ │ ] │ ~ │
+ * │ % │ ! │ & │   │ ^ │ ~ │ ( │ ) │ [ │ ] │
  * └───┴───┴───┴───┴───┴───┴───┴───┴───┴───┘
  */
 [_LOWER] = LAYOUT(
     KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   BACKSLASH,    VERTICAL_PIPE, KC_MINS,       KC_EQL,        KC_UNDS,
     KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  HASHTAG,      BACKTICK,      KC_QUOT,       KC_LBRC,       KC_RBRC,
     KC_F11,  KC_F12,  KC_ASTR, KC_QUES, KC_AT,   DOLLAR_SIGN,  CURLY_OPEN,    CURLY_CLOSE,   LESS_THAN,     GREATER_THAN,
-    KC_PERC, KC_EXLM, KC_AMPR, _______, KC_CIRC, KC_LPRN,      KC_RPRN,       SQUARE_OPEN,   SQUARE_CLOSE,  TILDE
+    KC_PERC, KC_EXLM, KC_AMPR, _______, KC_CIRC, TILDE,        KC_LPRN,       KC_RPRN,       SQUARE_OPEN,   SQUARE_CLOSE
 ),
 
 /* RAISE (Numbers & Symbols)
