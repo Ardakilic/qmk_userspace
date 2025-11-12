@@ -1,0 +1,1982 @@
+## cost_crafter40
+cost_crafter40:ardakilic
+ardakilic
+```
+Compiling QMK Firmware for target: 'cost_crafter40:ardakilic'...
+Generating: .build/obj_cost_crafter40_ardakilic/src/info_deps.d                                     [OK]
+Generating: .build/obj_cost_crafter40_ardakilic/src/community_modules.c                             [OK]
+arm-none-eabi-gcc (15:8-2019-q3-1+b1) 8.3.1 20190703 (release) [gcc-8-branch revision 273027]
+Copyright (C) 2018 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Generating: .build/obj_cost_crafter40_ardakilic/src/community_modules.h                             [OK]
+Generating: .build/obj_cost_crafter40_ardakilic/src/community_modules_introspection.c               [OK]
+Generating: .build/obj_cost_crafter40_ardakilic/src/community_modules_introspection.h               [OK]
+Generating: .build/obj_cost_crafter40_ardakilic/src/led_matrix_community_modules.inc                [OK]
+Generating: .build/obj_cost_crafter40_ardakilic/src/rgb_matrix_community_modules.inc                [OK]
+Generating: .build/obj_cost_crafter40_ardakilic/src/info_config.h                                   [OK]
+Generating: .build/obj_cost_crafter40_ardakilic/src/default_keyboard.c                              [OK]
+Generating: .build/obj_cost_crafter40_ardakilic/src/default_keyboard.h                              [OK]
+Compiling: tmk_core/protocol/chibios/usb_main.c                                                    In file included from <command-line>:
+/__w/qmk_userspace/qmk_userspace/keyboards/cost_crafter40/keymaps/ardakilic/config.h:13: error: "OS_DETECTION_ENABLE" redefined [-Werror]
+ #define OS_DETECTION_ENABLE
+
+<command-line>: note: this is the location of the previous definition
+cc1: all warnings being treated as errors
+ [ERRORS]
+ |
+ |
+ |
+gmake[1]: *** [builddefs/common_rules.mk:362: .build/obj_cost_crafter40_ardakilic/protocol/chibios/usb_main.o] Error 1
+```
+## crkbd/rev1
+crkbd/rev1:ardakilic
+ardakilic
+```
+Compiling QMK Firmware for target: 'crkbd/rev1:ardakilic'...
+Generating: .build/obj_crkbd_rev1_ardakilic/src/info_deps.d                                         [OK]
+Generating: .build/obj_crkbd_rev1_ardakilic/src/community_modules.c                                 [OK]
+arm-none-eabi-gcc (15:8-2019-q3-1+b1) 8.3.1 20190703 (release) [gcc-8-branch revision 273027]
+Copyright (C) 2018 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Generating: .build/obj_crkbd_rev1_ardakilic/src/community_modules.h                                 [OK]
+Generating: .build/obj_crkbd_rev1_ardakilic/src/community_modules_introspection.c                   [OK]
+Generating: .build/obj_crkbd_rev1_ardakilic/src/community_modules_introspection.h                   [OK]
+Generating: .build/obj_crkbd_rev1_ardakilic/src/led_matrix_community_modules.inc                    [OK]
+Generating: .build/obj_crkbd_rev1_ardakilic/src/rgb_matrix_community_modules.inc                    [OK]
+Generating: .build/obj_crkbd_rev1_ardakilic/src/info_config.h                                       [OK]
+Generating: .build/obj_crkbd_rev1_ardakilic/src/default_keyboard.c                                  [OK]
+Generating: .build/obj_crkbd_rev1_ardakilic/src/default_keyboard.h                                  [OK]
+Compiling: tmk_core/protocol/chibios/usb_main.c                                                     [OK]
+Compiling: tmk_core/protocol/chibios/chibios.c                                                      [OK]
+Compiling: tmk_core/protocol/usb_descriptor.c                                                       [OK]
+Compiling: tmk_core/protocol/chibios/usb_driver.c                                                   [OK]
+Compiling: tmk_core/protocol/chibios/usb_endpoints.c                                                [OK]
+Compiling: tmk_core/protocol/chibios/usb_report_handling.c                                          [OK]
+Compiling: tmk_core/protocol/chibios/usb_util.c                                                     [OK]
+Compiling: lib/chibios/os/common/startup/ARMCMx/compilers/GCC/crt1.c                                [OK]
+Compiling: lib/chibios/os/rt/src/chsys.c                                                            [OK]
+Compiling: lib/chibios/os/rt/src/chrfcu.c                                                           [OK]
+Compiling: lib/chibios/os/rt/src/chdebug.c                                                          [OK]
+Compiling: lib/chibios/os/rt/src/chtrace.c                                                          [OK]
+Compiling: lib/chibios/os/rt/src/chvt.c                                                             [OK]
+Compiling: lib/chibios/os/rt/src/chschd.c                                                           [OK]
+Compiling: lib/chibios/os/rt/src/chinstances.c                                                      [OK]
+Compiling: lib/chibios/os/rt/src/chthreads.c                                                        [OK]
+Compiling: lib/chibios/os/rt/src/chtm.c                                                             [OK]
+Compiling: lib/chibios/os/rt/src/chstats.c                                                          [OK]
+Compiling: lib/chibios/os/rt/src/chregistry.c                                                       [OK]
+Compiling: lib/chibios/os/rt/src/chsem.c                                                            [OK]
+Compiling: lib/chibios/os/rt/src/chmtx.c                                                            [OK]
+Compiling: lib/chibios/os/rt/src/chcond.c                                                           [OK]
+Compiling: lib/chibios/os/rt/src/chevents.c                                                         [OK]
+Compiling: lib/chibios/os/rt/src/chmsg.c                                                            [OK]
+Compiling: lib/chibios/os/rt/src/chdynamic.c                                                        [OK]
+Compiling: lib/chibios/os/common/ports/ARMv6-M-RP2/chcore.c                                         [OK]
+Compiling: lib/chibios/os/hal/osal/rt-nil/osal.c                                                    [OK]
+Compiling: lib/chibios/os/oslib/src/chmboxes.c                                                      [OK]
+Compiling: lib/chibios/os/oslib/src/chmemcore.c                                                     [OK]
+Compiling: lib/chibios/os/oslib/src/chmemheaps.c                                                    [OK]
+Compiling: lib/chibios/os/oslib/src/chmempools.c                                                    [OK]
+Compiling: lib/chibios/os/oslib/src/chpipes.c                                                       [OK]
+Compiling: lib/chibios/os/oslib/src/chobjcaches.c                                                   [OK]
+Compiling: lib/chibios/os/oslib/src/chdelegates.c                                                   [OK]
+Compiling: lib/chibios/os/oslib/src/chfactory.c                                                     [OK]
+Compiling: lib/chibios/os/hal/src/hal.c                                                             [OK]
+Compiling: lib/chibios/os/hal/src/hal_st.c                                                          [OK]
+Compiling: lib/chibios/os/hal/src/hal_buffers.c                                                     [OK]
+Compiling: lib/chibios/os/hal/src/hal_queues.c                                                      [OK]
+Compiling: lib/chibios/os/hal/src/hal_flash.c                                                       [OK]
+Compiling: lib/chibios/os/hal/src/hal_mmcsd.c                                                       [OK]
+Compiling: lib/chibios/os/hal/src/hal_adc.c                                                         [OK]
+Compiling: lib/chibios/os/hal/src/hal_can.c                                                         [OK]
+Compiling: lib/chibios/os/hal/src/hal_dac.c                                                         [OK]
+Compiling: lib/chibios/os/hal/src/hal_crypto.c                                                      [OK]
+Compiling: lib/chibios/os/hal/src/hal_efl.c                                                         [OK]
+Compiling: lib/chibios/os/hal/src/hal_gpt.c                                                         [OK]
+Compiling: lib/chibios/os/hal/src/hal_i2c.c                                                         [OK]
+Compiling: lib/chibios/os/hal/src/hal_i2s.c                                                         [OK]
+Compiling: lib/chibios/os/hal/src/hal_icu.c                                                         [OK]
+Compiling: lib/chibios/os/hal/src/hal_mac.c                                                         [OK]
+Compiling: lib/chibios/os/hal/src/hal_mmc_spi.c                                                     [OK]
+Compiling: lib/chibios/os/hal/src/hal_pal.c                                                         [OK]
+Compiling: lib/chibios/os/hal/src/hal_pwm.c                                                         [OK]
+Compiling: lib/chibios/os/hal/src/hal_rtc.c                                                         [OK]
+Compiling: lib/chibios/os/hal/src/hal_sdc.c                                                         [OK]
+Compiling: lib/chibios/os/hal/src/hal_serial.c                                                      [OK]
+Compiling: lib/chibios/os/hal/src/hal_serial_usb.c                                                  [OK]
+Compiling: lib/chibios/os/hal/src/hal_sio.c                                                         [OK]
+Compiling: lib/chibios/os/hal/src/hal_spi.c                                                         [OK]
+Compiling: lib/chibios/os/hal/src/hal_trng.c                                                        [OK]
+Compiling: lib/chibios/os/hal/src/hal_uart.c                                                        [OK]
+Compiling: lib/chibios/os/hal/src/hal_usb.c                                                         [OK]
+Compiling: lib/chibios/os/hal/src/hal_wdg.c                                                         [OK]
+Compiling: lib/chibios/os/hal/src/hal_wspi.c                                                        [OK]
+Compiling: lib/chibios/os/hal/ports/common/ARMCMx/nvic.c                                            [OK]
+Compiling: lib/chibios/os/hal/ports/RP/RP2040/rp_isr.c                                              [OK]
+Compiling: lib/chibios/os/hal/ports/RP/RP2040/hal_lld.c                                             [OK]
+Compiling: lib/chibios/os/hal/ports/RP/LLD/DMAv1/rp_dma.c                                           [OK]
+Compiling: lib/chibios/os/hal/ports/RP/LLD/GPIOv1/hal_pal_lld.c                                     [OK]
+Compiling: lib/chibios/os/hal/ports/RP/LLD/SPIv1/hal_spi_lld.c                                      [OK]
+Compiling: lib/chibios/os/hal/ports/RP/LLD/TIMERv1/hal_st_lld.c                                     [OK]
+Compiling: lib/chibios/os/hal/ports/RP/LLD/UARTv1/hal_sio_lld.c                                     [OK]
+Compiling: lib/chibios/os/hal/ports/RP/LLD/RTCv1/hal_rtc_lld.c                                      [OK]
+Compiling: lib/chibios/os/hal/ports/RP/LLD/WDGv1/hal_wdg_lld.c                                      [OK]
+Compiling: lib/chibios-contrib/os/hal/ports/RP/LLD/I2Cv1/hal_i2c_lld.c                              [OK]
+Compiling: lib/chibios-contrib/os/hal/ports/RP/LLD/PWMv1/hal_pwm_lld.c                              [OK]
+Compiling: lib/chibios-contrib/os/hal/ports/RP/LLD/ADCv1/hal_adc_lld.c                              [OK]
+Compiling: lib/chibios-contrib/os/hal/ports/RP/LLD/USBDv1/hal_usb_lld.c                             [OK]
+Compiling: lib/chibios/os/hal/boards/RP_PICO_RP2040/board.c                                         [OK]
+Compiling: lib/chibios/os/hal/lib/streams/chprintf.c                                                [OK]
+Compiling: lib/chibios/os/hal/lib/streams/chscanf.c                                                 [OK]
+Compiling: lib/chibios/os/hal/lib/streams/memstreams.c                                              [OK]
+Compiling: lib/chibios/os/hal/lib/streams/nullstreams.c                                             [OK]
+Compiling: lib/chibios/os/hal/lib/streams/bufstreams.c                                              [OK]
+Compiling: lib/chibios/os/various/syscalls.c                                                        [OK]
+Compiling: platforms/chibios/syscall-fallbacks.c                                                    [OK]
+Compiling: platforms/chibios/wait.c                                                                 [OK]
+Compiling: platforms/chibios/synchronization_util.c                                                 [OK]
+Compiling: platforms/chibios/interrupt_handlers.c                                                   [OK]
+Compiling: lib/pico-sdk/src/rp2_common/hardware_clocks/clocks.c                                     [OK]
+Compiling: lib/pico-sdk/src/rp2_common/hardware_pll/pll.c                                           [OK]
+Compiling: lib/pico-sdk/src/rp2_common/hardware_pio/pio.c                                           [OK]
+Compiling: lib/pico-sdk/src/rp2_common/hardware_timer/timer.c                                       [OK]
+Compiling: lib/pico-sdk/src/rp2_common/hardware_flash/flash.c                                       [OK]
+Compiling: lib/pico-sdk/src/rp2_common/hardware_gpio/gpio.c                                         [OK]
+Compiling: lib/pico-sdk/src/rp2_common/hardware_claim/claim.c                                       [OK]
+Compiling: lib/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c                                 [OK]
+Compiling: lib/pico-sdk/src/rp2_common/hardware_xosc/xosc.c                                         [OK]
+Compiling: lib/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c                                       [OK]
+Compiling: platforms/chibios/vendors/RP/stage2_bootloaders.c                                        [OK]
+Compiling: platforms/chibios/vendors/RP/pico_sdk_shims.c                                            [OK]
+Assembling: lib/pico-sdk/src/rp2_common/pico_divider/divider.S                                      [OK]
+Assembling: lib/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S                       [OK]
+Compiling: .build/obj_crkbd_rev1_ardakilic/src/community_modules.c                                  [OK]
+Compiling: keyboards/crkbd/crkbd.c                                                                  [OK]
+Compiling: .build/obj_crkbd_rev1_ardakilic/src/default_keyboard.c                                   [OK]
+Compiling: quantum/keymap_introspection.c                                                          In file included from /__w/qmk_userspace/qmk_userspace/keyboards/crkbd/keymaps/ardakilic/keymap.c:20,
+                 from quantum/keymap_introspection.c:9:
+/__w/qmk_userspace/qmk_userspace/keyboards/crkbd/keymaps/ardakilic/keymap.c:245:5: error: 'RGB_TOG' undeclared here (not in a function); did you mean 'RGB_M_G'?
+     RGB_TOG, RGB_HUI, RGB_SAI, RGB_VAI, _______, _______,                    _______, _______, _______, _______, _______, _______,
+     ^~~~~~~
+./.build/obj_crkbd_rev1_ardakilic/src/default_keyboard.h:47:7: note: in definition of macro 'LAYOUT_split_3x6_3'
+     { k1A, k1B, k1C, k1D, k1E, k1F }, \
+       ^~~
+/__w/qmk_userspace/qmk_userspace/keyboards/crkbd/keymaps/ardakilic/keymap.c:245:14: error: 'RGB_HUI' undeclared here (not in a function); did you mean 'RGB_M_T'?
+     RGB_TOG, RGB_HUI, RGB_SAI, RGB_VAI, _______, _______,                    _______, _______, _______, _______, _______, _______,
+              ^~~~~~~
+./.build/obj_crkbd_rev1_ardakilic/src/default_keyboard.h:47:12: note: in definition of macro 'LAYOUT_split_3x6_3'
+     { k1A, k1B, k1C, k1D, k1E, k1F }, \
+            ^~~
+/__w/qmk_userspace/qmk_userspace/keyboards/crkbd/keymaps/ardakilic/keymap.c:245:23: error: 'RGB_SAI' undeclared here (not in a function); did you mean 'RGB_M_T'?
+     RGB_TOG, RGB_HUI, RGB_SAI, RGB_VAI, _______, _______,                    _______, _______, _______, _______, _______, _______,
+                       ^~~~~~~
+./.build/obj_crkbd_rev1_ardakilic/src/default_keyboard.h:47:17: note: in definition of macro 'LAYOUT_split_3x6_3'
+     { k1A, k1B, k1C, k1D, k1E, k1F }, \
+                 ^~~
+/__w/qmk_userspace/qmk_userspace/keyboards/crkbd/keymaps/ardakilic/keymap.c:245:32: error: 'RGB_VAI' undeclared here (not in a function); did you mean 'RGB_M_T'?
+     RGB_TOG, RGB_HUI, RGB_SAI, RGB_VAI, _______, _______,                    _______, _______, _______, _______, _______, _______,
+                                ^~~~~~~
+./.build/obj_crkbd_rev1_ardakilic/src/default_keyboard.h:47:22: note: in definition of macro 'LAYOUT_split_3x6_3'
+     { k1A, k1B, k1C, k1D, k1E, k1F }, \
+                      ^~~
+/__w/qmk_userspace/qmk_userspace/keyboards/crkbd/keymaps/ardakilic/keymap.c:246:5: error: 'RGB_MOD' undeclared here (not in a function); did you mean 'RGB_M_T'?
+     RGB_MOD, RGB_HUD, RGB_SAD, RGB_VAD, _______, _______,                    _______, _______, _______, _______, _______, _______,
+     ^~~~~~~
+./.build/obj_crkbd_rev1_ardakilic/src/default_keyboard.h:48:7: note: in definition of macro 'LAYOUT_split_3x6_3'
+     { k2A, k2B, k2C, k2D, k2E, k2F }, \
+       ^~~
+/__w/qmk_userspace/qmk_userspace/keyboards/crkbd/keymaps/ardakilic/keymap.c:246:14: error: 'RGB_HUD' undeclared here (not in a function); did you mean 'RGB_RED'?
+     RGB_MOD, RGB_HUD, RGB_SAD, RGB_VAD, _______, _______,                    _______, _______, _______, _______, _______, _______,
+              ^~~~~~~
+./.build/obj_crkbd_rev1_ardakilic/src/default_keyboard.h:48:12: note: in definition of macro 'LAYOUT_split_3x6_3'
+     { k2A, k2B, k2C, k2D, k2E, k2F }, \
+            ^~~
+/__w/qmk_userspace/qmk_userspace/keyboards/crkbd/keymaps/ardakilic/keymap.c:246:23: error: 'RGB_SAD' undeclared here (not in a function); did you mean 'RGB_RED'?
+     RGB_MOD, RGB_HUD, RGB_SAD, RGB_VAD, _______, _______,                    _______, _______, _______, _______, _______, _______,
+                       ^~~~~~~
+./.build/obj_crkbd_rev1_ardakilic/src/default_keyboard.h:48:17: note: in definition of macro 'LAYOUT_split_3x6_3'
+     { k2A, k2B, k2C, k2D, k2E, k2F }, \
+                 ^~~
+/__w/qmk_userspace/qmk_userspace/keyboards/crkbd/keymaps/ardakilic/keymap.c:246:32: error: 'RGB_VAD' undeclared here (not in a function); did you mean 'RGB_RED'?
+     RGB_MOD, RGB_HUD, RGB_SAD, RGB_VAD, _______, _______,                    _______, _______, _______, _______, _______, _______,
+                                ^~~~~~~
+./.build/obj_crkbd_rev1_ardakilic/src/default_keyboard.h:48:22: note: in definition of macro 'LAYOUT_split_3x6_3'
+     { k2A, k2B, k2C, k2D, k2E, k2F }, \
+                      ^~~
+ [ERRORS]
+ |
+ |
+ |
+gmake[1]: *** [builddefs/common_rules.mk:362: .build/obj_crkbd_rev1_ardakilic/quantum/keymap_introspection.o] Error 1
+```
+## ergotravel/rev1
+ergotravel/rev1:ardakilic
+ardakilic
+```
+Compiling QMK Firmware for target: 'ergotravel/rev1:ardakilic'...
+Generating: .build/obj_ergotravel_rev1_ardakilic/src/info_deps.d                                    [OK]
+Generating: .build/obj_ergotravel_rev1_ardakilic/src/community_modules.c                            [OK]
+avr-gcc (GCC) 8.3.0
+Copyright (C) 2018 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Generating: .build/obj_ergotravel_rev1_ardakilic/src/community_modules.h                            [OK]
+Generating: .build/obj_ergotravel_rev1_ardakilic/src/community_modules_introspection.c              [OK]
+Generating: .build/obj_ergotravel_rev1_ardakilic/src/community_modules_introspection.h              [OK]
+Generating: .build/obj_ergotravel_rev1_ardakilic/src/led_matrix_community_modules.inc               [OK]
+Generating: .build/obj_ergotravel_rev1_ardakilic/src/rgb_matrix_community_modules.inc               [OK]
+Generating: .build/obj_ergotravel_rev1_ardakilic/src/info_config.h                                  [OK]
+Generating: .build/obj_ergotravel_rev1_ardakilic/src/default_keyboard.c                             [OK]
+Generating: .build/obj_ergotravel_rev1_ardakilic/src/default_keyboard.h                             [OK]
+Compiling: platforms/avr/printf.c                                                                   [OK]
+Compiling: quantum/process_keycode/process_underglow.c                                              [OK]
+Compiling: quantum/color.c                                                                          [OK]
+Compiling: quantum/rgblight/rgblight.c                                                              [OK]
+Compiling: quantum/rgblight/rgblight_drivers.c                                                      [OK]
+Compiling: quantum/led_tables.c                                                                     [OK]
+Compiling: drivers/led/ws2812.c                                                                     [OK]
+Compiling: platforms/avr/drivers/ws2812_bitbang.c                                                   [OK]
+Compiling: quantum/command.c                                                                        [OK]
+Compiling: quantum/crc.c                                                                            [OK]
+Compiling: quantum/process_keycode/process_grave_esc.c                                              [OK]
+Compiling: quantum/process_keycode/process_magic.c                                                  [OK]
+Compiling: quantum/mousekey.c                                                                       [OK]
+Compiling: quantum/send_string/send_string.c                                                        [OK]
+Compiling: quantum/process_keycode/process_space_cadet.c                                            [OK]
+Compiling: tmk_core/protocol/host.c                                                                 [OK]
+Compiling: tmk_core/protocol/report.c                                                               [OK]
+Compiling: tmk_core/protocol/usb_device_state.c                                                     [OK]
+Compiling: tmk_core/protocol/usb_util.c                                                             [OK]
+Compiling: platforms/suspend.c                                                                      [OK]
+Compiling: platforms/synchronization_util.c                                                         [OK]
+Compiling: platforms/timer.c                                                                        [OK]
+Compiling: platforms/avr/hardware_id.c                                                              [OK]
+Compiling: platforms/avr/platform.c                                                                 [OK]
+Compiling: platforms/avr/suspend.c                                                                  [OK]
+Compiling: platforms/avr/timer.c                                                                    [OK]
+Compiling: platforms/avr/bootloaders/caterina.c                                                     [OK]
+Compiling: platforms/avr/drivers/i2c_master.c                                                       [OK]
+Compiling: platforms/avr/drivers/i2c_slave.c                                                        [OK]
+Compiling: platforms/avr/drivers/serial.c                                                           [OK]
+Compiling: tmk_core/protocol/lufa/lufa.c                                                            [OK]
+Compiling: tmk_core/protocol/usb_descriptor.c                                                       [OK]
+Compiling: lib/lufa/LUFA/Drivers/USB/Class/Common/HIDParser.c                                       [OK]
+Compiling: lib/lufa/LUFA/Drivers/USB/Core/AVR8/Device_AVR8.c                                        [OK]
+Compiling: lib/lufa/LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.c                                [OK]
+Compiling: lib/lufa/LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.c                                      [OK]
+Compiling: lib/lufa/LUFA/Drivers/USB/Core/AVR8/Host_AVR8.c                                          [OK]
+Compiling: lib/lufa/LUFA/Drivers/USB/Core/AVR8/PipeStream_AVR8.c                                    [OK]
+Compiling: lib/lufa/LUFA/Drivers/USB/Core/AVR8/Pipe_AVR8.c                                          [OK]
+Compiling: lib/lufa/LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.c                                 [OK]
+Compiling: lib/lufa/LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.c                                  [OK]
+Compiling: lib/lufa/LUFA/Drivers/USB/Core/ConfigDescriptors.c                                       [OK]
+Compiling: lib/lufa/LUFA/Drivers/USB/Core/DeviceStandardReq.c                                       [OK]
+Compiling: lib/lufa/LUFA/Drivers/USB/Core/Events.c                                                  [OK]
+Compiling: lib/lufa/LUFA/Drivers/USB/Core/HostStandardReq.c                                         [OK]
+Compiling: lib/lufa/LUFA/Drivers/USB/Core/USBTask.c                                                 [OK]
+Compiling: tmk_core/protocol/lufa/usb_util.c                                                        [OK]
+Compiling: .build/obj_ergotravel_rev1_ardakilic/src/community_modules.c                             [OK]
+Compiling: .build/obj_ergotravel_rev1_ardakilic/src/default_keyboard.c                              [OK]
+Compiling: quantum/keymap_introspection.c                                                          In file included from [K/__w/qmk_userspace/qmk_userspace/keyboards/ergotravel/keymaps/ardakilic/keymap.c:16[K,
+                 from [Kquantum/keymap_introspection.c:9[K:
+[K/__w/qmk_userspace/qmk_userspace/keyboards/ergotravel/keymaps/ardakilic/keymap.c:121:5:[K [Kerror: [K'[KRGB_MOD[K' undeclared here (not in a function); did you mean '[KRGB_M_T[K'?
+     [KRGB_MOD[K, _______, _______, _______, _______, KC_BSPC,             /*|*/        KC_DEL, _______, SQUARE_OPEN, SQUARE_CLOSE, LSFT(KC_2), KC_NONUS_BACKSLASH
+     [K^~~~~~~[K
+[K./.build/obj_ergotravel_rev1_ardakilic/src/default_keyboard.h:38:7:[K [Knote: [Kin definition of macro '[KLAYOUT[K'
+     { [Kk3A[K, k3B, k3C, k3D, k3E, k3F, XXX }, \
+       [K^~~[K
+[K/__w/qmk_userspace/qmk_userspace/keyboards/ergotravel/keymaps/ardakilic/keymap.c:141:22:[K [Kerror: [K'[KRGB_VAI[K' undeclared here (not in a function); did you mean '[KRGB_M_T[K'?
+     KC_DEL, RGB_MOD, [KRGB_VAI[K, RGB_SAI, RGB_HUI, _______,  KC_VOLD,    /*|*/       KC_MNXT, KC_MPRV, KC_MINS, KC_EQL, BACKSLASH, VERTICAL_PIPE, KC_BSLS,
+                      [K^~~~~~~[K
+[K./.build/obj_ergotravel_rev1_ardakilic/src/default_keyboard.h:36:17:[K [Knote: [Kin definition of macro '[KLAYOUT[K'
+     { k1A, k1B, [Kk1C[K, k1D, k1E, k1F, k1G }, \
+                 [K^~~[K
+[K/__w/qmk_userspace/qmk_userspace/keyboards/ergotravel/keymaps/ardakilic/keymap.c:141:31:[K [Kerror: [K'[KRGB_SAI[K' undeclared here (not in a function); did you mean '[KRGB_M_T[K'?
+     KC_DEL, RGB_MOD, RGB_VAI, [KRGB_SAI[K, RGB_HUI, _______,  KC_VOLD,    /*|*/       KC_MNXT, KC_MPRV, KC_MINS, KC_EQL, BACKSLASH, VERTICAL_PIPE, KC_BSLS,
+                               [K^~~~~~~[K
+[K./.build/obj_ergotravel_rev1_ardakilic/src/default_keyboard.h:36:22:[K [Knote: [Kin definition of macro '[KLAYOUT[K'
+     { k1A, k1B, k1C, [Kk1D[K, k1E, k1F, k1G }, \
+                      [K^~~[K
+[K/__w/qmk_userspace/qmk_userspace/keyboards/ergotravel/keymaps/ardakilic/keymap.c:141:40:[K [Kerror: [K'[KRGB_HUI[K' undeclared here (not in a function); did you mean '[KRGB_M_T[K'?
+     KC_DEL, RGB_MOD, RGB_VAI, RGB_SAI, [KRGB_HUI[K, _______,  KC_VOLD,    /*|*/       KC_MNXT, KC_MPRV, KC_MINS, KC_EQL, BACKSLASH, VERTICAL_PIPE, KC_BSLS,
+                                        [K^~~~~~~[K
+[K./.build/obj_ergotravel_rev1_ardakilic/src/default_keyboard.h:36:27:[K [Knote: [Kin definition of macro '[KLAYOUT[K'
+     { k1A, k1B, k1C, k1D, [Kk1E[K, k1F, k1G }, \
+                           [K^~~[K
+[K/__w/qmk_userspace/qmk_userspace/keyboards/ergotravel/keymaps/ardakilic/keymap.c:142:14:[K [Kerror: [K'[KRGB_RMOD[K' undeclared here (not in a function); did you mean '[KRGB_RED[K'?
+     _______, [KRGB_RMOD[K, RGB_VAD, RGB_SAD, RGB_HUD, _______,  KC_MUTE,  /*|*/       KC_MSTP, _______, HASHTAG, KC_NUBS, TILDE, BACKTICK, KC_GRV,
+              [K^~~~~~~~[K
+[K./.build/obj_ergotravel_rev1_ardakilic/src/default_keyboard.h:37:12:[K [Knote: [Kin definition of macro '[KLAYOUT[K'
+     { k2A, [Kk2B[K, k2C, k2D, k2E, k2F, k2G }, \
+            [K^~~[K
+[K/__w/qmk_userspace/qmk_userspace/keyboards/ergotravel/keymaps/ardakilic/keymap.c:142:24:[K [Kerror: [K'[KRGB_VAD[K' undeclared here (not in a function); did you mean '[KRGB_RED[K'?
+     _______, RGB_RMOD, [KRGB_VAD[K, RGB_SAD, RGB_HUD, _______,  KC_MUTE,  /*|*/       KC_MSTP, _______, HASHTAG, KC_NUBS, TILDE, BACKTICK, KC_GRV,
+                        [K^~~~~~~[K
+[K./.build/obj_ergotravel_rev1_ardakilic/src/default_keyboard.h:37:17:[K [Knote: [Kin definition of macro '[KLAYOUT[K'
+     { k2A, k2B, [Kk2C[K, k2D, k2E, k2F, k2G }, \
+                 [K^~~[K
+[K/__w/qmk_userspace/qmk_userspace/keyboards/ergotravel/keymaps/ardakilic/keymap.c:142:33:[K [Kerror: [K'[KRGB_SAD[K' undeclared here (not in a function); did you mean '[KRGB_RED[K'?
+     _______, RGB_RMOD, RGB_VAD, [KRGB_SAD[K, RGB_HUD, _______,  KC_MUTE,  /*|*/       KC_MSTP, _______, HASHTAG, KC_NUBS, TILDE, BACKTICK, KC_GRV,
+                                 [K^~~~~~~[K
+[K./.build/obj_ergotravel_rev1_ardakilic/src/default_keyboard.h:37:22:[K [Knote: [Kin definition of macro '[KLAYOUT[K'
+     { k2A, k2B, k2C, [Kk2D[K, k2E, k2F, k2G }, \
+                      [K^~~[K
+[K/__w/qmk_userspace/qmk_userspace/keyboards/ergotravel/keymaps/ardakilic/keymap.c:142:42:[K [Kerror: [K'[KRGB_HUD[K' undeclared here (not in a function); did you mean '[KRGB_RED[K'?
+     _______, RGB_RMOD, RGB_VAD, RGB_SAD, [KRGB_HUD[K, _______,  KC_MUTE,  /*|*/       KC_MSTP, _______, HASHTAG, KC_NUBS, TILDE, BACKTICK, KC_GRV,
+                                          [K^~~~~~~[K
+[K./.build/obj_ergotravel_rev1_ardakilic/src/default_keyboard.h:37:27:[K [Knote: [Kin definition of macro '[KLAYOUT[K'
+     { k2A, k2B, k2C, k2D, [Kk2E[K, k2F, k2G }, \
+                           [K^~~[K
+[K/__w/qmk_userspace/qmk_userspace/keyboards/ergotravel/keymaps/ardakilic/keymap.c:143:14:[K [Kerror: [K'[KRGB_TOG[K' undeclared here (not in a function); did you mean '[KRGB_M_G[K'?
+     _______, [KRGB_TOG[K, BL_STEP, _______, _______, _______,             /*|*/           KC_BSPC, _______, KC_MNXT, KC_VOLD, KC_VOLU, KC_MPLY
+              [K^~~~~~~[K
+[K./.build/obj_ergotravel_rev1_ardakilic/src/default_keyboard.h:38:12:[K [Knote: [Kin definition of macro '[KLAYOUT[K'
+     { k3A, [Kk3B[K, k3C, k3D, k3E, k3F, XXX }, \
+            [K^~~[K
+ [ERRORS]
+ |
+ |
+ |
+gmake[1]: *** [builddefs/common_rules.mk:358: .build/obj_ergotravel_rev1_ardakilic/quantum/keymap_introspection.o] Error 1
+```
+## horizon
+horizon:ardakilic
+ardakilic
+```
+Compiling QMK Firmware for target: 'horizon:ardakilic'...
+Generating: .build/obj_horizon_ardakilic/src/info_deps.d                                            [OK]
+Generating: .build/obj_horizon_ardakilic/src/community_modules.c                                    [OK]
+avr-gcc (GCC) 8.3.0
+Copyright (C) 2018 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Generating: .build/obj_horizon_ardakilic/src/community_modules.h                                    [OK]
+Generating: .build/obj_horizon_ardakilic/src/community_modules_introspection.c                      [OK]
+Generating: .build/obj_horizon_ardakilic/src/community_modules_introspection.h                      [OK]
+Generating: .build/obj_horizon_ardakilic/src/led_matrix_community_modules.inc                       [OK]
+Generating: .build/obj_horizon_ardakilic/src/rgb_matrix_community_modules.inc                       [OK]
+Generating: .build/obj_horizon_ardakilic/src/info_config.h                                          [OK]
+Generating: .build/obj_horizon_ardakilic/src/default_keyboard.c                                     [OK]
+Generating: .build/obj_horizon_ardakilic/src/default_keyboard.h                                     [OK]
+Compiling: platforms/avr/printf.c                                                                   [OK]
+Compiling: quantum/bootmagic/bootmagic.c                                                            [OK]
+Compiling: quantum/process_keycode/process_grave_esc.c                                              [OK]
+Compiling: quantum/process_keycode/process_magic.c                                                  [OK]
+Compiling: quantum/mousekey.c                                                                       [OK]
+Compiling: quantum/send_string/send_string.c                                                        [OK]
+Compiling: quantum/process_keycode/process_space_cadet.c                                            [OK]
+Compiling: tmk_core/protocol/host.c                                                                 [OK]
+Compiling: tmk_core/protocol/report.c                                                               [OK]
+Compiling: tmk_core/protocol/usb_device_state.c                                                     [OK]
+Compiling: tmk_core/protocol/usb_util.c                                                             [OK]
+Compiling: platforms/suspend.c                                                                      [OK]
+Compiling: platforms/synchronization_util.c                                                         [OK]
+Compiling: platforms/timer.c                                                                        [OK]
+Compiling: platforms/avr/hardware_id.c                                                              [OK]
+Compiling: platforms/avr/platform.c                                                                 [OK]
+Compiling: platforms/avr/suspend.c                                                                  [OK]
+Compiling: platforms/avr/timer.c                                                                    [OK]
+Compiling: platforms/avr/bootloaders/caterina.c                                                     [OK]
+Compiling: tmk_core/protocol/lufa/lufa.c                                                            [OK]
+Compiling: tmk_core/protocol/usb_descriptor.c                                                       [OK]
+Compiling: lib/lufa/LUFA/Drivers/USB/Class/Common/HIDParser.c                                       [OK]
+Compiling: lib/lufa/LUFA/Drivers/USB/Core/AVR8/Device_AVR8.c                                        [OK]
+Compiling: lib/lufa/LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.c                                [OK]
+Compiling: lib/lufa/LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.c                                      [OK]
+Compiling: lib/lufa/LUFA/Drivers/USB/Core/AVR8/Host_AVR8.c                                          [OK]
+Compiling: lib/lufa/LUFA/Drivers/USB/Core/AVR8/PipeStream_AVR8.c                                    [OK]
+Compiling: lib/lufa/LUFA/Drivers/USB/Core/AVR8/Pipe_AVR8.c                                          [OK]
+Compiling: lib/lufa/LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.c                                 [OK]
+Compiling: lib/lufa/LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.c                                  [OK]
+Compiling: lib/lufa/LUFA/Drivers/USB/Core/ConfigDescriptors.c                                       [OK]
+Compiling: lib/lufa/LUFA/Drivers/USB/Core/DeviceStandardReq.c                                       [OK]
+Compiling: lib/lufa/LUFA/Drivers/USB/Core/Events.c                                                  [OK]
+Compiling: lib/lufa/LUFA/Drivers/USB/Core/HostStandardReq.c                                         [OK]
+Compiling: lib/lufa/LUFA/Drivers/USB/Core/USBTask.c                                                 [OK]
+Compiling: tmk_core/protocol/lufa/usb_util.c                                                        [OK]
+Compiling: .build/obj_horizon_ardakilic/src/community_modules.c                                     [OK]
+Compiling: .build/obj_horizon_ardakilic/src/default_keyboard.c                                      [OK]
+Compiling: quantum/keymap_introspection.c                                                          In file included from [K/__w/qmk_userspace/qmk_userspace/keyboards/horizon/keymaps/ardakilic/keymap.c:17[K,
+                 from [Kquantum/keymap_introspection.c:9[K:
+[K/__w/qmk_userspace/qmk_userspace/keyboards/horizon/keymaps/ardakilic/keymap.c:101:69:[K [Kerror: [K'[KKC_MS_BTN1[K' undeclared here (not in a function); did you mean '[KX_MS_BTN1[K'?
+         LSFT_T(KC_CAPS), KC_Z,  KC_X,    KC_C,    KC_V,    KC_B,    [KKC_MS_BTN1[K, KC_MS_BTN1,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, RSFT_T(KC_ENT) /*KC_ENT*/,
+                                                                     [K^~~~~~~~~~[K
+[K./.build/obj_horizon_ardakilic/src/default_keyboard.h:37:37:[K [Knote: [Kin definition of macro '[KLAYOUT[K'
+     { k2A, k2B, k2C, k2D, k2E, k2F, [Kk2G[K, k2H, k2I, k2J, k2K, k2L, k2M, k2N }, \
+                                     [K^~~[K
+[K/__w/qmk_userspace/qmk_userspace/keyboards/horizon/keymaps/ardakilic/keymap.c:102:105:[K [Kerror: [K'[KKC_MS_BTN2[K' undeclared here (not in a function); did you mean '[KX_MS_BTN2[K'?
+         LT(_SODA, KC_GRV), KC_LCTL, KC_LALT, KC_LGUI, LT(_LOWER, KC_BSLS), LT(_SPACE, KC_SPC), KC_SCRL, [KKC_MS_BTN2[K, KC_BSPC, LT(_RAISE, KC_NONUS_BACKSLASH), KC_LEFT, KC_DOWN, KC_UP, KC_RGHT
+                                                                                                         [K^~~~~~~~~~[K
+[K./.build/obj_horizon_ardakilic/src/default_keyboard.h:38:42:[K [Knote: [Kin definition of macro '[KLAYOUT[K'
+     { k3A, k3B, k3C, k3D, k3E, k3F, k3G, [Kk3H[K, k3I, k3J, k3K, k3L, k3M, k3N } \
+                                          [K^~~[K
+ [ERRORS]
+ |
+ |
+ |
+gmake[1]: *** [builddefs/common_rules.mk:358: .build/obj_horizon_ardakilic/quantum/keymap_introspection.o] Error 1
+```
+## horizon
+horizon:ardakilic_trackball
+ardakilic_trackball
+```
+Compiling QMK Firmware for target: 'horizon:ardakilic_trackball'...
+Generating: .build/obj_horizon_ardakilic_trackball/src/info_deps.d                                  [OK]
+Generating: .build/obj_horizon_ardakilic_trackball/src/community_modules.c                          [OK]
+avr-gcc (GCC) 8.3.0
+Copyright (C) 2018 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Generating: .build/obj_horizon_ardakilic_trackball/src/community_modules.h                          [OK]
+Generating: .build/obj_horizon_ardakilic_trackball/src/community_modules_introspection.c            [OK]
+Generating: .build/obj_horizon_ardakilic_trackball/src/community_modules_introspection.h            [OK]
+Generating: .build/obj_horizon_ardakilic_trackball/src/led_matrix_community_modules.inc             [OK]
+Generating: .build/obj_horizon_ardakilic_trackball/src/rgb_matrix_community_modules.inc             [OK]
+Generating: .build/obj_horizon_ardakilic_trackball/src/info_config.h                                [OK]
+Generating: .build/obj_horizon_ardakilic_trackball/src/default_keyboard.c                           [OK]
+Generating: .build/obj_horizon_ardakilic_trackball/src/default_keyboard.h                           [OK]
+Compiling: platforms/avr/printf.c                                                                   [OK]
+Compiling: quantum/pointing_device/pointing_device.c                                                [OK]
+Compiling: quantum/pointing_device/pointing_device_auto_mouse.c                                     [OK]
+Compiling: drivers/sensors/pimoroni_trackball.c                                                     [OK]
+Compiling: quantum/bootmagic/bootmagic.c                                                            [OK]
+Compiling: quantum/process_keycode/process_grave_esc.c                                              [OK]
+Compiling: quantum/process_keycode/process_magic.c                                                  [OK]
+Compiling: quantum/mousekey.c                                                                       [OK]
+Compiling: quantum/send_string/send_string.c                                                        [OK]
+Compiling: quantum/process_keycode/process_space_cadet.c                                            [OK]
+Compiling: tmk_core/protocol/host.c                                                                 [OK]
+Compiling: tmk_core/protocol/report.c                                                               [OK]
+Compiling: tmk_core/protocol/usb_device_state.c                                                     [OK]
+Compiling: tmk_core/protocol/usb_util.c                                                             [OK]
+Compiling: platforms/suspend.c                                                                      [OK]
+Compiling: platforms/synchronization_util.c                                                         [OK]
+Compiling: platforms/timer.c                                                                        [OK]
+Compiling: platforms/avr/hardware_id.c                                                              [OK]
+Compiling: platforms/avr/platform.c                                                                 [OK]
+Compiling: platforms/avr/suspend.c                                                                  [OK]
+Compiling: platforms/avr/timer.c                                                                    [OK]
+Compiling: platforms/avr/bootloaders/caterina.c                                                     [OK]
+Compiling: platforms/avr/drivers/i2c_master.c                                                       [OK]
+Compiling: tmk_core/protocol/lufa/lufa.c                                                            [OK]
+Compiling: tmk_core/protocol/usb_descriptor.c                                                       [OK]
+Compiling: lib/lufa/LUFA/Drivers/USB/Class/Common/HIDParser.c                                       [OK]
+Compiling: lib/lufa/LUFA/Drivers/USB/Core/AVR8/Device_AVR8.c                                        [OK]
+Compiling: lib/lufa/LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.c                                [OK]
+Compiling: lib/lufa/LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.c                                      [OK]
+Compiling: lib/lufa/LUFA/Drivers/USB/Core/AVR8/Host_AVR8.c                                          [OK]
+Compiling: lib/lufa/LUFA/Drivers/USB/Core/AVR8/PipeStream_AVR8.c                                    [OK]
+Compiling: lib/lufa/LUFA/Drivers/USB/Core/AVR8/Pipe_AVR8.c                                          [OK]
+Compiling: lib/lufa/LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.c                                 [OK]
+Compiling: lib/lufa/LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.c                                  [OK]
+Compiling: lib/lufa/LUFA/Drivers/USB/Core/ConfigDescriptors.c                                       [OK]
+Compiling: lib/lufa/LUFA/Drivers/USB/Core/DeviceStandardReq.c                                       [OK]
+Compiling: lib/lufa/LUFA/Drivers/USB/Core/Events.c                                                  [OK]
+Compiling: lib/lufa/LUFA/Drivers/USB/Core/HostStandardReq.c                                         [OK]
+Compiling: lib/lufa/LUFA/Drivers/USB/Core/USBTask.c                                                 [OK]
+Compiling: tmk_core/protocol/lufa/usb_util.c                                                        [OK]
+Compiling: .build/obj_horizon_ardakilic_trackball/src/community_modules.c                           [OK]
+Compiling: .build/obj_horizon_ardakilic_trackball/src/default_keyboard.c                            [OK]
+Compiling: quantum/keymap_introspection.c                                                          In file included from [K/__w/qmk_userspace/qmk_userspace/keyboards/horizon/keymaps/ardakilic_trackball/keymap.c:17[K,
+                 from [Kquantum/keymap_introspection.c:9[K:
+[K/__w/qmk_userspace/qmk_userspace/keyboards/horizon/keymaps/ardakilic_trackball/keymap.c:197:65:[K [Kerror: [K'[KKC_MS_BTN1[K' undeclared here (not in a function); did you mean '[KX_MS_BTN1[K'?
+     LSFT_T(KC_CAPS), KC_Z,  KC_X,    KC_C,    KC_V,    KC_B,    [KKC_MS_BTN1[K, KC_MS_BTN1,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, RSFT_T(KC_ENT) /*KC_ENT*/,
+                                                                 [K^~~~~~~~~~[K
+[K./.build/obj_horizon_ardakilic_trackball/src/default_keyboard.h:37:37:[K [Knote: [Kin definition of macro '[KLAYOUT[K'
+     { k2A, k2B, k2C, k2D, k2E, k2F, [Kk2G[K, k2H, k2I, k2J, k2K, k2L, k2M, k2N }, \
+                                     [K^~~[K
+[K/__w/qmk_userspace/qmk_userspace/keyboards/horizon/keymaps/ardakilic_trackball/keymap.c:198:102:[K [Kerror: [K'[KKC_MS_BTN2[K' undeclared here (not in a function); did you mean '[KX_MS_BTN2[K'?
+     LT(_SODA, KC_GRV), KC_LCTL, KC_LALT, KC_LGUI, LT(_LOWER, KC_BSLS), LT(_SPACE, KC_SPC), BALL_SCR, [KKC_MS_BTN2[K, KC_BSPC, LT(_RAISE, KC_NONUS_BACKSLASH), KC_LEFT, KC_DOWN, KC_UP, KC_RGHT
+                                                                                                      [K^~~~~~~~~~[K
+[K./.build/obj_horizon_ardakilic_trackball/src/default_keyboard.h:38:42:[K [Knote: [Kin definition of macro '[KLAYOUT[K'
+     { k3A, k3B, k3C, k3D, k3E, k3F, k3G, [Kk3H[K, k3I, k3J, k3K, k3L, k3M, k3N } \
+                                          [K^~~[K
+ [ERRORS]
+ |
+ |
+ |
+gmake[1]: *** [builddefs/common_rules.mk:362: .build/obj_horizon_ardakilic_trackball/quantum/keymap_introspection.o] Error 1
+```
+## peej/lumberjack
+peej/lumberjack:ardakilic
+ardakilic
+```
+Compiling QMK Firmware for target: 'peej/lumberjack:ardakilic'...
+Generating: .build/obj_peej_lumberjack_ardakilic/src/info_deps.d                                    [OK]
+Generating: .build/obj_peej_lumberjack_ardakilic/src/community_modules.c                            [OK]
+avr-gcc (GCC) 8.3.0
+Copyright (C) 2018 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Generating: .build/obj_peej_lumberjack_ardakilic/src/community_modules.h                            [OK]
+Generating: .build/obj_peej_lumberjack_ardakilic/src/community_modules_introspection.c              [OK]
+Generating: .build/obj_peej_lumberjack_ardakilic/src/community_modules_introspection.h              [OK]
+Generating: .build/obj_peej_lumberjack_ardakilic/src/led_matrix_community_modules.inc               [OK]
+Generating: .build/obj_peej_lumberjack_ardakilic/src/rgb_matrix_community_modules.inc               [OK]
+Generating: .build/obj_peej_lumberjack_ardakilic/src/info_config.h                                  [OK]
+Generating: .build/obj_peej_lumberjack_ardakilic/src/default_keyboard.c                             [OK]
+Generating: .build/obj_peej_lumberjack_ardakilic/src/default_keyboard.h                             [OK]
+Compiling: platforms/avr/printf.c                                                                   [OK]
+Compiling: quantum/process_keycode/process_grave_esc.c                                              [OK]
+Compiling: quantum/process_keycode/process_magic.c                                                  [OK]
+Compiling: quantum/mousekey.c                                                                       [OK]
+Compiling: quantum/send_string/send_string.c                                                        [OK]
+Compiling: quantum/process_keycode/process_space_cadet.c                                            [OK]
+Compiling: tmk_core/protocol/host.c                                                                 [OK]
+Compiling: tmk_core/protocol/report.c                                                               [OK]
+Compiling: tmk_core/protocol/usb_device_state.c                                                     [OK]
+Compiling: tmk_core/protocol/usb_util.c                                                             [OK]
+Compiling: platforms/suspend.c                                                                      [OK]
+Compiling: platforms/synchronization_util.c                                                         [OK]
+Compiling: platforms/timer.c                                                                        [OK]
+Compiling: platforms/avr/hardware_id.c                                                              [OK]
+Compiling: platforms/avr/platform.c                                                                 [OK]
+Compiling: platforms/avr/suspend.c                                                                  [OK]
+Compiling: platforms/avr/timer.c                                                                    [OK]
+Compiling: platforms/avr/bootloaders/usbasploader.c                                                 [OK]
+Compiling: tmk_core/protocol/vusb/protocol.c                                                        [OK]
+Compiling: tmk_core/protocol/vusb/vusb.c                                                            [OK]
+Compiling: tmk_core/protocol/vusb/usb_util.c                                                        [OK]
+Compiling: lib/vusb/usbdrv/usbdrv.c                                                                 [OK]
+Assembling: lib/vusb/usbdrv/usbdrvasm.S                                                             [OK]
+Compiling: lib/vusb/usbdrv/oddebug.c                                                                [OK]
+Compiling: .build/obj_peej_lumberjack_ardakilic/src/community_modules.c                             [OK]
+Compiling: keyboards/peej/lumberjack/lumberjack.c                                                   [OK]
+Compiling: .build/obj_peej_lumberjack_ardakilic/src/default_keyboard.c                              [OK]
+Compiling: quantum/keymap_introspection.c                                                          In file included from [K/__w/qmk_userspace/qmk_userspace/keyboards/peej/lumberjack/keymaps/ardakilic/keymap.c:17[K,
+                 from [Kquantum/keymap_introspection.c:9[K:
+[K/__w/qmk_userspace/qmk_userspace/keyboards/peej/lumberjack/keymaps/ardakilic/keymap.c:148:5:[K [Kerror: [K'[KKC_ACL0[K' undeclared here (not in a function); did you mean '[KMS_ACL0[K'?
+     [KKC_ACL0[K,KC_ACL1,KC_ACL2,KC_BTN3,_______,_______,    /*|*/   _______,KC_NUM,KC_PSLS,KC_PAST,KC_PMNS,KC_BSPC,
+     [K^~~~~~~[K
+[K./.build/obj_peej_lumberjack_ardakilic/src/default_keyboard.h:35:7:[K [Knote: [Kin definition of macro '[KLAYOUT_ortho_5x12[K'
+     { [Kk0A[K, k0B, k0C, k0D, k0E, k0F, k0G, k0H, k0I, k0J }, \
+       [K^~~[K
+[K/__w/qmk_userspace/qmk_userspace/keyboards/peej/lumberjack/keymaps/ardakilic/keymap.c:148:13:[K [Kerror: [K'[KKC_ACL1[K' undeclared here (not in a function); did you mean '[KMS_ACL1[K'?
+     KC_ACL0,[KKC_ACL1[K,KC_ACL2,KC_BTN3,_______,_______,    /*|*/   _______,KC_NUM,KC_PSLS,KC_PAST,KC_PMNS,KC_BSPC,
+             [K^~~~~~~[K
+[K./.build/obj_peej_lumberjack_ardakilic/src/default_keyboard.h:35:12:[K [Knote: [Kin definition of macro '[KLAYOUT_ortho_5x12[K'
+     { k0A, [Kk0B[K, k0C, k0D, k0E, k0F, k0G, k0H, k0I, k0J }, \
+            [K^~~[K
+[K/__w/qmk_userspace/qmk_userspace/keyboards/peej/lumberjack/keymaps/ardakilic/keymap.c:148:21:[K [Kerror: [K'[KKC_ACL2[K' undeclared here (not in a function); did you mean '[KMS_ACL2[K'?
+     KC_ACL0,KC_ACL1,[KKC_ACL2[K,KC_BTN3,_______,_______,    /*|*/   _______,KC_NUM,KC_PSLS,KC_PAST,KC_PMNS,KC_BSPC,
+                     [K^~~~~~~[K
+[K./.build/obj_peej_lumberjack_ardakilic/src/default_keyboard.h:35:17:[K [Knote: [Kin definition of macro '[KLAYOUT_ortho_5x12[K'
+     { k0A, k0B, [Kk0C[K, k0D, k0E, k0F, k0G, k0H, k0I, k0J }, \
+                 [K^~~[K
+[K/__w/qmk_userspace/qmk_userspace/keyboards/peej/lumberjack/keymaps/ardakilic/keymap.c:148:29:[K [Kerror: [K'[KKC_BTN3[K' undeclared here (not in a function); did you mean '[KMS_BTN3[K'?
+     KC_ACL0,KC_ACL1,KC_ACL2,[KKC_BTN3[K,_______,_______,    /*|*/   _______,KC_NUM,KC_PSLS,KC_PAST,KC_PMNS,KC_BSPC,
+                             [K^~~~~~~[K
+[K./.build/obj_peej_lumberjack_ardakilic/src/default_keyboard.h:35:22:[K [Knote: [Kin definition of macro '[KLAYOUT_ortho_5x12[K'
+     { k0A, k0B, k0C, [Kk0D[K, k0E, k0F, k0G, k0H, k0I, k0J }, \
+                      [K^~~[K
+[K/__w/qmk_userspace/qmk_userspace/keyboards/peej/lumberjack/keymaps/ardakilic/keymap.c:149:21:[K [Kerror: [K'[KKC_BTN1[K' undeclared here (not in a function); did you mean '[KMS_BTN1[K'?
+     _______,_______,[KKC_BTN1[K,KC_MS_U,KC_BTN2,KC_WH_U,    /*|*/   _______,KC_P7,KC_P8,KC_P9,KC_PPLS,KC_PEQL,
+                     [K^~~~~~~[K
+[K./.build/obj_peej_lumberjack_ardakilic/src/default_keyboard.h:36:17:[K [Knote: [Kin definition of macro '[KLAYOUT_ortho_5x12[K'
+     { k1A, k1B, [Kk1C[K, k1D, k1E, k1F, k1G, k1H, k1I, k1J }, \
+                 [K^~~[K
+[K/__w/qmk_userspace/qmk_userspace/keyboards/peej/lumberjack/keymaps/ardakilic/keymap.c:149:29:[K [Kerror: [K'[KKC_MS_U[K' undeclared here (not in a function); did you mean '[KKC_MSEL[K'?
+     _______,_______,KC_BTN1,[KKC_MS_U[K,KC_BTN2,KC_WH_U,    /*|*/   _______,KC_P7,KC_P8,KC_P9,KC_PPLS,KC_PEQL,
+                             [K^~~~~~~[K
+[K./.build/obj_peej_lumberjack_ardakilic/src/default_keyboard.h:36:22:[K [Knote: [Kin definition of macro '[KLAYOUT_ortho_5x12[K'
+     { k1A, k1B, k1C, [Kk1D[K, k1E, k1F, k1G, k1H, k1I, k1J }, \
+                      [K^~~[K
+[K/__w/qmk_userspace/qmk_userspace/keyboards/peej/lumberjack/keymaps/ardakilic/keymap.c:150:21:[K [Kerror: [K'[KKC_MS_L[K' undeclared here (not in a function); did you mean '[KKC_MSEL[K'?
+     _______,_______,[KKC_MS_L[K,KC_MS_D,KC_MS_R,KC_WH_D,    /*|*/   _______,KC_P4,KC_P5,KC_P6,KC_PPLS,KC_PDOT,
+                     [K^~~~~~~[K
+[K./.build/obj_peej_lumberjack_ardakilic/src/default_keyboard.h:37:17:[K [Knote: [Kin definition of macro '[KLAYOUT_ortho_5x12[K'
+     { k2A, k2B, [Kk2C[K, k2D, k2E, k2F, k2G, k2H, k2I, k2J }, \
+                 [K^~~[K
+[K/__w/qmk_userspace/qmk_userspace/keyboards/peej/lumberjack/keymaps/ardakilic/keymap.c:149:37:[K [Kerror: [K'[KKC_BTN2[K' undeclared here (not in a function); did you mean '[KMS_BTN2[K'?
+     _______,_______,KC_BTN1,KC_MS_U,[KKC_BTN2[K,KC_WH_U,    /*|*/   _______,KC_P7,KC_P8,KC_P9,KC_PPLS,KC_PEQL,
+                                     [K^~~~~~~[K
+[K./.build/obj_peej_lumberjack_ardakilic/src/default_keyboard.h:37:22:[K [Knote: [Kin definition of macro '[KLAYOUT_ortho_5x12[K'
+     { k2A, k2B, k2C, [Kk2D[K, k2E, k2F, k2G, k2H, k2I, k2J }, \
+                      [K^~~[K
+[K/__w/qmk_userspace/qmk_userspace/keyboards/peej/lumberjack/keymaps/ardakilic/keymap.c:149:45:[K [Kerror: [K'[KKC_WH_U[K' undeclared here (not in a function); did you mean '[KKC_WHOM[K'?
+     _______,_______,KC_BTN1,KC_MS_U,KC_BTN2,[KKC_WH_U[K,    /*|*/   _______,KC_P7,KC_P8,KC_P9,KC_PPLS,KC_PEQL,
+                                             [K^~~~~~~[K
+[K./.build/obj_peej_lumberjack_ardakilic/src/default_keyboard.h:37:27:[K [Knote: [Kin definition of macro '[KLAYOUT_ortho_5x12[K'
+     { k2A, k2B, k2C, k2D, [Kk2E[K, k2F, k2G, k2H, k2I, k2J }, \
+                           [K^~~[K
+[K/__w/qmk_userspace/qmk_userspace/keyboards/peej/lumberjack/keymaps/ardakilic/keymap.c:150:29:[K [Kerror: [K'[KKC_MS_D[K' undeclared here (not in a function); did you mean '[KKC_MRWD[K'?
+     _______,_______,KC_MS_L,[KKC_MS_D[K,KC_MS_R,KC_WH_D,    /*|*/   _______,KC_P4,KC_P5,KC_P6,KC_PPLS,KC_PDOT,
+                             [K^~~~~~~[K
+[K./.build/obj_peej_lumberjack_ardakilic/src/default_keyboard.h:38:17:[K [Knote: [Kin definition of macro '[KLAYOUT_ortho_5x12[K'
+     { k3A, k3B, [Kk3C[K, k3D, k3E, k3F, k3G, k3H, k3I, k3J }, \
+                 [K^~~[K
+[K/__w/qmk_userspace/qmk_userspace/keyboards/peej/lumberjack/keymaps/ardakilic/keymap.c:150:37:[K [Kerror: [K'[KKC_MS_R[K' undeclared here (not in a function); did you mean '[KKC_MSEL[K'?
+     _______,_______,KC_MS_L,KC_MS_D,[KKC_MS_R[K,KC_WH_D,    /*|*/   _______,KC_P4,KC_P5,KC_P6,KC_PPLS,KC_PDOT,
+                                     [K^~~~~~~[K
+[K./.build/obj_peej_lumberjack_ardakilic/src/default_keyboard.h:38:22:[K [Knote: [Kin definition of macro '[KLAYOUT_ortho_5x12[K'
+     { k3A, k3B, k3C, [Kk3D[K, k3E, k3F, k3G, k3H, k3I, k3J }, \
+                      [K^~~[K
+[K/__w/qmk_userspace/qmk_userspace/keyboards/peej/lumberjack/keymaps/ardakilic/keymap.c:150:45:[K [Kerror: [K'[KKC_WH_D[K' undeclared here (not in a function); did you mean '[KKC_WFWD[K'?
+     _______,_______,KC_MS_L,KC_MS_D,KC_MS_R,[KKC_WH_D[K,    /*|*/   _______,KC_P4,KC_P5,KC_P6,KC_PPLS,KC_PDOT,
+                                             [K^~~~~~~[K
+[K./.build/obj_peej_lumberjack_ardakilic/src/default_keyboard.h:38:27:[K [Knote: [Kin definition of macro '[KLAYOUT_ortho_5x12[K'
+     { k3A, k3B, k3C, k3D, [Kk3E[K, k3F, k3G, k3H, k3I, k3J }, \
+                           [K^~~[K
+ [ERRORS]
+ |
+ |
+ |
+gmake[1]: *** [builddefs/common_rules.mk:362: .build/obj_peej_lumberjack_ardakilic/quantum/keymap_introspection.o] Error 1
+```
+## planck/rev6
+planck/rev6:ardakilic
+ardakilic
+```
+Compiling QMK Firmware for target: 'planck/rev6:ardakilic'...
+Generating: .build/obj_planck_rev6_ardakilic/src/info_deps.d                                        [OK]
+arm-none-eabi-gcc (15:8-2019-q3-1+b1) 8.3.1 20190703 (release) [gcc-8-branch revision 273027]
+Copyright (C) 2018 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Generating: .build/obj_planck_rev6_ardakilic/src/community_modules.h                                [OK]
+Generating: .build/obj_planck_rev6_ardakilic/src/community_modules.c                                [OK]
+Generating: .build/obj_planck_rev6_ardakilic/src/community_modules_introspection.c                  [OK]
+Generating: .build/obj_planck_rev6_ardakilic/src/community_modules_introspection.h                  [OK]
+Generating: .build/obj_planck_rev6_ardakilic/src/led_matrix_community_modules.inc                   [OK]
+Generating: .build/obj_planck_rev6_ardakilic/src/rgb_matrix_community_modules.inc                   [OK]
+Generating: .build/obj_planck_rev6_ardakilic/src/info_config.h                                      [OK]
+Generating: .build/obj_planck_rev6_ardakilic/src/default_keyboard.c                                 [OK]
+Generating: .build/obj_planck_rev6_ardakilic/src/default_keyboard.h                                 [OK]
+Compiling: tmk_core/protocol/chibios/usb_main.c                                                     [OK]
+Compiling: tmk_core/protocol/chibios/chibios.c                                                      [OK]
+Compiling: tmk_core/protocol/usb_descriptor.c                                                       [OK]
+Compiling: tmk_core/protocol/chibios/usb_driver.c                                                   [OK]
+Compiling: tmk_core/protocol/chibios/usb_endpoints.c                                                [OK]
+Compiling: tmk_core/protocol/chibios/usb_util.c                                                     [OK]
+Compiling: tmk_core/protocol/chibios/usb_report_handling.c                                          [OK]
+Compiling: lib/chibios/os/common/startup/ARMCMx/compilers/GCC/crt1.c                                [OK]
+Compiling: lib/chibios/os/rt/src/chsys.c                                                            [OK]
+Compiling: lib/chibios/os/rt/src/chrfcu.c                                                           [OK]
+Compiling: lib/chibios/os/rt/src/chdebug.c                                                          [OK]
+Compiling: lib/chibios/os/rt/src/chtrace.c                                                          [OK]
+Compiling: lib/chibios/os/rt/src/chvt.c                                                             [OK]
+Compiling: lib/chibios/os/rt/src/chschd.c                                                           [OK]
+Compiling: lib/chibios/os/rt/src/chinstances.c                                                      [OK]
+Compiling: lib/chibios/os/rt/src/chthreads.c                                                        [OK]
+Compiling: lib/chibios/os/rt/src/chtm.c                                                             [OK]
+Compiling: lib/chibios/os/rt/src/chstats.c                                                          [OK]
+Compiling: lib/chibios/os/rt/src/chregistry.c                                                       [OK]
+Compiling: lib/chibios/os/rt/src/chsem.c                                                            [OK]
+Compiling: lib/chibios/os/rt/src/chmtx.c                                                            [OK]
+Compiling: lib/chibios/os/rt/src/chcond.c                                                           [OK]
+Compiling: lib/chibios/os/rt/src/chevents.c                                                         [OK]
+Compiling: lib/chibios/os/rt/src/chmsg.c                                                            [OK]
+Compiling: lib/chibios/os/rt/src/chdynamic.c                                                        [OK]
+Compiling: lib/chibios/os/common/ports/ARMv7-M/chcore.c                                             [OK]
+Compiling: lib/chibios/os/hal/osal/rt-nil/osal.c                                                    [OK]
+Compiling: lib/chibios/os/oslib/src/chmboxes.c                                                      [OK]
+Compiling: lib/chibios/os/oslib/src/chmemcore.c                                                     [OK]
+Compiling: lib/chibios/os/oslib/src/chmemheaps.c                                                    [OK]
+Compiling: lib/chibios/os/oslib/src/chmempools.c                                                    [OK]
+Compiling: lib/chibios/os/oslib/src/chpipes.c                                                       [OK]
+Compiling: lib/chibios/os/oslib/src/chobjcaches.c                                                   [OK]
+Compiling: lib/chibios/os/oslib/src/chdelegates.c                                                   [OK]
+Compiling: lib/chibios/os/oslib/src/chfactory.c                                                     [OK]
+Compiling: lib/chibios/os/hal/src/hal.c                                                             [OK]
+Compiling: lib/chibios/os/hal/src/hal_st.c                                                          [OK]
+Compiling: lib/chibios/os/hal/src/hal_buffers.c                                                     [OK]
+Compiling: lib/chibios/os/hal/src/hal_queues.c                                                      [OK]
+Compiling: lib/chibios/os/hal/src/hal_flash.c                                                       [OK]
+Compiling: lib/chibios/os/hal/src/hal_mmcsd.c                                                       [OK]
+Compiling: lib/chibios/os/hal/src/hal_adc.c                                                         [OK]
+Compiling: lib/chibios/os/hal/src/hal_can.c                                                         [OK]
+Compiling: lib/chibios/os/hal/src/hal_crypto.c                                                      [OK]
+Compiling: lib/chibios/os/hal/src/hal_dac.c                                                         [OK]
+Compiling: lib/chibios/os/hal/src/hal_efl.c                                                         [OK]
+Compiling: lib/chibios/os/hal/src/hal_gpt.c                                                         [OK]
+Compiling: lib/chibios/os/hal/src/hal_i2c.c                                                         [OK]
+Compiling: lib/chibios/os/hal/src/hal_i2s.c                                                         [OK]
+Compiling: lib/chibios/os/hal/src/hal_icu.c                                                         [OK]
+Compiling: lib/chibios/os/hal/src/hal_mac.c                                                         [OK]
+Compiling: lib/chibios/os/hal/src/hal_mmc_spi.c                                                     [OK]
+Compiling: lib/chibios/os/hal/src/hal_pal.c                                                         [OK]
+Compiling: lib/chibios/os/hal/src/hal_pwm.c                                                         [OK]
+Compiling: lib/chibios/os/hal/src/hal_rtc.c                                                         [OK]
+Compiling: lib/chibios/os/hal/src/hal_sdc.c                                                         [OK]
+Compiling: lib/chibios/os/hal/src/hal_serial.c                                                      [OK]
+Compiling: lib/chibios/os/hal/src/hal_serial_usb.c                                                  [OK]
+Compiling: lib/chibios/os/hal/src/hal_sio.c                                                         [OK]
+Compiling: lib/chibios/os/hal/src/hal_spi.c                                                         [OK]
+Compiling: lib/chibios/os/hal/src/hal_trng.c                                                        [OK]
+Compiling: lib/chibios/os/hal/src/hal_uart.c                                                        [OK]
+Compiling: lib/chibios/os/hal/src/hal_usb.c                                                         [OK]
+Compiling: lib/chibios/os/hal/src/hal_wdg.c                                                         [OK]
+Compiling: lib/chibios/os/hal/src/hal_wspi.c                                                        [OK]
+Compiling: lib/chibios/os/hal/ports/common/ARMCMx/nvic.c                                            [OK]
+Compiling: lib/chibios/os/hal/ports/STM32/STM32F3xx/stm32_isr.c                                     [OK]
+Compiling: lib/chibios/os/hal/ports/STM32/STM32F3xx/hal_lld.c                                       [OK]
+Compiling: lib/chibios/os/hal/ports/STM32/STM32F3xx/hal_efl_lld.c                                   [OK]
+Compiling: lib/chibios/os/hal/ports/STM32/LLD/ADCv3/hal_adc_lld.c                                   [OK]
+Compiling: lib/chibios/os/hal/ports/STM32/LLD/CANv1/hal_can_lld.c                                   [OK]
+Compiling: lib/chibios/os/hal/ports/STM32/LLD/DACv1/hal_dac_lld.c                                   [OK]
+Compiling: lib/chibios/os/hal/ports/STM32/LLD/DMAv1/stm32_dma.c                                     [OK]
+Compiling: lib/chibios/os/hal/ports/STM32/LLD/EXTIv1/stm32_exti.c                                   [OK]
+Compiling: lib/chibios/os/hal/ports/STM32/LLD/GPIOv2/hal_pal_lld.c                                  [OK]
+Compiling: lib/chibios/os/hal/ports/STM32/LLD/I2Cv2/hal_i2c_lld.c                                   [OK]
+Compiling: lib/chibios/os/hal/ports/STM32/LLD/RTCv2/hal_rtc_lld.c                                   [OK]
+Compiling: lib/chibios/os/hal/ports/STM32/LLD/SPIv2/hal_i2s_lld.c                                   [OK]
+Compiling: lib/chibios/os/hal/ports/STM32/LLD/SPIv2/hal_spi_v2_lld.c                                [OK]
+Compiling: lib/chibios/os/hal/ports/STM32/LLD/SYSTICKv1/hal_st_lld.c                                [OK]
+Compiling: lib/chibios/os/hal/ports/STM32/LLD/TIMv1/hal_gpt_lld.c                                   [OK]
+Compiling: lib/chibios/os/hal/ports/STM32/LLD/TIMv1/hal_icu_lld.c                                   [OK]
+Compiling: lib/chibios/os/hal/ports/STM32/LLD/TIMv1/hal_pwm_lld.c                                   [OK]
+Compiling: lib/chibios/os/hal/ports/STM32/LLD/USARTv2/hal_serial_lld.c                              [OK]
+Compiling: lib/chibios/os/hal/ports/STM32/LLD/USARTv2/hal_sio_lld.c                                 [OK]
+Compiling: lib/chibios/os/hal/ports/STM32/LLD/USARTv2/hal_uart_lld.c                                [OK]
+Compiling: lib/chibios/os/hal/ports/STM32/LLD/USBv1/hal_usb_lld.c                                   [OK]
+Compiling: lib/chibios/os/hal/ports/STM32/LLD/xWDGv1/hal_wdg_lld.c                                  [OK]
+Compiling: lib/chibios/os/hal/boards/ST_STM32F3_DISCOVERY/board.c                                   [OK]
+Compiling: lib/chibios/os/hal/lib/streams/chprintf.c                                                [OK]
+Compiling: lib/chibios/os/hal/lib/streams/chscanf.c                                                 [OK]
+Compiling: lib/chibios/os/hal/lib/streams/memstreams.c                                              [OK]
+Compiling: lib/chibios/os/hal/lib/streams/nullstreams.c                                             [OK]
+Compiling: lib/chibios/os/hal/lib/streams/bufstreams.c                                              [OK]
+Compiling: lib/chibios/os/various/syscalls.c                                                        [OK]
+Compiling: platforms/chibios/syscall-fallbacks.c                                                    [OK]
+Compiling: platforms/chibios/wait.c                                                                 [OK]
+Compiling: platforms/chibios/synchronization_util.c                                                 [OK]
+Compiling: platforms/chibios/interrupt_handlers.c                                                   [OK]
+Compiling: quantum/audio/muse.c                                                                     [OK]
+Compiling: .build/obj_planck_rev6_ardakilic/src/community_modules.c                                 [OK]
+Compiling: keyboards/planck/planck.c                                                                [OK]
+Compiling: keyboards/planck/rev6/rev6.c                                                             [OK]
+Compiling: .build/obj_planck_rev6_ardakilic/src/default_keyboard.c                                  [OK]
+Compiling: quantum/keymap_introspection.c                                                          In file included from /__w/qmk_userspace/qmk_userspace/keyboards/planck/keymaps/ardakilic/keymap.c:17,
+                 from quantum/keymap_introspection.c:9:
+/__w/qmk_userspace/qmk_userspace/keyboards/planck/keymaps/ardakilic/keymap.c:213:33: error: 'RGB_TOG' undeclared here (not in a function); did you mean 'RGB_M_G'?
+     EE_CLR, QK_BOOT, DB_TOGG,   RGB_TOG, RGB_MOD, RGB_HUI, RGB_HUD, RGB_SAI, RGB_SAD,  RGB_VAI, RGB_VAD, KC_DEL ,
+                                 ^~~~~~~
+./.build/obj_planck_rev6_ardakilic/src/default_keyboard.h:46:22: note: in definition of macro 'LAYOUT_planck_1x2uC'
+     { k0A, k0B, k0C, k0D, k0E, k0F }, \
+                      ^~~
+/__w/qmk_userspace/qmk_userspace/keyboards/planck/keymaps/ardakilic/keymap.c:212:13: note: in expansion of macro 'LAYOUT_planck_mit'
+ [_ADJUST] = LAYOUT_planck_mit(
+             ^~~~~~~~~~~~~~~~~
+/__w/qmk_userspace/qmk_userspace/keyboards/planck/keymaps/ardakilic/keymap.c:213:42: error: 'RGB_MOD' undeclared here (not in a function); did you mean 'RGB_M_T'?
+     EE_CLR, QK_BOOT, DB_TOGG,   RGB_TOG, RGB_MOD, RGB_HUI, RGB_HUD, RGB_SAI, RGB_SAD,  RGB_VAI, RGB_VAD, KC_DEL ,
+                                          ^~~~~~~
+./.build/obj_planck_rev6_ardakilic/src/default_keyboard.h:46:27: note: in definition of macro 'LAYOUT_planck_1x2uC'
+     { k0A, k0B, k0C, k0D, k0E, k0F }, \
+                           ^~~
+/__w/qmk_userspace/qmk_userspace/keyboards/planck/keymaps/ardakilic/keymap.c:212:13: note: in expansion of macro 'LAYOUT_planck_mit'
+ [_ADJUST] = LAYOUT_planck_mit(
+             ^~~~~~~~~~~~~~~~~
+/__w/qmk_userspace/qmk_userspace/keyboards/planck/keymaps/ardakilic/keymap.c:213:51: error: 'RGB_HUI' undeclared here (not in a function); did you mean 'RGB_M_T'?
+     EE_CLR, QK_BOOT, DB_TOGG,   RGB_TOG, RGB_MOD, RGB_HUI, RGB_HUD, RGB_SAI, RGB_SAD,  RGB_VAI, RGB_VAD, KC_DEL ,
+                                                   ^~~~~~~
+./.build/obj_planck_rev6_ardakilic/src/default_keyboard.h:46:32: note: in definition of macro 'LAYOUT_planck_1x2uC'
+     { k0A, k0B, k0C, k0D, k0E, k0F }, \
+                                ^~~
+/__w/qmk_userspace/qmk_userspace/keyboards/planck/keymaps/ardakilic/keymap.c:212:13: note: in expansion of macro 'LAYOUT_planck_mit'
+ [_ADJUST] = LAYOUT_planck_mit(
+             ^~~~~~~~~~~~~~~~~
+/__w/qmk_userspace/qmk_userspace/keyboards/planck/keymaps/ardakilic/keymap.c:213:60: error: 'RGB_HUD' undeclared here (not in a function); did you mean 'RGB_RED'?
+     EE_CLR, QK_BOOT, DB_TOGG,   RGB_TOG, RGB_MOD, RGB_HUI, RGB_HUD, RGB_SAI, RGB_SAD,  RGB_VAI, RGB_VAD, KC_DEL ,
+                                                            ^~~~~~~
+./.build/obj_planck_rev6_ardakilic/src/default_keyboard.h:50:7: note: in definition of macro 'LAYOUT_planck_1x2uC'
+     { k4A, k4B, k4C, k4D, k4E, k4F }, \
+       ^~~
+/__w/qmk_userspace/qmk_userspace/keyboards/planck/keymaps/ardakilic/keymap.c:212:13: note: in expansion of macro 'LAYOUT_planck_mit'
+ [_ADJUST] = LAYOUT_planck_mit(
+             ^~~~~~~~~~~~~~~~~
+/__w/qmk_userspace/qmk_userspace/keyboards/planck/keymaps/ardakilic/keymap.c:213:69: error: 'RGB_SAI' undeclared here (not in a function); did you mean 'RGB_M_T'?
+     EE_CLR, QK_BOOT, DB_TOGG,   RGB_TOG, RGB_MOD, RGB_HUI, RGB_HUD, RGB_SAI, RGB_SAD,  RGB_VAI, RGB_VAD, KC_DEL ,
+                                                                     ^~~~~~~
+./.build/obj_planck_rev6_ardakilic/src/default_keyboard.h:50:12: note: in definition of macro 'LAYOUT_planck_1x2uC'
+     { k4A, k4B, k4C, k4D, k4E, k4F }, \
+            ^~~
+/__w/qmk_userspace/qmk_userspace/keyboards/planck/keymaps/ardakilic/keymap.c:212:13: note: in expansion of macro 'LAYOUT_planck_mit'
+ [_ADJUST] = LAYOUT_planck_mit(
+             ^~~~~~~~~~~~~~~~~
+/__w/qmk_userspace/qmk_userspace/keyboards/planck/keymaps/ardakilic/keymap.c:213:78: error: 'RGB_SAD' undeclared here (not in a function); did you mean 'RGB_RED'?
+     EE_CLR, QK_BOOT, DB_TOGG,   RGB_TOG, RGB_MOD, RGB_HUI, RGB_HUD, RGB_SAI, RGB_SAD,  RGB_VAI, RGB_VAD, KC_DEL ,
+                                                                              ^~~~~~~
+./.build/obj_planck_rev6_ardakilic/src/default_keyboard.h:50:17: note: in definition of macro 'LAYOUT_planck_1x2uC'
+     { k4A, k4B, k4C, k4D, k4E, k4F }, \
+                 ^~~
+/__w/qmk_userspace/qmk_userspace/keyboards/planck/keymaps/ardakilic/keymap.c:212:13: note: in expansion of macro 'LAYOUT_planck_mit'
+ [_ADJUST] = LAYOUT_planck_mit(
+             ^~~~~~~~~~~~~~~~~
+/__w/qmk_userspace/qmk_userspace/keyboards/planck/keymaps/ardakilic/keymap.c:213:88: error: 'RGB_VAI' undeclared here (not in a function); did you mean 'RGB_M_T'?
+     EE_CLR, QK_BOOT, DB_TOGG,   RGB_TOG, RGB_MOD, RGB_HUI, RGB_HUD, RGB_SAI, RGB_SAD,  RGB_VAI, RGB_VAD, KC_DEL ,
+                                                                                        ^~~~~~~
+./.build/obj_planck_rev6_ardakilic/src/default_keyboard.h:50:22: note: in definition of macro 'LAYOUT_planck_1x2uC'
+     { k4A, k4B, k4C, k4D, k4E, k4F }, \
+                      ^~~
+/__w/qmk_userspace/qmk_userspace/keyboards/planck/keymaps/ardakilic/keymap.c:212:13: note: in expansion of macro 'LAYOUT_planck_mit'
+ [_ADJUST] = LAYOUT_planck_mit(
+             ^~~~~~~~~~~~~~~~~
+/__w/qmk_userspace/qmk_userspace/keyboards/planck/keymaps/ardakilic/keymap.c:213:97: error: 'RGB_VAD' undeclared here (not in a function); did you mean 'RGB_RED'?
+     EE_CLR, QK_BOOT, DB_TOGG,   RGB_TOG, RGB_MOD, RGB_HUI, RGB_HUD, RGB_SAI, RGB_SAD,  RGB_VAI, RGB_VAD, KC_DEL ,
+                                                                                                 ^~~~~~~
+./.build/obj_planck_rev6_ardakilic/src/default_keyboard.h:50:27: note: in definition of macro 'LAYOUT_planck_1x2uC'
+     { k4A, k4B, k4C, k4D, k4E, k4F }, \
+                           ^~~
+/__w/qmk_userspace/qmk_userspace/keyboards/planck/keymaps/ardakilic/keymap.c:212:13: note: in expansion of macro 'LAYOUT_planck_mit'
+ [_ADJUST] = LAYOUT_planck_mit(
+             ^~~~~~~~~~~~~~~~~
+In file included from quantum/keymap_introspection.c:9:
+/__w/qmk_userspace/qmk_userspace/keyboards/planck/keymaps/ardakilic/keymap.c: In function 'encoder_update_user':
+/__w/qmk_userspace/qmk_userspace/keyboards/planck/keymaps/ardakilic/keymap.c:254:18: error: 'KC_MS_WH_DOWN' undeclared (first use in this function); did you mean 'X_MS_WH_DOWN'?
+         tap_code(KC_MS_WH_DOWN);
+                  ^~~~~~~~~~~~~
+                  X_MS_WH_DOWN
+/__w/qmk_userspace/qmk_userspace/keyboards/planck/keymaps/ardakilic/keymap.c:254:18: note: each undeclared identifier is reported only once for each function it appears in
+/__w/qmk_userspace/qmk_userspace/keyboards/planck/keymaps/ardakilic/keymap.c:254:18: error: passing argument 1 of 'tap_code' makes integer from pointer without a cast [-Werror=int-conversion]
+In file included from quantum/action_layer.h:22,
+                 from quantum/eeconfig.h:23,
+                 from quantum/keycode_config.h:21,
+                 from quantum/quantum.h:41,
+                 from ./.build/obj_planck_rev6_ardakilic/src/default_keyboard.h:28,
+                 from /__w/qmk_userspace/qmk_userspace/keyboards/planck/keymaps/ardakilic/keymap.c:17,
+                 from quantum/keymap_introspection.c:9:
+quantum/action.h:117:23: note: expected 'uint8_t' {aka 'unsigned char'} but argument is of type 'const uint16_t (*)[8][6]' {aka 'const short unsigned int (*)[8][6]'}
+ void tap_code(uint8_t code);
+               ~~~~~~~~^~~~
+In file included from quantum/keymap_introspection.c:9:
+/__w/qmk_userspace/qmk_userspace/keyboards/planck/keymaps/ardakilic/keymap.c:260:18: error: 'KC_MS_WH_UP' undeclared (first use in this function); did you mean 'X_MS_WH_UP'?
+         tap_code(KC_MS_WH_UP);
+                  ^~~~~~~~~~~
+                  X_MS_WH_UP
+/__w/qmk_userspace/qmk_userspace/keyboards/planck/keymaps/ardakilic/keymap.c:260:18: error: passing argument 1 of 'tap_code' makes integer from pointer without a cast [-Werror=int-conversion]
+In file included from quantum/action_layer.h:22,
+                 from quantum/eeconfig.h:23,
+                 from quantum/keycode_config.h:21,
+                 from quantum/quantum.h:41,
+                 from ./.build/obj_planck_rev6_ardakilic/src/default_keyboard.h:28,
+                 from /__w/qmk_userspace/qmk_userspace/keyboards/planck/keymaps/ardakilic/keymap.c:17,
+                 from quantum/keymap_introspection.c:9:
+quantum/action.h:117:23: note: expected 'uint8_t' {aka 'unsigned char'} but argument is of type 'const uint16_t (*)[8][6]' {aka 'const short unsigned int (*)[8][6]'}
+ void tap_code(uint8_t code);
+               ~~~~~~~~^~~~
+cc1: all warnings being treated as errors
+ [ERRORS]
+ |
+ |
+ |
+gmake[1]: *** [builddefs/common_rules.mk:362: .build/obj_planck_rev6_ardakilic/quantum/keymap_introspection.o] Error 1
+```
+## planck/rev6
+planck/rev6:ardakilic_grid
+ardakilic_grid
+```
+Compiling QMK Firmware for target: 'planck/rev6:ardakilic_grid'...
+Generating: .build/obj_planck_rev6_ardakilic_grid/src/info_deps.d                                   [OK]
+arm-none-eabi-gcc (15:8-2019-q3-1+b1) 8.3.1 20190703 (release) [gcc-8-branch revision 273027]
+Copyright (C) 2018 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Generating: .build/obj_planck_rev6_ardakilic_grid/src/community_modules.h                           [OK]
+Generating: .build/obj_planck_rev6_ardakilic_grid/src/community_modules.c                           [OK]
+Generating: .build/obj_planck_rev6_ardakilic_grid/src/community_modules_introspection.c             [OK]
+Generating: .build/obj_planck_rev6_ardakilic_grid/src/community_modules_introspection.h             [OK]
+Generating: .build/obj_planck_rev6_ardakilic_grid/src/led_matrix_community_modules.inc              [OK]
+Generating: .build/obj_planck_rev6_ardakilic_grid/src/rgb_matrix_community_modules.inc              [OK]
+Generating: .build/obj_planck_rev6_ardakilic_grid/src/info_config.h                                 [OK]
+Generating: .build/obj_planck_rev6_ardakilic_grid/src/default_keyboard.c                            [OK]
+Generating: .build/obj_planck_rev6_ardakilic_grid/src/default_keyboard.h                            [OK]
+Compiling: tmk_core/protocol/chibios/usb_main.c                                                     [OK]
+Compiling: tmk_core/protocol/chibios/chibios.c                                                      [OK]
+Compiling: tmk_core/protocol/usb_descriptor.c                                                       [OK]
+Compiling: tmk_core/protocol/chibios/usb_driver.c                                                   [OK]
+Compiling: tmk_core/protocol/chibios/usb_endpoints.c                                                [OK]
+Compiling: tmk_core/protocol/chibios/usb_report_handling.c                                          [OK]
+Compiling: tmk_core/protocol/chibios/usb_util.c                                                     [OK]
+Compiling: lib/chibios/os/common/startup/ARMCMx/compilers/GCC/crt1.c                                [OK]
+Compiling: lib/chibios/os/rt/src/chsys.c                                                            [OK]
+Compiling: lib/chibios/os/rt/src/chrfcu.c                                                           [OK]
+Compiling: lib/chibios/os/rt/src/chdebug.c                                                          [OK]
+Compiling: lib/chibios/os/rt/src/chtrace.c                                                          [OK]
+Compiling: lib/chibios/os/rt/src/chvt.c                                                             [OK]
+Compiling: lib/chibios/os/rt/src/chschd.c                                                           [OK]
+Compiling: lib/chibios/os/rt/src/chinstances.c                                                      [OK]
+Compiling: lib/chibios/os/rt/src/chthreads.c                                                        [OK]
+Compiling: lib/chibios/os/rt/src/chtm.c                                                             [OK]
+Compiling: lib/chibios/os/rt/src/chstats.c                                                          [OK]
+Compiling: lib/chibios/os/rt/src/chregistry.c                                                       [OK]
+Compiling: lib/chibios/os/rt/src/chsem.c                                                            [OK]
+Compiling: lib/chibios/os/rt/src/chmtx.c                                                            [OK]
+Compiling: lib/chibios/os/rt/src/chcond.c                                                           [OK]
+Compiling: lib/chibios/os/rt/src/chevents.c                                                         [OK]
+Compiling: lib/chibios/os/rt/src/chmsg.c                                                            [OK]
+Compiling: lib/chibios/os/rt/src/chdynamic.c                                                        [OK]
+Compiling: lib/chibios/os/common/ports/ARMv7-M/chcore.c                                             [OK]
+Compiling: lib/chibios/os/hal/osal/rt-nil/osal.c                                                    [OK]
+Compiling: lib/chibios/os/oslib/src/chmboxes.c                                                      [OK]
+Compiling: lib/chibios/os/oslib/src/chmemcore.c                                                     [OK]
+Compiling: lib/chibios/os/oslib/src/chmemheaps.c                                                    [OK]
+Compiling: lib/chibios/os/oslib/src/chmempools.c                                                    [OK]
+Compiling: lib/chibios/os/oslib/src/chpipes.c                                                       [OK]
+Compiling: lib/chibios/os/oslib/src/chobjcaches.c                                                   [OK]
+Compiling: lib/chibios/os/oslib/src/chdelegates.c                                                   [OK]
+Compiling: lib/chibios/os/oslib/src/chfactory.c                                                     [OK]
+Compiling: lib/chibios/os/hal/src/hal.c                                                             [OK]
+Compiling: lib/chibios/os/hal/src/hal_st.c                                                          [OK]
+Compiling: lib/chibios/os/hal/src/hal_buffers.c                                                     [OK]
+Compiling: lib/chibios/os/hal/src/hal_queues.c                                                      [OK]
+Compiling: lib/chibios/os/hal/src/hal_flash.c                                                       [OK]
+Compiling: lib/chibios/os/hal/src/hal_mmcsd.c                                                       [OK]
+Compiling: lib/chibios/os/hal/src/hal_adc.c                                                         [OK]
+Compiling: lib/chibios/os/hal/src/hal_can.c                                                         [OK]
+Compiling: lib/chibios/os/hal/src/hal_crypto.c                                                      [OK]
+Compiling: lib/chibios/os/hal/src/hal_dac.c                                                         [OK]
+Compiling: lib/chibios/os/hal/src/hal_efl.c                                                         [OK]
+Compiling: lib/chibios/os/hal/src/hal_gpt.c                                                         [OK]
+Compiling: lib/chibios/os/hal/src/hal_i2c.c                                                         [OK]
+Compiling: lib/chibios/os/hal/src/hal_i2s.c                                                         [OK]
+Compiling: lib/chibios/os/hal/src/hal_icu.c                                                         [OK]
+Compiling: lib/chibios/os/hal/src/hal_mac.c                                                         [OK]
+Compiling: lib/chibios/os/hal/src/hal_mmc_spi.c                                                     [OK]
+Compiling: lib/chibios/os/hal/src/hal_pal.c                                                         [OK]
+Compiling: lib/chibios/os/hal/src/hal_pwm.c                                                         [OK]
+Compiling: lib/chibios/os/hal/src/hal_rtc.c                                                         [OK]
+Compiling: lib/chibios/os/hal/src/hal_sdc.c                                                         [OK]
+Compiling: lib/chibios/os/hal/src/hal_serial.c                                                      [OK]
+Compiling: lib/chibios/os/hal/src/hal_serial_usb.c                                                  [OK]
+Compiling: lib/chibios/os/hal/src/hal_sio.c                                                         [OK]
+Compiling: lib/chibios/os/hal/src/hal_spi.c                                                         [OK]
+Compiling: lib/chibios/os/hal/src/hal_trng.c                                                        [OK]
+Compiling: lib/chibios/os/hal/src/hal_uart.c                                                        [OK]
+Compiling: lib/chibios/os/hal/src/hal_usb.c                                                         [OK]
+Compiling: lib/chibios/os/hal/src/hal_wdg.c                                                         [OK]
+Compiling: lib/chibios/os/hal/src/hal_wspi.c                                                        [OK]
+Compiling: lib/chibios/os/hal/ports/common/ARMCMx/nvic.c                                            [OK]
+Compiling: lib/chibios/os/hal/ports/STM32/STM32F3xx/stm32_isr.c                                     [OK]
+Compiling: lib/chibios/os/hal/ports/STM32/STM32F3xx/hal_lld.c                                       [OK]
+Compiling: lib/chibios/os/hal/ports/STM32/STM32F3xx/hal_efl_lld.c                                   [OK]
+Compiling: lib/chibios/os/hal/ports/STM32/LLD/ADCv3/hal_adc_lld.c                                   [OK]
+Compiling: lib/chibios/os/hal/ports/STM32/LLD/CANv1/hal_can_lld.c                                   [OK]
+Compiling: lib/chibios/os/hal/ports/STM32/LLD/DACv1/hal_dac_lld.c                                   [OK]
+Compiling: lib/chibios/os/hal/ports/STM32/LLD/DMAv1/stm32_dma.c                                     [OK]
+Compiling: lib/chibios/os/hal/ports/STM32/LLD/EXTIv1/stm32_exti.c                                   [OK]
+Compiling: lib/chibios/os/hal/ports/STM32/LLD/GPIOv2/hal_pal_lld.c                                  [OK]
+Compiling: lib/chibios/os/hal/ports/STM32/LLD/I2Cv2/hal_i2c_lld.c                                   [OK]
+Compiling: lib/chibios/os/hal/ports/STM32/LLD/RTCv2/hal_rtc_lld.c                                   [OK]
+Compiling: lib/chibios/os/hal/ports/STM32/LLD/SPIv2/hal_i2s_lld.c                                   [OK]
+Compiling: lib/chibios/os/hal/ports/STM32/LLD/SPIv2/hal_spi_v2_lld.c                                [OK]
+Compiling: lib/chibios/os/hal/ports/STM32/LLD/SYSTICKv1/hal_st_lld.c                                [OK]
+Compiling: lib/chibios/os/hal/ports/STM32/LLD/TIMv1/hal_gpt_lld.c                                   [OK]
+Compiling: lib/chibios/os/hal/ports/STM32/LLD/TIMv1/hal_icu_lld.c                                   [OK]
+Compiling: lib/chibios/os/hal/ports/STM32/LLD/TIMv1/hal_pwm_lld.c                                   [OK]
+Compiling: lib/chibios/os/hal/ports/STM32/LLD/USARTv2/hal_serial_lld.c                              [OK]
+Compiling: lib/chibios/os/hal/ports/STM32/LLD/USARTv2/hal_sio_lld.c                                 [OK]
+Compiling: lib/chibios/os/hal/ports/STM32/LLD/USARTv2/hal_uart_lld.c                                [OK]
+Compiling: lib/chibios/os/hal/ports/STM32/LLD/USBv1/hal_usb_lld.c                                   [OK]
+Compiling: lib/chibios/os/hal/ports/STM32/LLD/xWDGv1/hal_wdg_lld.c                                  [OK]
+Compiling: lib/chibios/os/hal/boards/ST_STM32F3_DISCOVERY/board.c                                   [OK]
+Compiling: lib/chibios/os/hal/lib/streams/chprintf.c                                                [OK]
+Compiling: lib/chibios/os/hal/lib/streams/chscanf.c                                                 [OK]
+Compiling: lib/chibios/os/hal/lib/streams/memstreams.c                                              [OK]
+Compiling: lib/chibios/os/hal/lib/streams/nullstreams.c                                             [OK]
+Compiling: lib/chibios/os/hal/lib/streams/bufstreams.c                                              [OK]
+Compiling: lib/chibios/os/various/syscalls.c                                                        [OK]
+Compiling: platforms/chibios/syscall-fallbacks.c                                                    [OK]
+Compiling: platforms/chibios/wait.c                                                                 [OK]
+Compiling: platforms/chibios/synchronization_util.c                                                 [OK]
+Compiling: platforms/chibios/interrupt_handlers.c                                                   [OK]
+Compiling: quantum/audio/muse.c                                                                     [OK]
+Compiling: .build/obj_planck_rev6_ardakilic_grid/src/community_modules.c                            [OK]
+Compiling: keyboards/planck/planck.c                                                                [OK]
+Compiling: keyboards/planck/rev6/rev6.c                                                             [OK]
+Compiling: .build/obj_planck_rev6_ardakilic_grid/src/default_keyboard.c                             [OK]
+Compiling: quantum/keymap_introspection.c                                                          In file included from /__w/qmk_userspace/qmk_userspace/keyboards/planck/keymaps/ardakilic_grid/keymap.c:17,
+                 from quantum/keymap_introspection.c:9:
+/__w/qmk_userspace/qmk_userspace/keyboards/planck/keymaps/ardakilic_grid/keymap.c:213:31: error: 'RGB_TOG' undeclared here (not in a function); did you mean 'RGB_M_G'?
+     EE_CLR, QK_BOOT, DB_TOGG, RGB_TOG, RGB_MOD, RGB_HUI, RGB_HUD, RGB_SAI, RGB_SAD,  RGB_VAI, RGB_VAD, KC_DEL ,
+                               ^~~~~~~
+./.build/obj_planck_rev6_ardakilic_grid/src/default_keyboard.h:35:22: note: in definition of macro 'LAYOUT_ortho_4x12'
+     { k0A, k0B, k0C, k0D, k0E, k0F }, \
+                      ^~~
+/__w/qmk_userspace/qmk_userspace/keyboards/planck/keymaps/ardakilic_grid/keymap.c:212:13: note: in expansion of macro 'LAYOUT_planck_grid'
+ [_ADJUST] = LAYOUT_planck_grid(
+             ^~~~~~~~~~~~~~~~~~
+/__w/qmk_userspace/qmk_userspace/keyboards/planck/keymaps/ardakilic_grid/keymap.c:213:40: error: 'RGB_MOD' undeclared here (not in a function); did you mean 'RGB_M_T'?
+     EE_CLR, QK_BOOT, DB_TOGG, RGB_TOG, RGB_MOD, RGB_HUI, RGB_HUD, RGB_SAI, RGB_SAD,  RGB_VAI, RGB_VAD, KC_DEL ,
+                                        ^~~~~~~
+./.build/obj_planck_rev6_ardakilic_grid/src/default_keyboard.h:35:27: note: in definition of macro 'LAYOUT_ortho_4x12'
+     { k0A, k0B, k0C, k0D, k0E, k0F }, \
+                           ^~~
+/__w/qmk_userspace/qmk_userspace/keyboards/planck/keymaps/ardakilic_grid/keymap.c:212:13: note: in expansion of macro 'LAYOUT_planck_grid'
+ [_ADJUST] = LAYOUT_planck_grid(
+             ^~~~~~~~~~~~~~~~~~
+/__w/qmk_userspace/qmk_userspace/keyboards/planck/keymaps/ardakilic_grid/keymap.c:213:49: error: 'RGB_HUI' undeclared here (not in a function); did you mean 'RGB_M_T'?
+     EE_CLR, QK_BOOT, DB_TOGG, RGB_TOG, RGB_MOD, RGB_HUI, RGB_HUD, RGB_SAI, RGB_SAD,  RGB_VAI, RGB_VAD, KC_DEL ,
+                                                 ^~~~~~~
+./.build/obj_planck_rev6_ardakilic_grid/src/default_keyboard.h:35:32: note: in definition of macro 'LAYOUT_ortho_4x12'
+     { k0A, k0B, k0C, k0D, k0E, k0F }, \
+                                ^~~
+/__w/qmk_userspace/qmk_userspace/keyboards/planck/keymaps/ardakilic_grid/keymap.c:212:13: note: in expansion of macro 'LAYOUT_planck_grid'
+ [_ADJUST] = LAYOUT_planck_grid(
+             ^~~~~~~~~~~~~~~~~~
+/__w/qmk_userspace/qmk_userspace/keyboards/planck/keymaps/ardakilic_grid/keymap.c:213:58: error: 'RGB_HUD' undeclared here (not in a function); did you mean 'RGB_RED'?
+     EE_CLR, QK_BOOT, DB_TOGG, RGB_TOG, RGB_MOD, RGB_HUI, RGB_HUD, RGB_SAI, RGB_SAD,  RGB_VAI, RGB_VAD, KC_DEL ,
+                                                          ^~~~~~~
+./.build/obj_planck_rev6_ardakilic_grid/src/default_keyboard.h:39:7: note: in definition of macro 'LAYOUT_ortho_4x12'
+     { k4A, k4B, k4C, k4D, k4E, k4F }, \
+       ^~~
+/__w/qmk_userspace/qmk_userspace/keyboards/planck/keymaps/ardakilic_grid/keymap.c:212:13: note: in expansion of macro 'LAYOUT_planck_grid'
+ [_ADJUST] = LAYOUT_planck_grid(
+             ^~~~~~~~~~~~~~~~~~
+/__w/qmk_userspace/qmk_userspace/keyboards/planck/keymaps/ardakilic_grid/keymap.c:213:67: error: 'RGB_SAI' undeclared here (not in a function); did you mean 'RGB_M_T'?
+     EE_CLR, QK_BOOT, DB_TOGG, RGB_TOG, RGB_MOD, RGB_HUI, RGB_HUD, RGB_SAI, RGB_SAD,  RGB_VAI, RGB_VAD, KC_DEL ,
+                                                                   ^~~~~~~
+./.build/obj_planck_rev6_ardakilic_grid/src/default_keyboard.h:39:12: note: in definition of macro 'LAYOUT_ortho_4x12'
+     { k4A, k4B, k4C, k4D, k4E, k4F }, \
+            ^~~
+/__w/qmk_userspace/qmk_userspace/keyboards/planck/keymaps/ardakilic_grid/keymap.c:212:13: note: in expansion of macro 'LAYOUT_planck_grid'
+ [_ADJUST] = LAYOUT_planck_grid(
+             ^~~~~~~~~~~~~~~~~~
+/__w/qmk_userspace/qmk_userspace/keyboards/planck/keymaps/ardakilic_grid/keymap.c:213:76: error: 'RGB_SAD' undeclared here (not in a function); did you mean 'RGB_RED'?
+     EE_CLR, QK_BOOT, DB_TOGG, RGB_TOG, RGB_MOD, RGB_HUI, RGB_HUD, RGB_SAI, RGB_SAD,  RGB_VAI, RGB_VAD, KC_DEL ,
+                                                                            ^~~~~~~
+./.build/obj_planck_rev6_ardakilic_grid/src/default_keyboard.h:39:17: note: in definition of macro 'LAYOUT_ortho_4x12'
+     { k4A, k4B, k4C, k4D, k4E, k4F }, \
+                 ^~~
+/__w/qmk_userspace/qmk_userspace/keyboards/planck/keymaps/ardakilic_grid/keymap.c:212:13: note: in expansion of macro 'LAYOUT_planck_grid'
+ [_ADJUST] = LAYOUT_planck_grid(
+             ^~~~~~~~~~~~~~~~~~
+/__w/qmk_userspace/qmk_userspace/keyboards/planck/keymaps/ardakilic_grid/keymap.c:213:86: error: 'RGB_VAI' undeclared here (not in a function); did you mean 'RGB_M_T'?
+     EE_CLR, QK_BOOT, DB_TOGG, RGB_TOG, RGB_MOD, RGB_HUI, RGB_HUD, RGB_SAI, RGB_SAD,  RGB_VAI, RGB_VAD, KC_DEL ,
+                                                                                      ^~~~~~~
+./.build/obj_planck_rev6_ardakilic_grid/src/default_keyboard.h:39:22: note: in definition of macro 'LAYOUT_ortho_4x12'
+     { k4A, k4B, k4C, k4D, k4E, k4F }, \
+                      ^~~
+/__w/qmk_userspace/qmk_userspace/keyboards/planck/keymaps/ardakilic_grid/keymap.c:212:13: note: in expansion of macro 'LAYOUT_planck_grid'
+ [_ADJUST] = LAYOUT_planck_grid(
+             ^~~~~~~~~~~~~~~~~~
+/__w/qmk_userspace/qmk_userspace/keyboards/planck/keymaps/ardakilic_grid/keymap.c:213:95: error: 'RGB_VAD' undeclared here (not in a function); did you mean 'RGB_RED'?
+     EE_CLR, QK_BOOT, DB_TOGG, RGB_TOG, RGB_MOD, RGB_HUI, RGB_HUD, RGB_SAI, RGB_SAD,  RGB_VAI, RGB_VAD, KC_DEL ,
+                                                                                               ^~~~~~~
+./.build/obj_planck_rev6_ardakilic_grid/src/default_keyboard.h:39:27: note: in definition of macro 'LAYOUT_ortho_4x12'
+     { k4A, k4B, k4C, k4D, k4E, k4F }, \
+                           ^~~
+/__w/qmk_userspace/qmk_userspace/keyboards/planck/keymaps/ardakilic_grid/keymap.c:212:13: note: in expansion of macro 'LAYOUT_planck_grid'
+ [_ADJUST] = LAYOUT_planck_grid(
+             ^~~~~~~~~~~~~~~~~~
+In file included from quantum/keymap_introspection.c:9:
+/__w/qmk_userspace/qmk_userspace/keyboards/planck/keymaps/ardakilic_grid/keymap.c: In function 'encoder_update_user':
+/__w/qmk_userspace/qmk_userspace/keyboards/planck/keymaps/ardakilic_grid/keymap.c:254:18: error: 'KC_MS_WH_DOWN' undeclared (first use in this function); did you mean 'X_MS_WH_DOWN'?
+         tap_code(KC_MS_WH_DOWN);
+                  ^~~~~~~~~~~~~
+                  X_MS_WH_DOWN
+/__w/qmk_userspace/qmk_userspace/keyboards/planck/keymaps/ardakilic_grid/keymap.c:254:18: note: each undeclared identifier is reported only once for each function it appears in
+/__w/qmk_userspace/qmk_userspace/keyboards/planck/keymaps/ardakilic_grid/keymap.c:254:18: error: passing argument 1 of 'tap_code' makes integer from pointer without a cast [-Werror=int-conversion]
+In file included from quantum/action_layer.h:22,
+                 from quantum/eeconfig.h:23,
+                 from quantum/keycode_config.h:21,
+                 from quantum/quantum.h:41,
+                 from ./.build/obj_planck_rev6_ardakilic_grid/src/default_keyboard.h:28,
+                 from /__w/qmk_userspace/qmk_userspace/keyboards/planck/keymaps/ardakilic_grid/keymap.c:17,
+                 from quantum/keymap_introspection.c:9:
+quantum/action.h:117:23: note: expected 'uint8_t' {aka 'unsigned char'} but argument is of type 'const uint16_t (*)[8][6]' {aka 'const short unsigned int (*)[8][6]'}
+ void tap_code(uint8_t code);
+               ~~~~~~~~^~~~
+In file included from quantum/keymap_introspection.c:9:
+/__w/qmk_userspace/qmk_userspace/keyboards/planck/keymaps/ardakilic_grid/keymap.c:260:18: error: 'KC_MS_WH_UP' undeclared (first use in this function); did you mean 'X_MS_WH_UP'?
+         tap_code(KC_MS_WH_UP);
+                  ^~~~~~~~~~~
+                  X_MS_WH_UP
+/__w/qmk_userspace/qmk_userspace/keyboards/planck/keymaps/ardakilic_grid/keymap.c:260:18: error: passing argument 1 of 'tap_code' makes integer from pointer without a cast [-Werror=int-conversion]
+In file included from quantum/action_layer.h:22,
+                 from quantum/eeconfig.h:23,
+                 from quantum/keycode_config.h:21,
+                 from quantum/quantum.h:41,
+                 from ./.build/obj_planck_rev6_ardakilic_grid/src/default_keyboard.h:28,
+                 from /__w/qmk_userspace/qmk_userspace/keyboards/planck/keymaps/ardakilic_grid/keymap.c:17,
+                 from quantum/keymap_introspection.c:9:
+quantum/action.h:117:23: note: expected 'uint8_t' {aka 'unsigned char'} but argument is of type 'const uint16_t (*)[8][6]' {aka 'const short unsigned int (*)[8][6]'}
+ void tap_code(uint8_t code);
+               ~~~~~~~~^~~~
+cc1: all warnings being treated as errors
+ [ERRORS]
+ |
+ |
+ |
+gmake[1]: *** [builddefs/common_rules.mk:362: .build/obj_planck_rev6_ardakilic_grid/quantum/keymap_introspection.o] Error 1
+```
+## skywatch
+skywatch:arda
+arda
+```
+Compiling QMK Firmware for target: 'skywatch:arda'...
+Generating: .build/obj_skywatch_arda/src/info_deps.d                                                [OK]
+Generating: .build/obj_skywatch_arda/src/community_modules.c                                        [OK]
+arm-none-eabi-gcc (15:8-2019-q3-1+b1) 8.3.1 20190703 (release) [gcc-8-branch revision 273027]
+Copyright (C) 2018 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Generating: .build/obj_skywatch_arda/src/community_modules.h                                        [OK]
+Generating: .build/obj_skywatch_arda/src/community_modules_introspection.c                          [OK]
+Generating: .build/obj_skywatch_arda/src/community_modules_introspection.h                          [OK]
+Generating: .build/obj_skywatch_arda/src/led_matrix_community_modules.inc                           [OK]
+Generating: .build/obj_skywatch_arda/src/rgb_matrix_community_modules.inc                           [OK]
+Generating: .build/obj_skywatch_arda/src/info_config.h                                              [OK]
+Generating: .build/obj_skywatch_arda/src/default_keyboard.c                                         [OK]
+Generating: .build/obj_skywatch_arda/src/default_keyboard.h                                         [OK]
+Compiling: tmk_core/protocol/chibios/usb_main.c                                                     [OK]
+Compiling: tmk_core/protocol/chibios/chibios.c                                                      [OK]
+Compiling: tmk_core/protocol/usb_descriptor.c                                                       [OK]
+Compiling: tmk_core/protocol/chibios/usb_driver.c                                                   [OK]
+Compiling: tmk_core/protocol/chibios/usb_endpoints.c                                                [OK]
+Compiling: tmk_core/protocol/chibios/usb_report_handling.c                                          [OK]
+Compiling: tmk_core/protocol/chibios/usb_util.c                                                     [OK]
+Compiling: lib/chibios/os/common/startup/ARMCMx/compilers/GCC/crt1.c                                [OK]
+Compiling: lib/chibios/os/rt/src/chsys.c                                                            [OK]
+Compiling: lib/chibios/os/rt/src/chrfcu.c                                                           [OK]
+Compiling: lib/chibios/os/rt/src/chdebug.c                                                          [OK]
+Compiling: lib/chibios/os/rt/src/chtrace.c                                                          [OK]
+Compiling: lib/chibios/os/rt/src/chvt.c                                                             [OK]
+Compiling: lib/chibios/os/rt/src/chschd.c                                                           [OK]
+Compiling: lib/chibios/os/rt/src/chinstances.c                                                      [OK]
+Compiling: lib/chibios/os/rt/src/chthreads.c                                                        [OK]
+Compiling: lib/chibios/os/rt/src/chtm.c                                                             [OK]
+Compiling: lib/chibios/os/rt/src/chstats.c                                                          [OK]
+Compiling: lib/chibios/os/rt/src/chregistry.c                                                       [OK]
+Compiling: lib/chibios/os/rt/src/chsem.c                                                            [OK]
+Compiling: lib/chibios/os/rt/src/chmtx.c                                                            [OK]
+Compiling: lib/chibios/os/rt/src/chcond.c                                                           [OK]
+Compiling: lib/chibios/os/rt/src/chevents.c                                                         [OK]
+Compiling: lib/chibios/os/rt/src/chmsg.c                                                            [OK]
+Compiling: lib/chibios/os/rt/src/chdynamic.c                                                        [OK]
+Compiling: lib/chibios/os/common/ports/ARMv6-M-RP2/chcore.c                                         [OK]
+Compiling: lib/chibios/os/hal/osal/rt-nil/osal.c                                                    [OK]
+Compiling: lib/chibios/os/oslib/src/chmboxes.c                                                      [OK]
+Compiling: lib/chibios/os/oslib/src/chmemcore.c                                                     [OK]
+Compiling: lib/chibios/os/oslib/src/chmemheaps.c                                                    [OK]
+Compiling: lib/chibios/os/oslib/src/chmempools.c                                                    [OK]
+Compiling: lib/chibios/os/oslib/src/chpipes.c                                                       [OK]
+Compiling: lib/chibios/os/oslib/src/chobjcaches.c                                                   [OK]
+Compiling: lib/chibios/os/oslib/src/chdelegates.c                                                   [OK]
+Compiling: lib/chibios/os/oslib/src/chfactory.c                                                     [OK]
+Compiling: lib/chibios/os/hal/src/hal.c                                                             [OK]
+Compiling: lib/chibios/os/hal/src/hal_st.c                                                          [OK]
+Compiling: lib/chibios/os/hal/src/hal_buffers.c                                                     [OK]
+Compiling: lib/chibios/os/hal/src/hal_queues.c                                                      [OK]
+Compiling: lib/chibios/os/hal/src/hal_flash.c                                                       [OK]
+Compiling: lib/chibios/os/hal/src/hal_mmcsd.c                                                       [OK]
+Compiling: lib/chibios/os/hal/src/hal_adc.c                                                         [OK]
+Compiling: lib/chibios/os/hal/src/hal_can.c                                                         [OK]
+Compiling: lib/chibios/os/hal/src/hal_crypto.c                                                      [OK]
+Compiling: lib/chibios/os/hal/src/hal_dac.c                                                         [OK]
+Compiling: lib/chibios/os/hal/src/hal_efl.c                                                         [OK]
+Compiling: lib/chibios/os/hal/src/hal_gpt.c                                                         [OK]
+Compiling: lib/chibios/os/hal/src/hal_i2c.c                                                         [OK]
+Compiling: lib/chibios/os/hal/src/hal_i2s.c                                                         [OK]
+Compiling: lib/chibios/os/hal/src/hal_icu.c                                                         [OK]
+Compiling: lib/chibios/os/hal/src/hal_mac.c                                                         [OK]
+Compiling: lib/chibios/os/hal/src/hal_mmc_spi.c                                                     [OK]
+Compiling: lib/chibios/os/hal/src/hal_pal.c                                                         [OK]
+Compiling: lib/chibios/os/hal/src/hal_pwm.c                                                         [OK]
+Compiling: lib/chibios/os/hal/src/hal_rtc.c                                                         [OK]
+Compiling: lib/chibios/os/hal/src/hal_sdc.c                                                         [OK]
+Compiling: lib/chibios/os/hal/src/hal_serial.c                                                      [OK]
+Compiling: lib/chibios/os/hal/src/hal_serial_usb.c                                                  [OK]
+Compiling: lib/chibios/os/hal/src/hal_sio.c                                                         [OK]
+Compiling: lib/chibios/os/hal/src/hal_spi.c                                                         [OK]
+Compiling: lib/chibios/os/hal/src/hal_trng.c                                                        [OK]
+Compiling: lib/chibios/os/hal/src/hal_uart.c                                                        [OK]
+Compiling: lib/chibios/os/hal/src/hal_usb.c                                                         [OK]
+Compiling: lib/chibios/os/hal/src/hal_wdg.c                                                         [OK]
+Compiling: lib/chibios/os/hal/src/hal_wspi.c                                                        [OK]
+Compiling: lib/chibios/os/hal/ports/common/ARMCMx/nvic.c                                            [OK]
+Compiling: lib/chibios/os/hal/ports/RP/RP2040/rp_isr.c                                              [OK]
+Compiling: lib/chibios/os/hal/ports/RP/RP2040/hal_lld.c                                             [OK]
+Compiling: lib/chibios/os/hal/ports/RP/LLD/DMAv1/rp_dma.c                                           [OK]
+Compiling: lib/chibios/os/hal/ports/RP/LLD/GPIOv1/hal_pal_lld.c                                     [OK]
+Compiling: lib/chibios/os/hal/ports/RP/LLD/SPIv1/hal_spi_lld.c                                      [OK]
+Compiling: lib/chibios/os/hal/ports/RP/LLD/TIMERv1/hal_st_lld.c                                     [OK]
+Compiling: lib/chibios/os/hal/ports/RP/LLD/UARTv1/hal_sio_lld.c                                     [OK]
+Compiling: lib/chibios/os/hal/ports/RP/LLD/RTCv1/hal_rtc_lld.c                                      [OK]
+Compiling: lib/chibios/os/hal/ports/RP/LLD/WDGv1/hal_wdg_lld.c                                      [OK]
+Compiling: lib/chibios-contrib/os/hal/ports/RP/LLD/I2Cv1/hal_i2c_lld.c                              [OK]
+Compiling: lib/chibios-contrib/os/hal/ports/RP/LLD/PWMv1/hal_pwm_lld.c                              [OK]
+Compiling: lib/chibios-contrib/os/hal/ports/RP/LLD/ADCv1/hal_adc_lld.c                              [OK]
+Compiling: lib/chibios-contrib/os/hal/ports/RP/LLD/USBDv1/hal_usb_lld.c                             [OK]
+Compiling: lib/chibios/os/hal/boards/RP_PICO_RP2040/board.c                                         [OK]
+Compiling: lib/chibios/os/hal/lib/streams/chprintf.c                                                [OK]
+Compiling: lib/chibios/os/hal/lib/streams/chscanf.c                                                 [OK]
+Compiling: lib/chibios/os/hal/lib/streams/memstreams.c                                              [OK]
+Compiling: lib/chibios/os/hal/lib/streams/nullstreams.c                                             [OK]
+Compiling: lib/chibios/os/hal/lib/streams/bufstreams.c                                              [OK]
+Compiling: lib/chibios/os/various/syscalls.c                                                        [OK]
+Compiling: platforms/chibios/syscall-fallbacks.c                                                    [OK]
+Compiling: platforms/chibios/wait.c                                                                 [OK]
+Compiling: platforms/chibios/synchronization_util.c                                                 [OK]
+Compiling: platforms/chibios/interrupt_handlers.c                                                   [OK]
+Compiling: lib/pico-sdk/src/rp2_common/hardware_clocks/clocks.c                                     [OK]
+Compiling: lib/pico-sdk/src/rp2_common/hardware_pll/pll.c                                           [OK]
+Compiling: lib/pico-sdk/src/rp2_common/hardware_pio/pio.c                                           [OK]
+Compiling: lib/pico-sdk/src/rp2_common/hardware_timer/timer.c                                       [OK]
+Compiling: lib/pico-sdk/src/rp2_common/hardware_flash/flash.c                                       [OK]
+Compiling: lib/pico-sdk/src/rp2_common/hardware_gpio/gpio.c                                         [OK]
+Compiling: lib/pico-sdk/src/rp2_common/hardware_claim/claim.c                                       [OK]
+Compiling: lib/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c                                 [OK]
+Compiling: lib/pico-sdk/src/rp2_common/hardware_xosc/xosc.c                                         [OK]
+Compiling: lib/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c                                       [OK]
+Compiling: platforms/chibios/vendors/RP/stage2_bootloaders.c                                        [OK]
+Compiling: platforms/chibios/vendors/RP/pico_sdk_shims.c                                            [OK]
+Assembling: lib/pico-sdk/src/rp2_common/pico_divider/divider.S                                      [OK]
+Assembling: lib/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S                       [OK]
+Compiling: .build/obj_skywatch_arda/src/community_modules.c                                         [OK]
+Compiling: .build/obj_skywatch_arda/src/default_keyboard.c                                          [OK]
+Compiling: quantum/keymap_introspection.c                                                          In file included from /__w/qmk_userspace/qmk_userspace/keyboards/skywatch/keymaps/arda/keymap.c:18,
+                 from quantum/keymap_introspection.c:9:
+/__w/qmk_userspace/qmk_userspace/keyboards/skywatch/keymaps/arda/keymap.c:166:5: error: 'RGB_VAI' undeclared here (not in a function); did you mean 'RGB_M_T'?
+     RGB_VAI,   RGB_SAI, RGB_HUI,  RGB_MOD,    RGB_TOG,            _______,  _______,  _______,  _______,     _______,
+     ^~~~~~~
+./.build/obj_skywatch_arda/src/default_keyboard.h:35:7: note: in definition of macro 'LAYOUT'
+     { k0A, k0B, k0C, k0D, k0E, k0F, k0G, k0H, k0I, k0J }, \
+       ^~~
+/__w/qmk_userspace/qmk_userspace/keyboards/skywatch/keymaps/arda/keymap.c:166:16: error: 'RGB_SAI' undeclared here (not in a function); did you mean 'RGB_M_T'?
+     RGB_VAI,   RGB_SAI, RGB_HUI,  RGB_MOD,    RGB_TOG,            _______,  _______,  _______,  _______,     _______,
+                ^~~~~~~
+./.build/obj_skywatch_arda/src/default_keyboard.h:35:12: note: in definition of macro 'LAYOUT'
+     { k0A, k0B, k0C, k0D, k0E, k0F, k0G, k0H, k0I, k0J }, \
+            ^~~
+/__w/qmk_userspace/qmk_userspace/keyboards/skywatch/keymaps/arda/keymap.c:166:25: error: 'RGB_HUI' undeclared here (not in a function); did you mean 'RGB_M_T'?
+     RGB_VAI,   RGB_SAI, RGB_HUI,  RGB_MOD,    RGB_TOG,            _______,  _______,  _______,  _______,     _______,
+                         ^~~~~~~
+./.build/obj_skywatch_arda/src/default_keyboard.h:35:17: note: in definition of macro 'LAYOUT'
+     { k0A, k0B, k0C, k0D, k0E, k0F, k0G, k0H, k0I, k0J }, \
+                 ^~~
+/__w/qmk_userspace/qmk_userspace/keyboards/skywatch/keymaps/arda/keymap.c:166:35: error: 'RGB_MOD' undeclared here (not in a function); did you mean 'RGB_M_T'?
+     RGB_VAI,   RGB_SAI, RGB_HUI,  RGB_MOD,    RGB_TOG,            _______,  _______,  _______,  _______,     _______,
+                                   ^~~~~~~
+./.build/obj_skywatch_arda/src/default_keyboard.h:35:22: note: in definition of macro 'LAYOUT'
+     { k0A, k0B, k0C, k0D, k0E, k0F, k0G, k0H, k0I, k0J }, \
+                      ^~~
+/__w/qmk_userspace/qmk_userspace/keyboards/skywatch/keymaps/arda/keymap.c:166:47: error: 'RGB_TOG' undeclared here (not in a function); did you mean 'RGB_M_G'?
+     RGB_VAI,   RGB_SAI, RGB_HUI,  RGB_MOD,    RGB_TOG,            _______,  _______,  _______,  _______,     _______,
+                                               ^~~~~~~
+./.build/obj_skywatch_arda/src/default_keyboard.h:35:27: note: in definition of macro 'LAYOUT'
+     { k0A, k0B, k0C, k0D, k0E, k0F, k0G, k0H, k0I, k0J }, \
+                           ^~~
+/__w/qmk_userspace/qmk_userspace/keyboards/skywatch/keymaps/arda/keymap.c:167:5: error: 'RGB_VAD' undeclared here (not in a function); did you mean 'RGB_RED'?
+     RGB_VAD,   RGB_SAD, RGB_HUD,  RGB_RMOD,   _______,            BALL_HUI, BALL_WHT, BALL_DEC, _______,     _______,
+     ^~~~~~~
+./.build/obj_skywatch_arda/src/default_keyboard.h:36:7: note: in definition of macro 'LAYOUT'
+     { k1A, k1B, k1C, k1D, k1E, k1F, k1G, k1H, k1I, k1J }, \
+       ^~~
+/__w/qmk_userspace/qmk_userspace/keyboards/skywatch/keymaps/arda/keymap.c:167:16: error: 'RGB_SAD' undeclared here (not in a function); did you mean 'RGB_RED'?
+     RGB_VAD,   RGB_SAD, RGB_HUD,  RGB_RMOD,   _______,            BALL_HUI, BALL_WHT, BALL_DEC, _______,     _______,
+                ^~~~~~~
+./.build/obj_skywatch_arda/src/default_keyboard.h:36:12: note: in definition of macro 'LAYOUT'
+     { k1A, k1B, k1C, k1D, k1E, k1F, k1G, k1H, k1I, k1J }, \
+            ^~~
+/__w/qmk_userspace/qmk_userspace/keyboards/skywatch/keymaps/arda/keymap.c:167:25: error: 'RGB_HUD' undeclared here (not in a function); did you mean 'RGB_RED'?
+     RGB_VAD,   RGB_SAD, RGB_HUD,  RGB_RMOD,   _______,            BALL_HUI, BALL_WHT, BALL_DEC, _______,     _______,
+                         ^~~~~~~
+./.build/obj_skywatch_arda/src/default_keyboard.h:36:17: note: in definition of macro 'LAYOUT'
+     { k1A, k1B, k1C, k1D, k1E, k1F, k1G, k1H, k1I, k1J }, \
+                 ^~~
+/__w/qmk_userspace/qmk_userspace/keyboards/skywatch/keymaps/arda/keymap.c:167:35: error: 'RGB_RMOD' undeclared here (not in a function); did you mean 'RGB_RED'?
+     RGB_VAD,   RGB_SAD, RGB_HUD,  RGB_RMOD,   _______,            BALL_HUI, BALL_WHT, BALL_DEC, _______,     _______,
+                                   ^~~~~~~~
+./.build/obj_skywatch_arda/src/default_keyboard.h:36:22: note: in definition of macro 'LAYOUT'
+     { k1A, k1B, k1C, k1D, k1E, k1F, k1G, k1H, k1I, k1J }, \
+                      ^~~
+/__w/qmk_userspace/qmk_userspace/keyboards/skywatch/keymaps/arda/keymap.c:168:16: error: 'KC_BTN3' undeclared here (not in a function); did you mean 'MS_BTN3'?
+     _______,   KC_BTN3, KC_BTN2,  KC_BTN1,    BALL_SCR,           QK_RBT,   QK_BOOT,   QK_CLEAR_EEPROM,  DB_TOGG,     _______,
+                ^~~~~~~
+./.build/obj_skywatch_arda/src/default_keyboard.h:37:12: note: in definition of macro 'LAYOUT'
+     { k2A, k2B, k2C, k2D, k2E, k2F, k2G, k2H, k2I, k2J }, \
+            ^~~
+/__w/qmk_userspace/qmk_userspace/keyboards/skywatch/keymaps/arda/keymap.c:168:25: error: 'KC_BTN2' undeclared here (not in a function); did you mean 'MS_BTN2'?
+     _______,   KC_BTN3, KC_BTN2,  KC_BTN1,    BALL_SCR,           QK_RBT,   QK_BOOT,   QK_CLEAR_EEPROM,  DB_TOGG,     _______,
+                         ^~~~~~~
+./.build/obj_skywatch_arda/src/default_keyboard.h:37:17: note: in definition of macro 'LAYOUT'
+     { k2A, k2B, k2C, k2D, k2E, k2F, k2G, k2H, k2I, k2J }, \
+                 ^~~
+/__w/qmk_userspace/qmk_userspace/keyboards/skywatch/keymaps/arda/keymap.c:168:35: error: 'KC_BTN1' undeclared here (not in a function); did you mean 'MS_BTN1'?
+     _______,   KC_BTN3, KC_BTN2,  KC_BTN1,    BALL_SCR,           QK_RBT,   QK_BOOT,   QK_CLEAR_EEPROM,  DB_TOGG,     _______,
+                                   ^~~~~~~
+./.build/obj_skywatch_arda/src/default_keyboard.h:37:22: note: in definition of macro 'LAYOUT'
+     { k2A, k2B, k2C, k2D, k2E, k2F, k2G, k2H, k2I, k2J }, \
+                      ^~~
+/__w/qmk_userspace/qmk_userspace/keyboards/skywatch/keymaps/arda/keymap.c:207:66: error: 'KC_MS_BTN1' undeclared here (not in a function); did you mean 'X_MS_BTN1'?
+     KC_LSFT, _______, _______, _______, _______,                 KC_MS_BTN1, KC_MS_BTN2, BALL_SCR, BALL_MCL, _______,
+                                                                  ^~~~~~~~~~
+./.build/obj_skywatch_arda/src/default_keyboard.h:37:32: note: in definition of macro 'LAYOUT'
+     { k2A, k2B, k2C, k2D, k2E, k2F, k2G, k2H, k2I, k2J }, \
+                                ^~~
+/__w/qmk_userspace/qmk_userspace/keyboards/skywatch/keymaps/arda/keymap.c:207:78: error: 'KC_MS_BTN2' undeclared here (not in a function); did you mean 'X_MS_BTN2'?
+     KC_LSFT, _______, _______, _______, _______,                 KC_MS_BTN1, KC_MS_BTN2, BALL_SCR, BALL_MCL, _______,
+                                                                              ^~~~~~~~~~
+./.build/obj_skywatch_arda/src/default_keyboard.h:37:37: note: in definition of macro 'LAYOUT'
+     { k2A, k2B, k2C, k2D, k2E, k2F, k2G, k2H, k2I, k2J }, \
+                                     ^~~
+In file included from quantum/keymap_introspection.c:9:
+/__w/qmk_userspace/qmk_userspace/keyboards/skywatch/keymaps/arda/keymap.c: In function 'process_record_user':
+/__w/qmk_userspace/qmk_userspace/keyboards/skywatch/keymaps/arda/keymap.c:443:43: error: passing argument 1 of 'register_code' makes integer from pointer without a cast [-Werror=int-conversion]
+       record->event.pressed?register_code(KC_BTN1):unregister_code(KC_BTN1);
+                                           ^~~~~~~
+In file included from quantum/action_layer.h:22,
+                 from quantum/eeconfig.h:23,
+                 from quantum/keycode_config.h:21,
+                 from quantum/quantum.h:41,
+                 from ./.build/obj_skywatch_arda/src/default_keyboard.h:28,
+                 from /__w/qmk_userspace/qmk_userspace/keyboards/skywatch/keymaps/arda/keymap.c:18,
+                 from quantum/keymap_introspection.c:9:
+quantum/action.h:115:28: note: expected 'uint8_t' {aka 'unsigned char'} but argument is of type 'const uint16_t (*)[4][10]' {aka 'const short unsigned int (*)[4][10]'}
+ void register_code(uint8_t code);
+                    ~~~~~~~~^~~~
+In file included from quantum/keymap_introspection.c:9:
+/__w/qmk_userspace/qmk_userspace/keyboards/skywatch/keymaps/arda/keymap.c:443:68: error: passing argument 1 of 'unregister_code' makes integer from pointer without a cast [-Werror=int-conversion]
+       record->event.pressed?register_code(KC_BTN1):unregister_code(KC_BTN1);
+                                                                    ^~~~~~~
+In file included from quantum/action_layer.h:22,
+                 from quantum/eeconfig.h:23,
+                 from quantum/keycode_config.h:21,
+                 from quantum/quantum.h:41,
+                 from ./.build/obj_skywatch_arda/src/default_keyboard.h:28,
+                 from /__w/qmk_userspace/qmk_userspace/keyboards/skywatch/keymaps/arda/keymap.c:18,
+                 from quantum/keymap_introspection.c:9:
+quantum/action.h:116:30: note: expected 'uint8_t' {aka 'unsigned char'} but argument is of type 'const uint16_t (*)[4][10]' {aka 'const short unsigned int (*)[4][10]'}
+ void unregister_code(uint8_t code);
+                      ~~~~~~~~^~~~
+In file included from quantum/keymap_introspection.c:9:
+/__w/qmk_userspace/qmk_userspace/keyboards/skywatch/keymaps/arda/keymap.c:446:45: error: passing argument 1 of 'register_code' makes integer from pointer without a cast [-Werror=int-conversion]
+         record->event.pressed?register_code(KC_BTN2):unregister_code(KC_BTN2);
+                                             ^~~~~~~
+In file included from quantum/action_layer.h:22,
+                 from quantum/eeconfig.h:23,
+                 from quantum/keycode_config.h:21,
+                 from quantum/quantum.h:41,
+                 from ./.build/obj_skywatch_arda/src/default_keyboard.h:28,
+                 from /__w/qmk_userspace/qmk_userspace/keyboards/skywatch/keymaps/arda/keymap.c:18,
+                 from quantum/keymap_introspection.c:9:
+quantum/action.h:115:28: note: expected 'uint8_t' {aka 'unsigned char'} but argument is of type 'const uint16_t (*)[4][10]' {aka 'const short unsigned int (*)[4][10]'}
+ void register_code(uint8_t code);
+                    ~~~~~~~~^~~~
+In file included from quantum/keymap_introspection.c:9:
+/__w/qmk_userspace/qmk_userspace/keyboards/skywatch/keymaps/arda/keymap.c:446:70: error: passing argument 1 of 'unregister_code' makes integer from pointer without a cast [-Werror=int-conversion]
+         record->event.pressed?register_code(KC_BTN2):unregister_code(KC_BTN2);
+                                                                      ^~~~~~~
+In file included from quantum/action_layer.h:22,
+                 from quantum/eeconfig.h:23,
+                 from quantum/keycode_config.h:21,
+                 from quantum/quantum.h:41,
+                 from ./.build/obj_skywatch_arda/src/default_keyboard.h:28,
+                 from /__w/qmk_userspace/qmk_userspace/keyboards/skywatch/keymaps/arda/keymap.c:18,
+                 from quantum/keymap_introspection.c:9:
+quantum/action.h:116:30: note: expected 'uint8_t' {aka 'unsigned char'} but argument is of type 'const uint16_t (*)[4][10]' {aka 'const short unsigned int (*)[4][10]'}
+ void unregister_code(uint8_t code);
+                      ~~~~~~~~^~~~
+In file included from quantum/keymap_introspection.c:9:
+/__w/qmk_userspace/qmk_userspace/keyboards/skywatch/keymaps/arda/keymap.c:449:45: error: passing argument 1 of 'register_code' makes integer from pointer without a cast [-Werror=int-conversion]
+         record->event.pressed?register_code(KC_BTN3):unregister_code(KC_BTN3);
+                                             ^~~~~~~
+In file included from quantum/action_layer.h:22,
+                 from quantum/eeconfig.h:23,
+                 from quantum/keycode_config.h:21,
+                 from quantum/quantum.h:41,
+                 from ./.build/obj_skywatch_arda/src/default_keyboard.h:28,
+                 from /__w/qmk_userspace/qmk_userspace/keyboards/skywatch/keymaps/arda/keymap.c:18,
+                 from quantum/keymap_introspection.c:9:
+quantum/action.h:115:28: note: expected 'uint8_t' {aka 'unsigned char'} but argument is of type 'const uint16_t (*)[4][10]' {aka 'const short unsigned int (*)[4][10]'}
+ void register_code(uint8_t code);
+                    ~~~~~~~~^~~~
+In file included from quantum/keymap_introspection.c:9:
+/__w/qmk_userspace/qmk_userspace/keyboards/skywatch/keymaps/arda/keymap.c:449:70: error: passing argument 1 of 'unregister_code' makes integer from pointer without a cast [-Werror=int-conversion]
+         record->event.pressed?register_code(KC_BTN3):unregister_code(KC_BTN3);
+                                                                      ^~~~~~~
+In file included from quantum/action_layer.h:22,
+                 from quantum/eeconfig.h:23,
+                 from quantum/keycode_config.h:21,
+                 from quantum/quantum.h:41,
+                 from ./.build/obj_skywatch_arda/src/default_keyboard.h:28,
+                 from /__w/qmk_userspace/qmk_userspace/keyboards/skywatch/keymaps/arda/keymap.c:18,
+                 from quantum/keymap_introspection.c:9:
+quantum/action.h:116:30: note: expected 'uint8_t' {aka 'unsigned char'} but argument is of type 'const uint16_t (*)[4][10]' {aka 'const short unsigned int (*)[4][10]'}
+ void unregister_code(uint8_t code);
+                      ~~~~~~~~^~~~
+cc1: all warnings being treated as errors
+ [ERRORS]
+ |
+ |
+ |
+gmake[1]: *** [builddefs/common_rules.mk:362: .build/obj_skywatch_arda/quantum/keymap_introspection.o] Error 1
+```
+## tada68
+tada68:ardakilic
+ardakilic
+```
+Compiling QMK Firmware for target: 'tada68:ardakilic'...
+Generating: .build/obj_tada68_ardakilic/src/info_deps.d                                             [OK]
+Generating: .build/obj_tada68_ardakilic/src/community_modules.c                                     [OK]
+avr-gcc (GCC) 8.3.0
+Copyright (C) 2018 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Generating: .build/obj_tada68_ardakilic/src/community_modules.h                                     [OK]
+Generating: .build/obj_tada68_ardakilic/src/community_modules_introspection.c                       [OK]
+Generating: .build/obj_tada68_ardakilic/src/community_modules_introspection.h                       [OK]
+Generating: .build/obj_tada68_ardakilic/src/led_matrix_community_modules.inc                        [OK]
+Generating: .build/obj_tada68_ardakilic/src/rgb_matrix_community_modules.inc                        [OK]
+Generating: .build/obj_tada68_ardakilic/src/info_config.h                                           [OK]
+Generating: .build/obj_tada68_ardakilic/src/default_keyboard.c                                      [OK]
+Generating: .build/obj_tada68_ardakilic/src/default_keyboard.h                                      [OK]
+Compiling: platforms/avr/printf.c                                                                   [OK]
+Compiling: quantum/backlight/backlight.c                                                            [OK]
+Compiling: quantum/process_keycode/process_backlight.c                                              [OK]
+Compiling: quantum/backlight/backlight_driver_common.c                                              [OK]
+Compiling: platforms/avr/drivers/backlight_pwm.c                                                    [OK]
+Compiling: quantum/command.c                                                                        [OK]
+Compiling: quantum/process_keycode/process_grave_esc.c                                              [OK]
+Compiling: quantum/process_keycode/process_magic.c                                                  [OK]
+Compiling: quantum/mousekey.c                                                                       [OK]
+Compiling: quantum/send_string/send_string.c                                                        [OK]
+Compiling: quantum/process_keycode/process_space_cadet.c                                            [OK]
+Compiling: tmk_core/protocol/host.c                                                                 [OK]
+Compiling: tmk_core/protocol/report.c                                                               [OK]
+Compiling: tmk_core/protocol/usb_device_state.c                                                     [OK]
+Compiling: tmk_core/protocol/usb_util.c                                                             [OK]
+Compiling: platforms/suspend.c                                                                      [OK]
+Compiling: platforms/synchronization_util.c                                                         [OK]
+Compiling: platforms/timer.c                                                                        [OK]
+Compiling: platforms/avr/hardware_id.c                                                              [OK]
+Compiling: platforms/avr/platform.c                                                                 [OK]
+Compiling: platforms/avr/suspend.c                                                                  [OK]
+Compiling: platforms/avr/timer.c                                                                    [OK]
+Compiling: platforms/avr/bootloaders/dfu.c                                                          [OK]
+Compiling: tmk_core/protocol/lufa/lufa.c                                                            [OK]
+Compiling: tmk_core/protocol/usb_descriptor.c                                                       [OK]
+Compiling: lib/lufa/LUFA/Drivers/USB/Class/Common/HIDParser.c                                       [OK]
+Compiling: lib/lufa/LUFA/Drivers/USB/Core/AVR8/Device_AVR8.c                                        [OK]
+Compiling: lib/lufa/LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.c                                [OK]
+Compiling: lib/lufa/LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.c                                      [OK]
+Compiling: lib/lufa/LUFA/Drivers/USB/Core/AVR8/Host_AVR8.c                                          [OK]
+Compiling: lib/lufa/LUFA/Drivers/USB/Core/AVR8/PipeStream_AVR8.c                                    [OK]
+Compiling: lib/lufa/LUFA/Drivers/USB/Core/AVR8/Pipe_AVR8.c                                          [OK]
+Compiling: lib/lufa/LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.c                                 [OK]
+Compiling: lib/lufa/LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.c                                  [OK]
+Compiling: lib/lufa/LUFA/Drivers/USB/Core/ConfigDescriptors.c                                       [OK]
+Compiling: lib/lufa/LUFA/Drivers/USB/Core/DeviceStandardReq.c                                       [OK]
+Compiling: lib/lufa/LUFA/Drivers/USB/Core/Events.c                                                  [OK]
+Compiling: lib/lufa/LUFA/Drivers/USB/Core/HostStandardReq.c                                         [OK]
+Compiling: lib/lufa/LUFA/Drivers/USB/Core/USBTask.c                                                 [OK]
+Compiling: tmk_core/protocol/lufa/usb_util.c                                                        [OK]
+Compiling: .build/obj_tada68_ardakilic/src/community_modules.c                                      [OK]
+Compiling: .build/obj_tada68_ardakilic/src/default_keyboard.c                                       [OK]
+Compiling: quantum/keymap_introspection.c                                                          In file included from [K/__w/qmk_userspace/qmk_userspace/keyboards/tada68/keymaps/ardakilic/keymap.c:1[K,
+                 from [Kquantum/keymap_introspection.c:9[K:
+[K/__w/qmk_userspace/qmk_userspace/keyboards/tada68/keymaps/ardakilic/keymap.c:122:95:[K [Kerror: [K'[KKC_MS_U[K' undeclared here (not in a function); did you mean '[KKC_MSEL[K'?
+   KC_LSFT, KC_Z, KC_X, KC_C, KC_V,_______, KC_PDOT, KC_PDOT, KC_PDOT,_______,_______,_______, [KKC_MS_U[K, KC_BTN2, \
+                                                                                               [K^~~~~~~[K
+[K./.build/obj_tada68_ardakilic/src/default_keyboard.h:38:72:[K [Knote: [Kin definition of macro '[KLAYOUT_65_ansi[K'
+     { k3A, XXX, k3C, k3D, k3E, k3F, k3G, k3H, k3I, k3J, k3K, k3L, k3M, [Kk3N[K, k3O }, \
+                                                                        [K^~~[K
+[K/__w/qmk_userspace/qmk_userspace/keyboards/tada68/keymaps/ardakilic/keymap.c:118:10:[K [Knote: [Kin expansion of macro '[KLAYOUT_ansi[K'
+ [_NUM] = [KLAYOUT_ansi[K(
+          [K^~~~~~~~~~~[K
+[K/__w/qmk_userspace/qmk_userspace/keyboards/tada68/keymaps/ardakilic/keymap.c:122:104:[K [Kerror: [K'[KKC_BTN2[K' undeclared here (not in a function); did you mean '[KMS_BTN2[K'?
+   KC_LSFT, KC_Z, KC_X, KC_C, KC_V,_______, KC_PDOT, KC_PDOT, KC_PDOT,_______,_______,_______, KC_MS_U, [KKC_BTN2[K, \
+                                                                                                        [K^~~~~~~[K
+[K./.build/obj_tada68_ardakilic/src/default_keyboard.h:38:77:[K [Knote: [Kin definition of macro '[KLAYOUT_65_ansi[K'
+     { k3A, XXX, k3C, k3D, k3E, k3F, k3G, k3H, k3I, k3J, k3K, k3L, k3M, k3N, [Kk3O[K }, \
+                                                                             [K^~~[K
+[K/__w/qmk_userspace/qmk_userspace/keyboards/tada68/keymaps/ardakilic/keymap.c:118:10:[K [Knote: [Kin expansion of macro '[KLAYOUT_ansi[K'
+ [_NUM] = [KLAYOUT_ansi[K(
+          [K^~~~~~~~~~~[K
+[K/__w/qmk_userspace/qmk_userspace/keyboards/tada68/keymaps/ardakilic/keymap.c:123:51:[K [Kerror: [K'[KKC_BTN1[K' undeclared here (not in a function); did you mean '[KMS_BTN1[K'?
+   KC_LCTL, KC_LGUI, KC_LALT,KC_P0,_______,_______,[KKC_BTN1[K,KC_MS_L,KC_MS_D, KC_MS_R
+                                                   [K^~~~~~~[K
+[K./.build/obj_tada68_ardakilic/src/default_keyboard.h:39:62:[K [Knote: [Kin definition of macro '[KLAYOUT_65_ansi[K'
+     { k4A, k4B, k4C, XXX, XXX, k4F, XXX, XXX, XXX, k4J, k4K, [Kk4L[K, k4M, k4N, k4O } \
+                                                              [K^~~[K
+[K/__w/qmk_userspace/qmk_userspace/keyboards/tada68/keymaps/ardakilic/keymap.c:118:10:[K [Knote: [Kin expansion of macro '[KLAYOUT_ansi[K'
+ [_NUM] = [KLAYOUT_ansi[K(
+          [K^~~~~~~~~~~[K
+[K/__w/qmk_userspace/qmk_userspace/keyboards/tada68/keymaps/ardakilic/keymap.c:123:59:[K [Kerror: [K'[KKC_MS_L[K' undeclared here (not in a function); did you mean '[KKC_MSEL[K'?
+   KC_LCTL, KC_LGUI, KC_LALT,KC_P0,_______,_______,KC_BTN1,[KKC_MS_L[K,KC_MS_D, KC_MS_R
+                                                           [K^~~~~~~[K
+[K./.build/obj_tada68_ardakilic/src/default_keyboard.h:39:67:[K [Knote: [Kin definition of macro '[KLAYOUT_65_ansi[K'
+     { k4A, k4B, k4C, XXX, XXX, k4F, XXX, XXX, XXX, k4J, k4K, k4L, [Kk4M[K, k4N, k4O } \
+                                                                   [K^~~[K
+[K/__w/qmk_userspace/qmk_userspace/keyboards/tada68/keymaps/ardakilic/keymap.c:118:10:[K [Knote: [Kin expansion of macro '[KLAYOUT_ansi[K'
+ [_NUM] = [KLAYOUT_ansi[K(
+          [K^~~~~~~~~~~[K
+[K/__w/qmk_userspace/qmk_userspace/keyboards/tada68/keymaps/ardakilic/keymap.c:123:67:[K [Kerror: [K'[KKC_MS_D[K' undeclared here (not in a function); did you mean '[KKC_MRWD[K'?
+   KC_LCTL, KC_LGUI, KC_LALT,KC_P0,_______,_______,KC_BTN1,KC_MS_L,[KKC_MS_D[K, KC_MS_R
+                                                                   [K^~~~~~~[K
+[K./.build/obj_tada68_ardakilic/src/default_keyboard.h:39:72:[K [Knote: [Kin definition of macro '[KLAYOUT_65_ansi[K'
+     { k4A, k4B, k4C, XXX, XXX, k4F, XXX, XXX, XXX, k4J, k4K, k4L, k4M, [Kk4N[K, k4O } \
+                                                                        [K^~~[K
+[K/__w/qmk_userspace/qmk_userspace/keyboards/tada68/keymaps/ardakilic/keymap.c:118:10:[K [Knote: [Kin expansion of macro '[KLAYOUT_ansi[K'
+ [_NUM] = [KLAYOUT_ansi[K(
+          [K^~~~~~~~~~~[K
+[K/__w/qmk_userspace/qmk_userspace/keyboards/tada68/keymaps/ardakilic/keymap.c:123:76:[K [Kerror: [K'[KKC_MS_R[K' undeclared here (not in a function); did you mean '[KKC_MSEL[K'?
+   KC_LCTL, KC_LGUI, KC_LALT,KC_P0,_______,_______,KC_BTN1,KC_MS_L,KC_MS_D, [KKC_MS_R[K
+                                                                            [K^~~~~~~[K
+[K./.build/obj_tada68_ardakilic/src/default_keyboard.h:39:77:[K [Knote: [Kin definition of macro '[KLAYOUT_65_ansi[K'
+     { k4A, k4B, k4C, XXX, XXX, k4F, XXX, XXX, XXX, k4J, k4K, k4L, k4M, k4N, [Kk4O[K } \
+                                                                             [K^~~[K
+[K/__w/qmk_userspace/qmk_userspace/keyboards/tada68/keymaps/ardakilic/keymap.c:118:10:[K [Knote: [Kin expansion of macro '[KLAYOUT_ansi[K'
+ [_NUM] = [KLAYOUT_ansi[K(
+          [K^~~~~~~~~~~[K
+ [ERRORS]
+ |
+ |
+ |
+gmake[1]: *** [builddefs/common_rules.mk:362: .build/obj_tada68_ardakilic/quantum/keymap_introspection.o] Error 1
+```
+## woodpecker
+woodpecker:ardakilic
+ardakilic
+```
+Compiling QMK Firmware for target: 'woodpecker:ardakilic'...
+Generating: .build/obj_woodpecker_ardakilic/src/info_deps.d                                         [OK]
+Generating: .build/obj_woodpecker_ardakilic/src/community_modules.c                                 [OK]
+arm-none-eabi-gcc (15:8-2019-q3-1+b1) 8.3.1 20190703 (release) [gcc-8-branch revision 273027]
+Copyright (C) 2018 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Generating: .build/obj_woodpecker_ardakilic/src/community_modules.h                                 [OK]
+Generating: .build/obj_woodpecker_ardakilic/src/community_modules_introspection.c                   [OK]
+Generating: .build/obj_woodpecker_ardakilic/src/community_modules_introspection.h                   [OK]
+Generating: .build/obj_woodpecker_ardakilic/src/led_matrix_community_modules.inc                    [OK]
+Generating: .build/obj_woodpecker_ardakilic/src/rgb_matrix_community_modules.inc                    [OK]
+Generating: .build/obj_woodpecker_ardakilic/src/info_config.h                                       [OK]
+Generating: .build/obj_woodpecker_ardakilic/src/default_keyboard.c                                  [OK]
+Generating: .build/obj_woodpecker_ardakilic/src/default_keyboard.h                                  [OK]
+Compiling: .build/obj_woodpecker_ardakilic/src/community_modules.c                                  [OK]
+Compiling: .build/obj_woodpecker_ardakilic/src/default_keyboard.c                                   [OK]
+Compiling: quantum/keymap_introspection.c                                                          In file included from /__w/qmk_userspace/qmk_userspace/keyboards/woodpecker/keymaps/ardakilic/keymap.c:17,
+                 from quantum/keymap_introspection.c:9:
+/__w/qmk_userspace/qmk_userspace/keyboards/woodpecker/keymaps/ardakilic/keymap.c:150:5: error: 'KC_ACL0' undeclared here (not in a function); did you mean 'MS_ACL0'?
+     KC_ACL0,KC_ACL1,KC_ACL2,KC_BTN3,_______,_______,    /*|*/   _______,KC_NUM,KC_PSLS,KC_PAST,KC_PMNS,KC_BSPC,
+     ^~~~~~~
+./.build/obj_woodpecker_ardakilic/src/default_keyboard.h:35:7: note: in definition of macro 'LAYOUT_ortho_5x12'
+     { k0A, k0B, k0C, k0D, k0E, k0F, k0G, k0H, k0I, k0J, k0K, k0L }, \
+       ^~~
+/__w/qmk_userspace/qmk_userspace/keyboards/woodpecker/keymaps/ardakilic/keymap.c:149:13: note: in expansion of macro 'LAYOUT_woodpecker_grid'
+ [_NUMPAD] = LAYOUT_woodpecker_grid(
+             ^~~~~~~~~~~~~~~~~~~~~~
+/__w/qmk_userspace/qmk_userspace/keyboards/woodpecker/keymaps/ardakilic/keymap.c:150:13: error: 'KC_ACL1' undeclared here (not in a function); did you mean 'MS_ACL1'?
+     KC_ACL0,KC_ACL1,KC_ACL2,KC_BTN3,_______,_______,    /*|*/   _______,KC_NUM,KC_PSLS,KC_PAST,KC_PMNS,KC_BSPC,
+             ^~~~~~~
+./.build/obj_woodpecker_ardakilic/src/default_keyboard.h:35:12: note: in definition of macro 'LAYOUT_ortho_5x12'
+     { k0A, k0B, k0C, k0D, k0E, k0F, k0G, k0H, k0I, k0J, k0K, k0L }, \
+            ^~~
+/__w/qmk_userspace/qmk_userspace/keyboards/woodpecker/keymaps/ardakilic/keymap.c:149:13: note: in expansion of macro 'LAYOUT_woodpecker_grid'
+ [_NUMPAD] = LAYOUT_woodpecker_grid(
+             ^~~~~~~~~~~~~~~~~~~~~~
+/__w/qmk_userspace/qmk_userspace/keyboards/woodpecker/keymaps/ardakilic/keymap.c:150:21: error: 'KC_ACL2' undeclared here (not in a function); did you mean 'MS_ACL2'?
+     KC_ACL0,KC_ACL1,KC_ACL2,KC_BTN3,_______,_______,    /*|*/   _______,KC_NUM,KC_PSLS,KC_PAST,KC_PMNS,KC_BSPC,
+                     ^~~~~~~
+./.build/obj_woodpecker_ardakilic/src/default_keyboard.h:35:17: note: in definition of macro 'LAYOUT_ortho_5x12'
+     { k0A, k0B, k0C, k0D, k0E, k0F, k0G, k0H, k0I, k0J, k0K, k0L }, \
+                 ^~~
+/__w/qmk_userspace/qmk_userspace/keyboards/woodpecker/keymaps/ardakilic/keymap.c:149:13: note: in expansion of macro 'LAYOUT_woodpecker_grid'
+ [_NUMPAD] = LAYOUT_woodpecker_grid(
+             ^~~~~~~~~~~~~~~~~~~~~~
+/__w/qmk_userspace/qmk_userspace/keyboards/woodpecker/keymaps/ardakilic/keymap.c:150:29: error: 'KC_BTN3' undeclared here (not in a function); did you mean 'MS_BTN3'?
+     KC_ACL0,KC_ACL1,KC_ACL2,KC_BTN3,_______,_______,    /*|*/   _______,KC_NUM,KC_PSLS,KC_PAST,KC_PMNS,KC_BSPC,
+                             ^~~~~~~
+./.build/obj_woodpecker_ardakilic/src/default_keyboard.h:35:22: note: in definition of macro 'LAYOUT_ortho_5x12'
+     { k0A, k0B, k0C, k0D, k0E, k0F, k0G, k0H, k0I, k0J, k0K, k0L }, \
+                      ^~~
+/__w/qmk_userspace/qmk_userspace/keyboards/woodpecker/keymaps/ardakilic/keymap.c:149:13: note: in expansion of macro 'LAYOUT_woodpecker_grid'
+ [_NUMPAD] = LAYOUT_woodpecker_grid(
+             ^~~~~~~~~~~~~~~~~~~~~~
+/__w/qmk_userspace/qmk_userspace/keyboards/woodpecker/keymaps/ardakilic/keymap.c:151:21: error: 'KC_BTN1' undeclared here (not in a function); did you mean 'MS_BTN1'?
+     _______,_______,KC_BTN1,KC_MS_U,KC_BTN2,KC_WH_U,    /*|*/   _______,KC_P7,KC_P8,KC_P9,KC_PPLS,KC_PEQL,
+                     ^~~~~~~
+./.build/obj_woodpecker_ardakilic/src/default_keyboard.h:36:17: note: in definition of macro 'LAYOUT_ortho_5x12'
+     { k1A, k1B, k1C, k1D, k1E, k1F, k1G, k1H, k1I, k1J, k1K, k1L }, \
+                 ^~~
+/__w/qmk_userspace/qmk_userspace/keyboards/woodpecker/keymaps/ardakilic/keymap.c:149:13: note: in expansion of macro 'LAYOUT_woodpecker_grid'
+ [_NUMPAD] = LAYOUT_woodpecker_grid(
+             ^~~~~~~~~~~~~~~~~~~~~~
+/__w/qmk_userspace/qmk_userspace/keyboards/woodpecker/keymaps/ardakilic/keymap.c:151:29: error: 'KC_MS_U' undeclared here (not in a function); did you mean 'KC_MSEL'?
+     _______,_______,KC_BTN1,KC_MS_U,KC_BTN2,KC_WH_U,    /*|*/   _______,KC_P7,KC_P8,KC_P9,KC_PPLS,KC_PEQL,
+                             ^~~~~~~
+./.build/obj_woodpecker_ardakilic/src/default_keyboard.h:36:22: note: in definition of macro 'LAYOUT_ortho_5x12'
+     { k1A, k1B, k1C, k1D, k1E, k1F, k1G, k1H, k1I, k1J, k1K, k1L }, \
+                      ^~~
+/__w/qmk_userspace/qmk_userspace/keyboards/woodpecker/keymaps/ardakilic/keymap.c:149:13: note: in expansion of macro 'LAYOUT_woodpecker_grid'
+ [_NUMPAD] = LAYOUT_woodpecker_grid(
+             ^~~~~~~~~~~~~~~~~~~~~~
+/__w/qmk_userspace/qmk_userspace/keyboards/woodpecker/keymaps/ardakilic/keymap.c:151:37: error: 'KC_BTN2' undeclared here (not in a function); did you mean 'MS_BTN2'?
+     _______,_______,KC_BTN1,KC_MS_U,KC_BTN2,KC_WH_U,    /*|*/   _______,KC_P7,KC_P8,KC_P9,KC_PPLS,KC_PEQL,
+                                     ^~~~~~~
+./.build/obj_woodpecker_ardakilic/src/default_keyboard.h:36:27: note: in definition of macro 'LAYOUT_ortho_5x12'
+     { k1A, k1B, k1C, k1D, k1E, k1F, k1G, k1H, k1I, k1J, k1K, k1L }, \
+                           ^~~
+/__w/qmk_userspace/qmk_userspace/keyboards/woodpecker/keymaps/ardakilic/keymap.c:149:13: note: in expansion of macro 'LAYOUT_woodpecker_grid'
+ [_NUMPAD] = LAYOUT_woodpecker_grid(
+             ^~~~~~~~~~~~~~~~~~~~~~
+/__w/qmk_userspace/qmk_userspace/keyboards/woodpecker/keymaps/ardakilic/keymap.c:151:45: error: 'KC_WH_U' undeclared here (not in a function); did you mean 'KC_WHOM'?
+     _______,_______,KC_BTN1,KC_MS_U,KC_BTN2,KC_WH_U,    /*|*/   _______,KC_P7,KC_P8,KC_P9,KC_PPLS,KC_PEQL,
+                                             ^~~~~~~
+./.build/obj_woodpecker_ardakilic/src/default_keyboard.h:36:32: note: in definition of macro 'LAYOUT_ortho_5x12'
+     { k1A, k1B, k1C, k1D, k1E, k1F, k1G, k1H, k1I, k1J, k1K, k1L }, \
+                                ^~~
+/__w/qmk_userspace/qmk_userspace/keyboards/woodpecker/keymaps/ardakilic/keymap.c:149:13: note: in expansion of macro 'LAYOUT_woodpecker_grid'
+ [_NUMPAD] = LAYOUT_woodpecker_grid(
+             ^~~~~~~~~~~~~~~~~~~~~~
+/__w/qmk_userspace/qmk_userspace/keyboards/woodpecker/keymaps/ardakilic/keymap.c:152:21: error: 'KC_MS_L' undeclared here (not in a function); did you mean 'KC_MSEL'?
+     _______,_______,KC_MS_L,KC_MS_D,KC_MS_R,KC_WH_D,    /*|*/   _______,KC_P4,KC_P5,KC_P6,KC_PPLS,KC_PDOT,
+                     ^~~~~~~
+./.build/obj_woodpecker_ardakilic/src/default_keyboard.h:37:17: note: in definition of macro 'LAYOUT_ortho_5x12'
+     { k2A, k2B, k2C, k2D, k2E, k2F, k2G, k2H, k2I, k2J, k2K, k2L }, \
+                 ^~~
+/__w/qmk_userspace/qmk_userspace/keyboards/woodpecker/keymaps/ardakilic/keymap.c:149:13: note: in expansion of macro 'LAYOUT_woodpecker_grid'
+ [_NUMPAD] = LAYOUT_woodpecker_grid(
+             ^~~~~~~~~~~~~~~~~~~~~~
+/__w/qmk_userspace/qmk_userspace/keyboards/woodpecker/keymaps/ardakilic/keymap.c:152:29: error: 'KC_MS_D' undeclared here (not in a function); did you mean 'KC_MRWD'?
+     _______,_______,KC_MS_L,KC_MS_D,KC_MS_R,KC_WH_D,    /*|*/   _______,KC_P4,KC_P5,KC_P6,KC_PPLS,KC_PDOT,
+                             ^~~~~~~
+./.build/obj_woodpecker_ardakilic/src/default_keyboard.h:37:22: note: in definition of macro 'LAYOUT_ortho_5x12'
+     { k2A, k2B, k2C, k2D, k2E, k2F, k2G, k2H, k2I, k2J, k2K, k2L }, \
+                      ^~~
+/__w/qmk_userspace/qmk_userspace/keyboards/woodpecker/keymaps/ardakilic/keymap.c:149:13: note: in expansion of macro 'LAYOUT_woodpecker_grid'
+ [_NUMPAD] = LAYOUT_woodpecker_grid(
+             ^~~~~~~~~~~~~~~~~~~~~~
+/__w/qmk_userspace/qmk_userspace/keyboards/woodpecker/keymaps/ardakilic/keymap.c:152:37: error: 'KC_MS_R' undeclared here (not in a function); did you mean 'KC_MSEL'?
+     _______,_______,KC_MS_L,KC_MS_D,KC_MS_R,KC_WH_D,    /*|*/   _______,KC_P4,KC_P5,KC_P6,KC_PPLS,KC_PDOT,
+                                     ^~~~~~~
+./.build/obj_woodpecker_ardakilic/src/default_keyboard.h:37:27: note: in definition of macro 'LAYOUT_ortho_5x12'
+     { k2A, k2B, k2C, k2D, k2E, k2F, k2G, k2H, k2I, k2J, k2K, k2L }, \
+                           ^~~
+/__w/qmk_userspace/qmk_userspace/keyboards/woodpecker/keymaps/ardakilic/keymap.c:149:13: note: in expansion of macro 'LAYOUT_woodpecker_grid'
+ [_NUMPAD] = LAYOUT_woodpecker_grid(
+             ^~~~~~~~~~~~~~~~~~~~~~
+/__w/qmk_userspace/qmk_userspace/keyboards/woodpecker/keymaps/ardakilic/keymap.c:152:45: error: 'KC_WH_D' undeclared here (not in a function); did you mean 'KC_WFWD'?
+     _______,_______,KC_MS_L,KC_MS_D,KC_MS_R,KC_WH_D,    /*|*/   _______,KC_P4,KC_P5,KC_P6,KC_PPLS,KC_PDOT,
+                                             ^~~~~~~
+./.build/obj_woodpecker_ardakilic/src/default_keyboard.h:37:32: note: in definition of macro 'LAYOUT_ortho_5x12'
+     { k2A, k2B, k2C, k2D, k2E, k2F, k2G, k2H, k2I, k2J, k2K, k2L }, \
+                                ^~~
+/__w/qmk_userspace/qmk_userspace/keyboards/woodpecker/keymaps/ardakilic/keymap.c:149:13: note: in expansion of macro 'LAYOUT_woodpecker_grid'
+ [_NUMPAD] = LAYOUT_woodpecker_grid(
+             ^~~~~~~~~~~~~~~~~~~~~~
+In file included from quantum/quantum.h:139,
+                 from ./.build/obj_woodpecker_ardakilic/src/default_keyboard.h:28,
+                 from /__w/qmk_userspace/qmk_userspace/keyboards/woodpecker/keymaps/ardakilic/keymap.c:17,
+                 from quantum/keymap_introspection.c:9:
+quantum/process_keycode/process_combo.h:61:36: error: initialization of 'short unsigned int' from 'const uint16_t (*)[5][12]' {aka 'const short unsigned int (*)[5][12]'} makes integer from pointer without a cast [-Werror=int-conversion]
+     { .keys = &(ck)[0], .keycode = (ca) }
+                                    ^
+/__w/qmk_userspace/qmk_userspace/keyboards/woodpecker/keymaps/ardakilic/keymap.c:231:28: note: in expansion of macro 'COMBO'
+     [C_LEFT_MOUSE_BTN_1] = COMBO(c_left_mouse_btn_1_combo, KC_BTN1),
+                            ^~~~~
+quantum/process_keycode/process_combo.h:61:36: note: (near initialization for 'key_combos[0].keycode')
+     { .keys = &(ck)[0], .keycode = (ca) }
+                                    ^
+/__w/qmk_userspace/qmk_userspace/keyboards/woodpecker/keymaps/ardakilic/keymap.c:231:28: note: in expansion of macro 'COMBO'
+     [C_LEFT_MOUSE_BTN_1] = COMBO(c_left_mouse_btn_1_combo, KC_BTN1),
+                            ^~~~~
+quantum/process_keycode/process_combo.h:61:36: error: initializer element is not constant
+     { .keys = &(ck)[0], .keycode = (ca) }
+                                    ^
+/__w/qmk_userspace/qmk_userspace/keyboards/woodpecker/keymaps/ardakilic/keymap.c:231:28: note: in expansion of macro 'COMBO'
+     [C_LEFT_MOUSE_BTN_1] = COMBO(c_left_mouse_btn_1_combo, KC_BTN1),
+                            ^~~~~
+quantum/process_keycode/process_combo.h:61:36: note: (near initialization for 'key_combos[0].keycode')
+     { .keys = &(ck)[0], .keycode = (ca) }
+                                    ^
+/__w/qmk_userspace/qmk_userspace/keyboards/woodpecker/keymaps/ardakilic/keymap.c:231:28: note: in expansion of macro 'COMBO'
+     [C_LEFT_MOUSE_BTN_1] = COMBO(c_left_mouse_btn_1_combo, KC_BTN1),
+                            ^~~~~
+quantum/process_keycode/process_combo.h:61:36: error: initialization of 'short unsigned int' from 'const uint16_t (*)[5][12]' {aka 'const short unsigned int (*)[5][12]'} makes integer from pointer without a cast [-Werror=int-conversion]
+     { .keys = &(ck)[0], .keycode = (ca) }
+                                    ^
+/__w/qmk_userspace/qmk_userspace/keyboards/woodpecker/keymaps/ardakilic/keymap.c:232:28: note: in expansion of macro 'COMBO'
+     [C_LEFT_MOUSE_BTN_2] = COMBO(c_left_mouse_btn_2_combo, KC_BTN1),
+                            ^~~~~
+quantum/process_keycode/process_combo.h:61:36: note: (near initialization for 'key_combos[1].keycode')
+     { .keys = &(ck)[0], .keycode = (ca) }
+                                    ^
+/__w/qmk_userspace/qmk_userspace/keyboards/woodpecker/keymaps/ardakilic/keymap.c:232:28: note: in expansion of macro 'COMBO'
+     [C_LEFT_MOUSE_BTN_2] = COMBO(c_left_mouse_btn_2_combo, KC_BTN1),
+                            ^~~~~
+quantum/process_keycode/process_combo.h:61:36: error: initializer element is not constant
+     { .keys = &(ck)[0], .keycode = (ca) }
+                                    ^
+/__w/qmk_userspace/qmk_userspace/keyboards/woodpecker/keymaps/ardakilic/keymap.c:232:28: note: in expansion of macro 'COMBO'
+     [C_LEFT_MOUSE_BTN_2] = COMBO(c_left_mouse_btn_2_combo, KC_BTN1),
+                            ^~~~~
+quantum/process_keycode/process_combo.h:61:36: note: (near initialization for 'key_combos[1].keycode')
+     { .keys = &(ck)[0], .keycode = (ca) }
+                                    ^
+/__w/qmk_userspace/qmk_userspace/keyboards/woodpecker/keymaps/ardakilic/keymap.c:232:28: note: in expansion of macro 'COMBO'
+     [C_LEFT_MOUSE_BTN_2] = COMBO(c_left_mouse_btn_2_combo, KC_BTN1),
+                            ^~~~~
+quantum/process_keycode/process_combo.h:61:36: error: initialization of 'short unsigned int' from 'const uint16_t (*)[5][12]' {aka 'const short unsigned int (*)[5][12]'} makes integer from pointer without a cast [-Werror=int-conversion]
+     { .keys = &(ck)[0], .keycode = (ca) }
+                                    ^
+/__w/qmk_userspace/qmk_userspace/keyboards/woodpecker/keymaps/ardakilic/keymap.c:233:29: note: in expansion of macro 'COMBO'
+     [C_RIGHT_MOUSE_BTN_1] = COMBO(c_right_mouse_btn_1_combo, KC_BTN2),
+                             ^~~~~
+quantum/process_keycode/process_combo.h:61:36: note: (near initialization for 'key_combos[2].keycode')
+     { .keys = &(ck)[0], .keycode = (ca) }
+                                    ^
+/__w/qmk_userspace/qmk_userspace/keyboards/woodpecker/keymaps/ardakilic/keymap.c:233:29: note: in expansion of macro 'COMBO'
+     [C_RIGHT_MOUSE_BTN_1] = COMBO(c_right_mouse_btn_1_combo, KC_BTN2),
+                             ^~~~~
+quantum/process_keycode/process_combo.h:61:36: error: initializer element is not constant
+     { .keys = &(ck)[0], .keycode = (ca) }
+                                    ^
+/__w/qmk_userspace/qmk_userspace/keyboards/woodpecker/keymaps/ardakilic/keymap.c:233:29: note: in expansion of macro 'COMBO'
+     [C_RIGHT_MOUSE_BTN_1] = COMBO(c_right_mouse_btn_1_combo, KC_BTN2),
+                             ^~~~~
+quantum/process_keycode/process_combo.h:61:36: note: (near initialization for 'key_combos[2].keycode')
+     { .keys = &(ck)[0], .keycode = (ca) }
+                                    ^
+/__w/qmk_userspace/qmk_userspace/keyboards/woodpecker/keymaps/ardakilic/keymap.c:233:29: note: in expansion of macro 'COMBO'
+     [C_RIGHT_MOUSE_BTN_1] = COMBO(c_right_mouse_btn_1_combo, KC_BTN2),
+                             ^~~~~
+quantum/process_keycode/process_combo.h:61:36: error: initialization of 'short unsigned int' from 'const uint16_t (*)[5][12]' {aka 'const short unsigned int (*)[5][12]'} makes integer from pointer without a cast [-Werror=int-conversion]
+     { .keys = &(ck)[0], .keycode = (ca) }
+                                    ^
+/__w/qmk_userspace/qmk_userspace/keyboards/woodpecker/keymaps/ardakilic/keymap.c:234:29: note: in expansion of macro 'COMBO'
+     [C_RIGHT_MOUSE_BTN_2] = COMBO(c_right_mouse_btn_2_combo, KC_BTN2),
+                             ^~~~~
+quantum/process_keycode/process_combo.h:61:36: note: (near initialization for 'key_combos[3].keycode')
+     { .keys = &(ck)[0], .keycode = (ca) }
+                                    ^
+/__w/qmk_userspace/qmk_userspace/keyboards/woodpecker/keymaps/ardakilic/keymap.c:234:29: note: in expansion of macro 'COMBO'
+     [C_RIGHT_MOUSE_BTN_2] = COMBO(c_right_mouse_btn_2_combo, KC_BTN2),
+                             ^~~~~
+quantum/process_keycode/process_combo.h:61:36: error: initializer element is not constant
+     { .keys = &(ck)[0], .keycode = (ca) }
+                                    ^
+/__w/qmk_userspace/qmk_userspace/keyboards/woodpecker/keymaps/ardakilic/keymap.c:234:29: note: in expansion of macro 'COMBO'
+     [C_RIGHT_MOUSE_BTN_2] = COMBO(c_right_mouse_btn_2_combo, KC_BTN2),
+                             ^~~~~
+quantum/process_keycode/process_combo.h:61:36: note: (near initialization for 'key_combos[3].keycode')
+     { .keys = &(ck)[0], .keycode = (ca) }
+                                    ^
+/__w/qmk_userspace/qmk_userspace/keyboards/woodpecker/keymaps/ardakilic/keymap.c:234:29: note: in expansion of macro 'COMBO'
+     [C_RIGHT_MOUSE_BTN_2] = COMBO(c_right_mouse_btn_2_combo, KC_BTN2),
+                             ^~~~~
+quantum/process_keycode/process_combo.h:61:36: error: initialization of 'short unsigned int' from 'const uint16_t (*)[5][12]' {aka 'const short unsigned int (*)[5][12]'} makes integer from pointer without a cast [-Werror=int-conversion]
+     { .keys = &(ck)[0], .keycode = (ca) }
+                                    ^
+/__w/qmk_userspace/qmk_userspace/keyboards/woodpecker/keymaps/ardakilic/keymap.c:235:30: note: in expansion of macro 'COMBO'
+     [C_MIDDLE_MOUSE_BTN_1] = COMBO(c_middle_mouse_btn_1_combo, KC_BTN3),
+                              ^~~~~
+quantum/process_keycode/process_combo.h:61:36: note: (near initialization for 'key_combos[4].keycode')
+     { .keys = &(ck)[0], .keycode = (ca) }
+                                    ^
+/__w/qmk_userspace/qmk_userspace/keyboards/woodpecker/keymaps/ardakilic/keymap.c:235:30: note: in expansion of macro 'COMBO'
+     [C_MIDDLE_MOUSE_BTN_1] = COMBO(c_middle_mouse_btn_1_combo, KC_BTN3),
+                              ^~~~~
+quantum/process_keycode/process_combo.h:61:36: error: initializer element is not constant
+     { .keys = &(ck)[0], .keycode = (ca) }
+                                    ^
+/__w/qmk_userspace/qmk_userspace/keyboards/woodpecker/keymaps/ardakilic/keymap.c:235:30: note: in expansion of macro 'COMBO'
+     [C_MIDDLE_MOUSE_BTN_1] = COMBO(c_middle_mouse_btn_1_combo, KC_BTN3),
+                              ^~~~~
+quantum/process_keycode/process_combo.h:61:36: note: (near initialization for 'key_combos[4].keycode')
+     { .keys = &(ck)[0], .keycode = (ca) }
+                                    ^
+/__w/qmk_userspace/qmk_userspace/keyboards/woodpecker/keymaps/ardakilic/keymap.c:235:30: note: in expansion of macro 'COMBO'
+     [C_MIDDLE_MOUSE_BTN_1] = COMBO(c_middle_mouse_btn_1_combo, KC_BTN3),
+                              ^~~~~
+quantum/process_keycode/process_combo.h:61:36: error: initialization of 'short unsigned int' from 'const uint16_t (*)[5][12]' {aka 'const short unsigned int (*)[5][12]'} makes integer from pointer without a cast [-Werror=int-conversion]
+     { .keys = &(ck)[0], .keycode = (ca) }
+                                    ^
+/__w/qmk_userspace/qmk_userspace/keyboards/woodpecker/keymaps/ardakilic/keymap.c:236:30: note: in expansion of macro 'COMBO'
+     [C_MIDDLE_MOUSE_BTN_2] = COMBO(c_middle_mouse_btn_2_combo, KC_BTN3),
+                              ^~~~~
+quantum/process_keycode/process_combo.h:61:36: note: (near initialization for 'key_combos[5].keycode')
+     { .keys = &(ck)[0], .keycode = (ca) }
+                                    ^
+/__w/qmk_userspace/qmk_userspace/keyboards/woodpecker/keymaps/ardakilic/keymap.c:236:30: note: in expansion of macro 'COMBO'
+     [C_MIDDLE_MOUSE_BTN_2] = COMBO(c_middle_mouse_btn_2_combo, KC_BTN3),
+                              ^~~~~
+quantum/process_keycode/process_combo.h:61:36: error: initializer element is not constant
+     { .keys = &(ck)[0], .keycode = (ca) }
+                                    ^
+/__w/qmk_userspace/qmk_userspace/keyboards/woodpecker/keymaps/ardakilic/keymap.c:236:30: note: in expansion of macro 'COMBO'
+     [C_MIDDLE_MOUSE_BTN_2] = COMBO(c_middle_mouse_btn_2_combo, KC_BTN3),
+                              ^~~~~
+quantum/process_keycode/process_combo.h:61:36: note: (near initialization for 'key_combos[5].keycode')
+     { .keys = &(ck)[0], .keycode = (ca) }
+                                    ^
+/__w/qmk_userspace/qmk_userspace/keyboards/woodpecker/keymaps/ardakilic/keymap.c:236:30: note: in expansion of macro 'COMBO'
+     [C_MIDDLE_MOUSE_BTN_2] = COMBO(c_middle_mouse_btn_2_combo, KC_BTN3),
+                              ^~~~~
+In file included from quantum/keymap_introspection.c:9:
+/__w/qmk_userspace/qmk_userspace/keyboards/woodpecker/keymaps/ardakilic/keymap.c: In function 'matrix_scan_user':
+/__w/qmk_userspace/qmk_userspace/keyboards/woodpecker/keymaps/ardakilic/keymap.c:248:18: error: passing argument 1 of 'tap_code' makes integer from pointer without a cast [-Werror=int-conversion]
+         tap_code(KC_MS_L);  // Move 1px left
+                  ^~~~~~~
+In file included from quantum/action_layer.h:22,
+                 from quantum/eeconfig.h:23,
+                 from quantum/keycode_config.h:21,
+                 from quantum/quantum.h:41,
+                 from ./.build/obj_woodpecker_ardakilic/src/default_keyboard.h:28,
+                 from /__w/qmk_userspace/qmk_userspace/keyboards/woodpecker/keymaps/ardakilic/keymap.c:17,
+                 from quantum/keymap_introspection.c:9:
+quantum/action.h:117:23: note: expected 'uint8_t' {aka 'unsigned char'} but argument is of type 'combo_t *' {aka 'struct combo_t *'}
+ void tap_code(uint8_t code);
+               ~~~~~~~~^~~~
+In file included from quantum/keymap_introspection.c:9:
+/__w/qmk_userspace/qmk_userspace/keyboards/woodpecker/keymaps/ardakilic/keymap.c:250:18: error: passing argument 1 of 'tap_code' makes integer from pointer without a cast [-Werror=int-conversion]
+         tap_code(KC_MS_R);  // Move 1px right
+                  ^~~~~~~
+In file included from quantum/action_layer.h:22,
+                 from quantum/eeconfig.h:23,
+                 from quantum/keycode_config.h:21,
+                 from quantum/quantum.h:41,
+                 from ./.build/obj_woodpecker_ardakilic/src/default_keyboard.h:28,
+                 from /__w/qmk_userspace/qmk_userspace/keyboards/woodpecker/keymaps/ardakilic/keymap.c:17,
+                 from quantum/keymap_introspection.c:9:
+quantum/action.h:117:23: note: expected 'uint8_t' {aka 'unsigned char'} but argument is of type 'combo_t *' {aka 'struct combo_t *'}
+ void tap_code(uint8_t code);
+               ~~~~~~~~^~~~
+cc1: all warnings being treated as errors
+ [ERRORS]
+ |
+ |
+ |
+gmake[1]: *** [builddefs/common_rules.mk:362: .build/obj_woodpecker_ardakilic/quantum/keymap_introspection.o] Error 1
+gmake[1]: *** Waiting for unfinished jobs....
+Compiling: quantum/quantum.c                                                                        [OK]
+```
+## yakamoz
+yakamoz:ardakilic
+ardakilic
+```
+Compiling QMK Firmware for target: 'yakamoz:ardakilic'...
+Generating: .build/obj_yakamoz_ardakilic/src/info_deps.d                                            [OK]
+Generating: .build/obj_yakamoz_ardakilic/src/community_modules.c                                    [OK]
+arm-none-eabi-gcc (15:8-2019-q3-1+b1) 8.3.1 20190703 (release) [gcc-8-branch revision 273027]
+Copyright (C) 2018 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Generating: .build/obj_yakamoz_ardakilic/src/community_modules.h                                    [OK]
+Generating: .build/obj_yakamoz_ardakilic/src/community_modules_introspection.c                      [OK]
+Generating: .build/obj_yakamoz_ardakilic/src/community_modules_introspection.h                      [OK]
+Generating: .build/obj_yakamoz_ardakilic/src/led_matrix_community_modules.inc                       [OK]
+Generating: .build/obj_yakamoz_ardakilic/src/rgb_matrix_community_modules.inc                       [OK]
+Generating: .build/obj_yakamoz_ardakilic/src/info_config.h                                          [OK]
+Generating: .build/obj_yakamoz_ardakilic/src/default_keyboard.c                                     [OK]
+Generating: .build/obj_yakamoz_ardakilic/src/default_keyboard.h                                     [OK]
+Compiling: .build/obj_yakamoz_ardakilic/src/community_modules.c                                     [OK]
+Compiling: quantum/bitwise.c                                                                        [OK]
+Compiling: .build/obj_yakamoz_ardakilic/src/default_keyboard.c                                      [OK]
+Compiling: quantum/keymap_introspection.c                                                          In file included from /__w/qmk_userspace/qmk_userspace/keyboards/yakamoz/keymaps/ardakilic/keymap.c:17,
+                 from quantum/keymap_introspection.c:9:
+/__w/qmk_userspace/qmk_userspace/keyboards/yakamoz/keymaps/ardakilic/keymap.c:102:96: error: 'KC_MS_BTN1' undeclared here (not in a function); did you mean 'X_MS_BTN1'?
+         LT(_SODA, KC_GRV), KC_LCTL, KC_LALT, KC_LGUI, LT(_LOWER, KC_BSLS), LT(_SPACE, KC_SPC), KC_MS_BTN1, KC_MS_BTN2, KC_BSPC, LT(_RAISE, KC_NONUS_BACKSLASH), KC_LEFT, KC_DOWN, KC_UP, KC_RGHT
+                                                                                                ^~~~~~~~~~
+./.build/obj_yakamoz_ardakilic/src/default_keyboard.h:38:37: note: in definition of macro 'LAYOUT'
+     { k3A, k3B, k3C, k3D, k3E, k3F, k3G, k3H, k3I, k3J, k3K, k3L, k3M, k3N } \
+                                     ^~~
+/__w/qmk_userspace/qmk_userspace/keyboards/yakamoz/keymaps/ardakilic/keymap.c:98:17: note: in expansion of macro 'LAYOUT_yakamoz'
+     [_QWERTY] = LAYOUT_yakamoz(
+                 ^~~~~~~~~~~~~~
+/__w/qmk_userspace/qmk_userspace/keyboards/yakamoz/keymaps/ardakilic/keymap.c:102:108: error: 'KC_MS_BTN2' undeclared here (not in a function); did you mean 'X_MS_BTN2'?
+         LT(_SODA, KC_GRV), KC_LCTL, KC_LALT, KC_LGUI, LT(_LOWER, KC_BSLS), LT(_SPACE, KC_SPC), KC_MS_BTN1, KC_MS_BTN2, KC_BSPC, LT(_RAISE, KC_NONUS_BACKSLASH), KC_LEFT, KC_DOWN, KC_UP, KC_RGHT
+                                                                                                            ^~~~~~~~~~
+./.build/obj_yakamoz_ardakilic/src/default_keyboard.h:38:42: note: in definition of macro 'LAYOUT'
+     { k3A, k3B, k3C, k3D, k3E, k3F, k3G, k3H, k3I, k3J, k3K, k3L, k3M, k3N } \
+                                          ^~~
+/__w/qmk_userspace/qmk_userspace/keyboards/yakamoz/keymaps/ardakilic/keymap.c:98:17: note: in expansion of macro 'LAYOUT_yakamoz'
+     [_QWERTY] = LAYOUT_yakamoz(
+                 ^~~~~~~~~~~~~~
+/__w/qmk_userspace/qmk_userspace/keyboards/yakamoz/keymaps/ardakilic/keymap.c:154:18: error: 'RGB_VAI' undeclared here (not in a function); did you mean 'RGB_M_T'?
+         _______, RGB_VAI, RGB_SAI, RGB_HUI, RGB_MOD, RGB_TOG, _______, KC_LEFT, KC_DOWN, KC_RGHT, _______, KC_MUTE,
+                  ^~~~~~~
+./.build/obj_yakamoz_ardakilic/src/default_keyboard.h:36:12: note: in definition of macro 'LAYOUT'
+     { k1A, k1B, k1C, k1D, k1E, k1F, XXX, XXX, k1I, k1J, k1K, k1L, k1M, k1N }, \
+            ^~~
+/__w/qmk_userspace/qmk_userspace/keyboards/yakamoz/keymaps/ardakilic/keymap.c:152:15: note: in expansion of macro 'LAYOUT_yakamoz'
+     [_SODA] = LAYOUT_yakamoz(
+               ^~~~~~~~~~~~~~
+/__w/qmk_userspace/qmk_userspace/keyboards/yakamoz/keymaps/ardakilic/keymap.c:154:27: error: 'RGB_SAI' undeclared here (not in a function); did you mean 'RGB_M_T'?
+         _______, RGB_VAI, RGB_SAI, RGB_HUI, RGB_MOD, RGB_TOG, _______, KC_LEFT, KC_DOWN, KC_RGHT, _______, KC_MUTE,
+                           ^~~~~~~
+./.build/obj_yakamoz_ardakilic/src/default_keyboard.h:36:17: note: in definition of macro 'LAYOUT'
+     { k1A, k1B, k1C, k1D, k1E, k1F, XXX, XXX, k1I, k1J, k1K, k1L, k1M, k1N }, \
+                 ^~~
+/__w/qmk_userspace/qmk_userspace/keyboards/yakamoz/keymaps/ardakilic/keymap.c:152:15: note: in expansion of macro 'LAYOUT_yakamoz'
+     [_SODA] = LAYOUT_yakamoz(
+               ^~~~~~~~~~~~~~
+/__w/qmk_userspace/qmk_userspace/keyboards/yakamoz/keymaps/ardakilic/keymap.c:154:36: error: 'RGB_HUI' undeclared here (not in a function); did you mean 'RGB_M_T'?
+         _______, RGB_VAI, RGB_SAI, RGB_HUI, RGB_MOD, RGB_TOG, _______, KC_LEFT, KC_DOWN, KC_RGHT, _______, KC_MUTE,
+                                    ^~~~~~~
+./.build/obj_yakamoz_ardakilic/src/default_keyboard.h:36:22: note: in definition of macro 'LAYOUT'
+     { k1A, k1B, k1C, k1D, k1E, k1F, XXX, XXX, k1I, k1J, k1K, k1L, k1M, k1N }, \
+                      ^~~
+/__w/qmk_userspace/qmk_userspace/keyboards/yakamoz/keymaps/ardakilic/keymap.c:152:15: note: in expansion of macro 'LAYOUT_yakamoz'
+     [_SODA] = LAYOUT_yakamoz(
+               ^~~~~~~~~~~~~~
+/__w/qmk_userspace/qmk_userspace/keyboards/yakamoz/keymaps/ardakilic/keymap.c:154:45: error: 'RGB_MOD' undeclared here (not in a function); did you mean 'RGB_M_T'?
+         _______, RGB_VAI, RGB_SAI, RGB_HUI, RGB_MOD, RGB_TOG, _______, KC_LEFT, KC_DOWN, KC_RGHT, _______, KC_MUTE,
+                                             ^~~~~~~
+./.build/obj_yakamoz_ardakilic/src/default_keyboard.h:36:27: note: in definition of macro 'LAYOUT'
+     { k1A, k1B, k1C, k1D, k1E, k1F, XXX, XXX, k1I, k1J, k1K, k1L, k1M, k1N }, \
+                           ^~~
+/__w/qmk_userspace/qmk_userspace/keyboards/yakamoz/keymaps/ardakilic/keymap.c:152:15: note: in expansion of macro 'LAYOUT_yakamoz'
+     [_SODA] = LAYOUT_yakamoz(
+               ^~~~~~~~~~~~~~
+/__w/qmk_userspace/qmk_userspace/keyboards/yakamoz/keymaps/ardakilic/keymap.c:154:54: error: 'RGB_TOG' undeclared here (not in a function); did you mean 'RGB_M_G'?
+         _______, RGB_VAI, RGB_SAI, RGB_HUI, RGB_MOD, RGB_TOG, _______, KC_LEFT, KC_DOWN, KC_RGHT, _______, KC_MUTE,
+                                                      ^~~~~~~
+./.build/obj_yakamoz_ardakilic/src/default_keyboard.h:36:32: note: in definition of macro 'LAYOUT'
+     { k1A, k1B, k1C, k1D, k1E, k1F, XXX, XXX, k1I, k1J, k1K, k1L, k1M, k1N }, \
+                                ^~~
+/__w/qmk_userspace/qmk_userspace/keyboards/yakamoz/keymaps/ardakilic/keymap.c:152:15: note: in expansion of macro 'LAYOUT_yakamoz'
+     [_SODA] = LAYOUT_yakamoz(
+               ^~~~~~~~~~~~~~
+/__w/qmk_userspace/qmk_userspace/keyboards/yakamoz/keymaps/ardakilic/keymap.c:155:18: error: 'RGB_VAD' undeclared here (not in a function); did you mean 'RGB_RED'?
+         _______, RGB_VAD, RGB_SAD, RGB_HUD, _______, _______, _______, _______, KC_MNXT, KC_VOLD, KC_VOLU, KC_MPLY,
+                  ^~~~~~~
+./.build/obj_yakamoz_ardakilic/src/default_keyboard.h:37:12: note: in definition of macro 'LAYOUT'
+     { k2A, k2B, k2C, k2D, k2E, k2F, XXX, XXX, k2I, k2J, k2K, k2L, k2M, k2N }, \
+            ^~~
+/__w/qmk_userspace/qmk_userspace/keyboards/yakamoz/keymaps/ardakilic/keymap.c:152:15: note: in expansion of macro 'LAYOUT_yakamoz'
+     [_SODA] = LAYOUT_yakamoz(
+               ^~~~~~~~~~~~~~
+/__w/qmk_userspace/qmk_userspace/keyboards/yakamoz/keymaps/ardakilic/keymap.c:155:27: error: 'RGB_SAD' undeclared here (not in a function); did you mean 'RGB_RED'?
+         _______, RGB_VAD, RGB_SAD, RGB_HUD, _______, _______, _______, _______, KC_MNXT, KC_VOLD, KC_VOLU, KC_MPLY,
+                           ^~~~~~~
+./.build/obj_yakamoz_ardakilic/src/default_keyboard.h:37:17: note: in definition of macro 'LAYOUT'
+     { k2A, k2B, k2C, k2D, k2E, k2F, XXX, XXX, k2I, k2J, k2K, k2L, k2M, k2N }, \
+                 ^~~
+/__w/qmk_userspace/qmk_userspace/keyboards/yakamoz/keymaps/ardakilic/keymap.c:152:15: note: in expansion of macro 'LAYOUT_yakamoz'
+     [_SODA] = LAYOUT_yakamoz(
+               ^~~~~~~~~~~~~~
+/__w/qmk_userspace/qmk_userspace/keyboards/yakamoz/keymaps/ardakilic/keymap.c:155:36: error: 'RGB_HUD' undeclared here (not in a function); did you mean 'RGB_RED'?
+         _______, RGB_VAD, RGB_SAD, RGB_HUD, _______, _______, _______, _______, KC_MNXT, KC_VOLD, KC_VOLU, KC_MPLY,
+                                    ^~~~~~~
+./.build/obj_yakamoz_ardakilic/src/default_keyboard.h:37:22: note: in definition of macro 'LAYOUT'
+     { k2A, k2B, k2C, k2D, k2E, k2F, XXX, XXX, k2I, k2J, k2K, k2L, k2M, k2N }, \
+                      ^~~
+/__w/qmk_userspace/qmk_userspace/keyboards/yakamoz/keymaps/ardakilic/keymap.c:152:15: note: in expansion of macro 'LAYOUT_yakamoz'
+     [_SODA] = LAYOUT_yakamoz(
+               ^~~~~~~~~~~~~~
+ [ERRORS]
+ |
+ |
+ |
+gmake[1]: *** [builddefs/common_rules.mk:362: .build/obj_yakamoz_ardakilic/quantum/keymap_introspection.o] Error 1
+gmake[1]: *** Waiting for unfinished jobs....
+Compiling: quantum/quantum.c                                                                        [OK]
+Compiling: quantum/led.c                                                                            [OK]
+Compiling: quantum/action.c                                                                         [OK]
+```

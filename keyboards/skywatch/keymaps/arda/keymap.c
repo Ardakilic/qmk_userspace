@@ -163,8 +163,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //                                     ╰───────┴────────╯
 
   [_TAB] = LAYOUT(
-    RGB_VAI,   RGB_SAI, RGB_HUI,  RGB_MOD,    RGB_TOG,            _______,  _______,  _______,  _______,     _______,
-    RGB_VAD,   RGB_SAD, RGB_HUD,  RGB_RMOD,   _______,            BALL_HUI, BALL_WHT, BALL_DEC, _______,     _______,
+    UG_VALU,   UG_SATU, UG_HUEU,  UG_NEXT,    UG_TOGG,            _______,  _______,  _______,  _______,     _______,
+    UG_VALD,   UG_SATD, UG_HUED,  UG_PREV,   _______,            BALL_HUI, BALL_WHT, BALL_DEC, _______,     _______,
     _______,   KC_BTN3, KC_BTN2,  KC_BTN1,    BALL_SCR,           QK_RBT,   QK_BOOT,   QK_CLEAR_EEPROM,  DB_TOGG,     _______,
                               _______,   _______,    _______,  _______,   _______,   _______
   ),

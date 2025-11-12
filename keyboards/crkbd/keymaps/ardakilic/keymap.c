@@ -242,8 +242,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 */
   [_ADJUST] = LAYOUT_split_3x6_3(
     QK_BOOT, QK_CLEAR_EEPROM,  _______, _______, _______, _______,                      _______, _______, _______, _______, _______, _______,
-    RGB_TOG, RGB_HUI, RGB_SAI, RGB_VAI, _______, _______,                    _______, _______, _______, _______, _______, _______,
-    RGB_MOD, RGB_HUD, RGB_SAD, RGB_VAD, _______, _______,                    _______, _______, _______, _______, _______, _______,
+    UG_TOGG, UG_HUEU, UG_SATU, UG_VALU, _______, _______,                    _______, _______, _______, _______, _______, _______,
+    UG_NEXT, UG_HUED, UG_SATD, UG_VALD, _______, _______,                    _______, _______, _______, _______, _______, _______,
                                           KC_LGUI, _______,  KC_SPC,     KC_ENT, _______, KC_RALT
   )
 };

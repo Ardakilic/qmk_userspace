@@ -118,7 +118,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TILD, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, KC_HOME,    /*|*/        KC_PGUP, KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_BSPC,
     KC_F1,    KC_F2,   KC_F3,   KC_F4,   KC_F5, KC_F6,    KC_END ,    /*|*/        KC_PGDN, _______, KC_UNDS, KC_PLUS, KC_LBRC, KC_RBRC, KC_EQL,
     KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  KC_DEL,     /*|*/        KC_BSPC, _______,DOLLAR_SIGN, CURLY_OPEN, CURLY_CLOSE, KC_GRV, LSFT(KC_GRV),
-    RGB_MOD, _______, _______, _______, _______, KC_BSPC,             /*|*/        KC_DEL, _______, SQUARE_OPEN, SQUARE_CLOSE, LSFT(KC_2), KC_NONUS_BACKSLASH
+    UG_NEXT, _______, _______, _______, _______, KC_BSPC,             /*|*/        KC_DEL, _______, SQUARE_OPEN, SQUARE_CLOSE, LSFT(KC_2), KC_NONUS_BACKSLASH
   ),
 
 
@@ -138,9 +138,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [_RAISE] = LAYOUT(
     KC_GRV,  KC_1, KC_2, KC_3, KC_4, KC_5, KC_VOLU,                   /*|*/       KC_MPLY, KC_6, KC_7, KC_8, KC_9, KC_0, KC_BSPC,
-    KC_DEL, RGB_MOD, RGB_VAI, RGB_SAI, RGB_HUI, _______,  KC_VOLD,    /*|*/       KC_MNXT, KC_MPRV, KC_MINS, KC_EQL, BACKSLASH, VERTICAL_PIPE, KC_BSLS,
-    _______, RGB_RMOD, RGB_VAD, RGB_SAD, RGB_HUD, _______,  KC_MUTE,  /*|*/       KC_MSTP, _______, HASHTAG, KC_NUBS, TILDE, BACKTICK, KC_GRV,
-    _______, RGB_TOG, BL_STEP, _______, _______, _______,             /*|*/           KC_BSPC, _______, KC_MNXT, KC_VOLD, KC_VOLU, KC_MPLY
+    KC_DEL, UG_NEXT, UG_VALU, UG_SATU, UG_HUEU, _______,  KC_VOLD,    /*|*/       KC_MNXT, KC_MPRV, KC_MINS, KC_EQL, BACKSLASH, VERTICAL_PIPE, KC_BSLS,
+    _______, UG_PREV, UG_VALD, UG_SATD, UG_HUED, _______,  KC_MUTE,  /*|*/       KC_MSTP, _______, HASHTAG, KC_NUBS, TILDE, BACKTICK, KC_GRV,
+    _______, UG_TOGG, BL_STEP, _______, _______, _______,             /*|*/           KC_BSPC, _______, KC_MNXT, KC_VOLD, KC_VOLU, KC_MPLY
   ),
 
 /* Soda

@@ -10,7 +10,9 @@
 #define COMBO_TERM_PER_COMBO
 
 // Enable OS Detection
-#define OS_DETECTION_ENABLE
+#ifndef OS_DETECTION_ENABLE
+#    define OS_DETECTION_ENABLE
+#endif
 
 // Tapping term for layer tap and mod tap keys
 #define TAPPING_TERM 200

@@ -151,8 +151,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      */
     [_SODA] = LAYOUT_yakamoz(
         QK_CLEAR_EEPROM,  QK_BOOT, DB_TOGG, QK_RBT, _______, _______, _______, _______, KC_UP, _______, _______, _______,
-        _______, RGB_VAI, RGB_SAI, RGB_HUI, RGB_MOD, RGB_TOG, _______, KC_LEFT, KC_DOWN, KC_RGHT, _______, KC_MUTE,
-        _______, RGB_VAD, RGB_SAD, RGB_HUD, _______, _______, _______, _______, KC_MNXT, KC_VOLD, KC_VOLU, KC_MPLY,
+        _______, UG_VALU, UG_SATU, UG_HUEU, UG_NEXT, UG_TOGG, _______, KC_LEFT, KC_DOWN, KC_RGHT, _______, KC_MUTE,
+        _______, UG_VALD, UG_SATD, UG_HUED, _______, _______, _______, _______, KC_MNXT, KC_VOLD, KC_VOLU, KC_MPLY,
         _______, _______, _______, _______, _______, QK_MUSIC_MODE_NEXT, QK_AUDIO_VOICE_NEXT, QK_MUSIC_TOGGLE, QK_AUDIO_TOGGLE, _______, _______, _______, KC_BRMD, KC_BRMU
     ),
 
