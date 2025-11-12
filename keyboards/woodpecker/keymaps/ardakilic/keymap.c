@@ -245,9 +245,9 @@ void toggle_infinite_mouse_movement(void) {
 }
 void matrix_scan_user(void) {
     if (moving_mouse && timer_elapsed(last_mouse_move) > 5000) {
-        tap_code(KC_MS_L);  // Move 1px left
+        tap_code(MS_WHLL);  // Move 1px left
         wait_ms(10);
-        tap_code(KC_MS_R);  // Move 1px right
+        tap_code(MS_WHLR);  // Move 1px right
         last_mouse_move = timer_read();  // Reset timer
     }
 }

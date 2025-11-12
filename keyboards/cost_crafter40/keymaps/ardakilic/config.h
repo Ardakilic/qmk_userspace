@@ -19,5 +19,4 @@
 #define TAPPING_TERM_PER_KEY
 
 // Prevent accidental modifier activations
-#define IGNORE_MOD_TAP_INTERRUPT
 #define PERMISSIVE_HOLD
