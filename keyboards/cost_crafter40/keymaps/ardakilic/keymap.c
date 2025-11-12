@@ -35,7 +35,6 @@ enum cost_crafter40_layers {
 // KC_LBRC is Turkish g [ğĞ] key
 // KC_RBRC is Turkish u [üÜ] key
 
-
 // Custom shortcuts specific to Turkish layout
 #define CURLY_OPEN RALT(KC_7)
 #define CURLY_CLOSE RALT(KC_0)
