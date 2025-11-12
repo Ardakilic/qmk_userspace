@@ -164,13 +164,13 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record){
    }
 /*
   case BALL_NCL:
-     record->event.pressed?register_code(KC_BTN1):unregister_code(KC_BTN1);
+     record->event.pressed?register_code(MS_BTN1):unregister_code(MS_BTN1);
      break;
   case BALL_RCL:
-      record->event.pressed?register_code(KC_BTN2):unregister_code(KC_BTN2);
+      record->event.pressed?register_code(MS_BTN2):unregister_code(MS_BTN2);
       break;
   case BALL_MCL:
-      record->event.pressed?register_code(KC_BTN3):unregister_code(KC_BTN3);
+      record->event.pressed?register_code(MS_BTN3):unregister_code(MS_BTN3);
       break;
   }
   */
@@ -249,8 +249,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_SODA] = LAYOUT(
     QK_CLEAR_EEPROM,  QK_BOOT,  DB_TOGG, QK_RBT, _______, _______, _______, _______, KC_UP, _______, _______, _______,
     _______, _______, _______, _______, _______, _______, _______, KC_LEFT, KC_DOWN, KC_RGHT, _______, KC_MUTE,
-    _______, _______, _______, _______, _______, _______, KC_MS_BTN1, KC_MS_BTN1, _______, _______, KC_MNXT, KC_VOLD, KC_VOLU, KC_MPLY,
-    _______, _______, _______, _______, _______, _______, BALL_SCR, KC_MS_BTN2, _______, _______, _______, _______, KC_BRMD, KC_BRMU
+    _______, _______, _______, _______, _______, _______, MS_BTN1, MS_BTN1, _______, _______, KC_MNXT, KC_VOLD, KC_VOLU, KC_MPLY,
+    _______, _______, _______, _______, _______, _______, BALL_SCR, MS_BTN2, _______, _______, _______, _______, KC_BRMD, KC_BRMU
 ),
 
 /* Space Layer (Space Bar Layer Tap)
@@ -267,8 +267,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_SPACE] = LAYOUT(
     _______, LGUI(KC_1), LGUI(KC_2), LGUI(KC_3), LGUI(KC_4), LGUI(KC_5), LGUI(KC_6), LGUI(KC_7), LGUI(KC_8),  LGUI(KC_9), LGUI(KC_0), LOCKSCREEN,
     _______, _______, _______, _______, _______, _______, _______, _______, _______, KC_UP,  _______, _______,
-    _______, _______, _______, _______, _______, _______, KC_MS_BTN1, KC_MS_BTN1, _______, _______, KC_LEFT, KC_DOWN, KC_RGHT, _______,
-    _______, _______, _______, _______, _______, _______, BALL_SCR, KC_MS_BTN2, _______, _______, _______, _______, KC_BRMD, KC_BRMU
+    _______, _______, _______, _______, _______, _______, MS_BTN1, MS_BTN1, _______, _______, KC_LEFT, KC_DOWN, KC_RGHT, _______,
+    _______, _______, _______, _______, _______, _______, BALL_SCR, MS_BTN2, _______, _______, _______, _______, KC_BRMD, KC_BRMU
 ),
 
 
@@ -287,8 +287,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_NUMPAD] = LAYOUT(
     _______, _______, _______, _______, _______, _______, KC_SPC, KC_P7, KC_P8, KC_P9, KC_PMNS, KC_BSPC,
     _______, _______, _______, _______, _______, _______, KC_PENT, KC_P4, KC_P5, KC_P6, KC_PPLS, KC_PAST,
-    _______, _______, _______, _______, _______, _______, KC_MS_BTN1, KC_MS_BTN1, KC_PENT, KC_P1, KC_P2, KC_P3, KC_PPLS, KC_PSLS,
-    _______, _______, _______, _______, _______, _______, BALL_SCR, KC_MS_BTN2, KC_BSPC,  KC_P0, KC_P0, KC_SLSH, KC_PDOT, KC_PEQL
+    _______, _______, _______, _______, _______, _______, MS_BTN1, MS_BTN1, KC_PENT, KC_P1, KC_P2, KC_P3, KC_PPLS, KC_PSLS,
+    _______, _______, _______, _______, _______, _______, BALL_SCR, MS_BTN2, KC_BSPC,  KC_P0, KC_P0, KC_SLSH, KC_PDOT, KC_PEQL
 ),
 
 };
