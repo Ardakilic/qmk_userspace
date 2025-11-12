@@ -147,8 +147,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-----------------------------------------' `-----------------------------------------'
  */
 [_NUMPAD] = LAYOUT_woodpecker_grid(
-    KC_ACL0,KC_ACL1,KC_ACL2,KC_BTN3,_______,_______,    /*|*/   _______,KC_NUM,KC_PSLS,KC_PAST,KC_PMNS,KC_BSPC,
-    _______,_______,KC_BTN1,KC_MS_U,KC_BTN2,KC_WH_U,    /*|*/   _______,KC_P7,KC_P8,KC_P9,KC_PPLS,KC_PEQL,
+    MS_ACL0,MS_ACL1,MS_ACL2,MS_BTN3,_______,_______,    /*|*/   _______,KC_NUM,KC_PSLS,KC_PAST,KC_PMNS,KC_BSPC,
+    _______,_______,MS_BTN1,KC_MS_U,MS_BTN2,KC_WH_U,    /*|*/   _______,KC_P7,KC_P8,KC_P9,KC_PPLS,KC_PEQL,
     _______,_______,KC_MS_L,KC_MS_D,KC_MS_R,KC_WH_D,    /*|*/   _______,KC_P4,KC_P5,KC_P6,KC_PPLS,KC_PDOT,
     _______,KC_VOLU,_______,KC_MPRV,KC_MPLY,KC_MNXT,    /*|*/   _______,KC_P1,KC_P2,KC_P3,KC_PENT,_______,
     _______,KC_VOLD,_______,KC_MUTE,KC_BSPC,KC_DEL,     /*|*/   KC_PENT,KC_SPC,KC_P0,KC_SLSH,KC_PENT,_______

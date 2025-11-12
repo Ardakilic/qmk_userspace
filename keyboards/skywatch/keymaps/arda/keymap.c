@@ -165,7 +165,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_TAB] = LAYOUT(
     UG_VALU,   UG_SATU, UG_HUEU,  UG_NEXT,    UG_TOGG,            _______,  _______,  _______,  _______,     _______,
     UG_VALD,   UG_SATD, UG_HUED,  UG_PREV,   _______,            BALL_HUI, BALL_WHT, BALL_DEC, _______,     _______,
-    _______,   KC_BTN3, KC_BTN2,  KC_BTN1,    BALL_SCR,           QK_RBT,   QK_BOOT,   QK_CLEAR_EEPROM,  DB_TOGG,     _______,
+    _______,   MS_BTN3, MS_BTN2,  MS_BTN1,    BALL_SCR,           QK_RBT,   QK_BOOT,   QK_CLEAR_EEPROM,  DB_TOGG,     _______,
                               _______,   _______,    _______,  _______,   _______,   _______
   ),
 
@@ -204,7 +204,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_SPACE] = LAYOUT(
     KC_EXLM, KC_AT, KC_HASH, KC_DLR, KC_PERC,                    KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN,
     _______, _______, _______, _______, _______,                 KC_LEFT, KC_DOWN, KC_UP, KC_RGHT, KC_BSPC,
-    KC_LSFT, _______, _______, _______, _______,                 KC_MS_BTN1, KC_MS_BTN2, BALL_SCR, BALL_MCL, _______,
+    KC_LSFT, _______, _______, _______, _______,                 X_MS_BTN1, X_MS_BTN2, BALL_SCR, BALL_MCL, _______,
                                     _______, KC_LGUI, _______, _______, _______, _______
   ),
 
@@ -440,13 +440,13 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record){
     break;
 
     case BALL_NCL:
-      record->event.pressed?register_code(KC_BTN1):unregister_code(KC_BTN1);
+      record->event.pressed?register_code(MS_BTN1):unregister_code(MS_BTN1);
       break;
     case BALL_RCL:
-        record->event.pressed?register_code(KC_BTN2):unregister_code(KC_BTN2);
+        record->event.pressed?register_code(MS_BTN2):unregister_code(MS_BTN2);
         break;
     case BALL_MCL:
-        record->event.pressed?register_code(KC_BTN3):unregister_code(KC_BTN3);
+        record->event.pressed?register_code(MS_BTN3):unregister_code(MS_BTN3);
         break;
     }
   return true;

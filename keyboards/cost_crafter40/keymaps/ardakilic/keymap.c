@@ -94,12 +94,12 @@ combo_t key_combos[] = {
     [C_CTRL] = COMBO(c_ctrl_combo, KC_LCTL),
     [C_GUI] = COMBO(c_gui_combo, KC_LGUI),
     [C_NUMPAD_LAYER] = COMBO(c_numpad_layer_combo, MO_NUMPAD),
-    [C_LEFT_MOUSE_BTN_1] = COMBO(c_left_mouse_btn_1_combo, KC_MS_BTN1),
-    [C_LEFT_MOUSE_BTN_2] = COMBO(c_left_mouse_btn_2_combo, KC_MS_BTN1),
-    [C_RIGHT_MOUSE_BTN_1] = COMBO(c_right_mouse_btn_1_combo, KC_MS_BTN2),
-    [C_RIGHT_MOUSE_BTN_2] = COMBO(c_right_mouse_btn_2_combo, KC_MS_BTN2),
-    [C_MIDDLE_MOUSE_BTN_1] = COMBO(c_middle_mouse_btn_1_combo, KC_MS_BTN3),
-    [C_MIDDLE_MOUSE_BTN_2] = COMBO(c_middle_mouse_btn_2_combo, KC_MS_BTN3)
+    [C_LEFT_MOUSE_BTN_1] = COMBO(c_left_mouse_btn_1_combo, X_MS_BTN1),
+    [C_LEFT_MOUSE_BTN_2] = COMBO(c_left_mouse_btn_2_combo, X_MS_BTN1),
+    [C_RIGHT_MOUSE_BTN_1] = COMBO(c_right_mouse_btn_1_combo, X_MS_BTN2),
+    [C_RIGHT_MOUSE_BTN_2] = COMBO(c_right_mouse_btn_2_combo, X_MS_BTN2),
+    [C_MIDDLE_MOUSE_BTN_1] = COMBO(c_middle_mouse_btn_1_combo, X_MS_BTN3),
+    [C_MIDDLE_MOUSE_BTN_2] = COMBO(c_middle_mouse_btn_2_combo, X_MS_BTN3),
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -256,9 +256,9 @@ void toggle_infinite_mouse_movement(void) {
 }
 void matrix_scan_user(void) {
     if (moving_mouse && timer_elapsed(last_mouse_move) > 5000) {
-        tap_code(KC_MS_L);  // Move 1px left
+        tap_code(KC_MS_WH_LEFT);  // Move 1px left
         wait_ms(10);
-        tap_code(KC_MS_R);  // Move 1px right
+        tap_code(KC_MS_WH_RIGHT);  // Move 1px right
         last_mouse_move = timer_read();  // Reset timer
     }
 }
