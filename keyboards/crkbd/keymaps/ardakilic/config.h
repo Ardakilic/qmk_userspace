@@ -40,10 +40,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define OLED_FONT_H "keyboards/crkbd/lib/glcdfont.c"
 
-// size optimisations
-// #define NO_DEBUG
-#define NO_ACTION_MACRO
-#define NO_ACTION_FUNCTION
+// NOTE: NO_ACTION_MACRO / NO_ACTION_FUNCTION removed - marked invalid in
+// current QMK (data/mappings/info_config.hjson). CONSOLE_ENABLE=no + LTO
+// already cover size optimisation.
 
 /* CONSOLE_ENABLE = no achieves this
 // Size optimisations

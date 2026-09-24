@@ -21,7 +21,7 @@
 #define BACKTICK RALT(KC_BSLS)
 #define TILDE RALT(KC_RBRC)
 #define HASHTAG RALT(KC_3)
-#define LOCKSCREEN LCTL(LSFT(KC_PWR)) // Screen Lock shortcut for OSX
+#define LOCKSCREEN LCTL(LSFT(KC_SYSTEM_POWER)) // Screen Lock shortcut for OSX
 
 /*
 // Unicode Turkish characters, in case it's needed
