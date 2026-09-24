@@ -140,7 +140,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_GRV,  KC_1, KC_2, KC_3, KC_4, KC_5, KC_VOLU,                   /*|*/       KC_MPLY, KC_6, KC_7, KC_8, KC_9, KC_0, KC_BSPC,
     KC_DEL, UG_NEXT, UG_VALU, UG_SATU, UG_HUEU, _______,  KC_VOLD,    /*|*/       KC_MNXT, KC_MPRV, KC_MINS, KC_EQL, BACKSLASH, VERTICAL_PIPE, KC_BSLS,
     _______, UG_PREV, UG_VALD, UG_SATD, UG_HUED, _______,  KC_MUTE,  /*|*/       KC_MSTP, _______, HASHTAG, KC_NUBS, TILDE, BACKTICK, KC_GRV,
-    _______, UG_TOGG, BL_TOGG, _______, _______, _______,             /*|*/           KC_BSPC, _______, KC_MNXT, KC_VOLD, KC_VOLU, KC_MPLY
+    _______, UG_TOGG, BL_STEP, _______, _______, _______,             /*|*/           KC_BSPC, _______, KC_MNXT, KC_VOLD, KC_VOLU, KC_MPLY
   ),
 
 /* Soda
