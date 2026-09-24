@@ -1,0 +1,21 @@
+{
+    "features": {
+        "via": true,
+        "vial": true,
+        "console": false,
+        "combo": true,
+        "rgblight": true,
+        "pointing_device": true,
+        "qmk_settings": true
+    },
+    "build": {
+        "lto": true
+    },
+    "combo": {
+        "term": 50
+    },
+    "ws2812": {
+        "pin": "GP27",
+        "driver": "vendor"
+    }
+}

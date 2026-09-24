@@ -1,0 +1,12 @@
+{
+    "tapping": {
+        "term": 200,
+        "permissive_hold": true,
+        "retro": true
+    },
+    "split": {
+        "transport": {
+            "protocol": "serial"
+        }
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "features": {
+        "wpm": true,
+        "audio": true
+    },
+    "audio": {
+        "driver": "pwm_hardware"
+    },
+    "indicators": {
+        "caps_lock": "GP25",
+        "on_state": 1
+    }
+}

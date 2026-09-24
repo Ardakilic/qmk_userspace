@@ -1,0 +1,8 @@
+{
+    "features": {
+        "pointing_device": true,
+        "mousekey": true,
+        "combo": true,
+        "os_detection": true
+    }
+}

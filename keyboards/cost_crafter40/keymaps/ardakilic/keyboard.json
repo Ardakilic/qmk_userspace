@@ -1,0 +1,16 @@
+{
+    "features": {
+        "combo": true,
+        "pointing_device": true,
+        "os_detection": true,
+        "mousekey": true
+    },
+    "combo": {
+        "term": 50
+    },
+    "tapping": {
+        "term": 200,
+        "term_per_key": true,
+        "permissive_hold": true
+    }
+}

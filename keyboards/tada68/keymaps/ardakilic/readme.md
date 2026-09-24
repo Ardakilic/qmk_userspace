@@ -7,7 +7,7 @@ This layout aims to have a similar layout to Apple keyboards while using ISO lay
 The changes that were applied over default layout:
 
 * Supports both Windows and Mac Layouts on a single layout now.
-* Adding a power (`KC_PWR`) key, so the lock screen shortcut works.
+* Adding a power (`KC_SYSTEM_POWER`) key, so the lock screen shortcut works.
 * Re-use the page up and page down keys to make ["é] (`KC_NUBS`) and [<>|] (`KC_GRAVE`) keys more accessible.
 * Optimize the function layer, by removing the mouse movement combinations and adding additional media keys.
 * Swap the positions of volume up and volume down and mute buttons on function layer, so these keys are actually with the same order as Apple keyboard layout.

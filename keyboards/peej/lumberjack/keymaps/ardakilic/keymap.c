@@ -34,7 +34,7 @@
 #define BACKTICK RALT(KC_BSLS)
 #define TILDE RALT(KC_RBRC)
 #define HASHTAG RALT(KC_3)
-#define LOCKSCREEN LCTL(LSFT(KC_PWR)) // Screen Lock shortcut for OSX
+#define LOCKSCREEN LCTL(LSFT(KC_SYSTEM_POWER)) // Screen Lock shortcut for OSX
 
 /*
 // Unicode Turkish characters, in case it's needed
@@ -103,7 +103,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_GRV,KC_1,KC_2,KC_3,KC_4,KC_5,                    /*|*/   KC_6,KC_7,KC_8,KC_9,KC_0,KC_BSPC,
     KC_TAB,KC_Q,KC_W,KC_E,KC_R,KC_T,                    /*|*/   KC_Y,KC_U,KC_I,KC_O,KC_P,KC_DEL,
     LT(_NUMPAD, KC_ESC),KC_A,KC_S,KC_D,KC_F,KC_G,       /*|*/   KC_H,KC_J,KC_K,KC_L,KC_SCLN,KC_QUOT,
-    KC_LSFT,KC_Z,KC_X,KC_C,KC_V,KC_B,                   /*|*/   KC_N,KC_M,KC_COMM,KC_DOT,KC_SLSH,SC_SENT,
+    KC_LSFT,KC_Z,KC_X,KC_C,KC_V,KC_B,                   /*|*/   KC_N,KC_M,KC_COMM,KC_DOT,KC_SLSH,SFT_T(KC_ENT),
     KC_LCTL,LT(_ADJUST,KC_NONUS_BACKSLASH),KC_LGUI,KC_LALT,LT(_LOWER,KC_BSLS),KC_SPC, /*|*/ KC_SPC,KC_RALT,KC_LEFT,KC_DOWN,KC_UP,KC_RGHT
 ),
 
@@ -145,7 +145,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-----------------------------------------' `-----------------------------------------'
  */
 [_NUMPAD] = LAYOUT_ortho_5x12(
-    MS_ACL0,MS_ACL1,MS_ACL2,MS_BTN3,_______,_______,    /*|*/   _______,KC_NUM,KC_PSLS,KC_PAST,KC_PMNS,KC_BSPC,
+    MS_ACL0,MS_ACL1,MS_ACL2,MS_BTN3,_______,_______,    /*|*/   _______,KC_NUM_LOCK,KC_PSLS,KC_PAST,KC_PMNS,KC_BSPC,
     _______,_______,MS_BTN1,MS_UP,MS_BTN2,MS_WHLU,    /*|*/   _______,KC_P7,KC_P8,KC_P9,KC_PPLS,KC_PEQL,
     _______,_______,MS_LEFT,MS_DOWN,MS_RGHT,MS_WHLD,    /*|*/   _______,KC_P4,KC_P5,KC_P6,KC_PPLS,KC_PDOT,
     _______,KC_VOLU,_______,KC_MPRV,KC_MPLY,KC_MNXT,    /*|*/   _______,KC_P1,KC_P2,KC_P3,KC_PENT,_______,
@@ -166,7 +166,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-----------------------------------------' `-----------------------------------------'
  */
 [_ADJUST] = LAYOUT_ortho_5x12(
-    EE_CLR,QK_BOOT,DB_TOGG,QK_RBT,_______,_______,             /*|*/   TG(_MAC),_______,_______,_______,_______,LOCKSCREEN,
+    QK_CLEAR_EEPROM,QK_BOOT,DB_TOGG,QK_RBT,_______,_______,             /*|*/   TG(_MAC),_______,_______,_______,_______,LOCKSCREEN,
     _______,_______,_______,_______,_______,_______,            /*|*/   _______,_______,_______,_______,_______,_______,
     _______,_______,_______,_______,_______,_______,            /*|*/   _______,_______,_______,_______,_______,_______,
     KC_CAPS,_______,_______,_______,_______,_______,            /*|*/   _______,_______,_______,_______,_______,_______,
