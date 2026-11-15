@@ -2,6 +2,10 @@
 
 This is a template repository which allows for an external set of QMK keymaps to be defined and compiled. This is useful for users who want to maintain their own keymaps without having to fork the [main QMK repository](https://github.com/qmk/qmk_firmware). You must still fork the main QMK repository if writing firmware for a *new* keyboard.
 
+## Notable keymaps
+
+* [`yakamoz:yakamoz_ithalat_trackpad`](keyboards/yakamoz/keymaps/yakamoz_ithalat_trackpad/README.md) -- my `yakamoz:ardakilic` keymap plus the Azoteq TPS65 trackpad of the [ithalat](https://github.com/Ardakilic/ithalat) wrist rest (hot-pluggable, on the OLED's I2C bus).
+
 ## Howto configure your build targets
 
 1. Run the normal `qmk setup` procedure if you haven't already done so -- see [QMK Docs](https://docs.qmk.fm/#/newbs) for details.
@@ -26,6 +30,13 @@ This is a template repository which allows for an external set of QMK keymaps to
 1. Look at the GitHub Actions for a new actions run
 1. Wait for the actions run to complete
 1. Inspect the Releases tab on your repository for the latest firmware build
+
+### CI notes for this userspace
+
+* The build uses upstream `qmk/qmk_firmware` (`master`). The keyboards that only exist in [my fork](https://github.com/Ardakilic/qmk_firmware) (`cost_crafter40`, `skywatch`, `woodpecker`, `yakamoz`) are copied in from a pinned fork commit by the `preparation_command` in `.github/workflows/build_binaries.yaml`. Bump `FORK_SHA` there after changing one of them in the fork.
+* The fork itself is not used as the build tree: its `lib/chibios*` and `lib/pico-sdk` submodules are out of date, so every ChibiOS (RP2040/STM32) board fails to compile against it.
+* Only pushes to `main` replace the `latest` release. Other branches only build; their firmware is attached to the workflow run as an artifact.
+* To build those keyboards locally, copy the same folders from the fork into your upstream `qmk_firmware/keyboards/` first.
 
 ## Howto build locally
 

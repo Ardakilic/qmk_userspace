@@ -10,13 +10,29 @@ jobs:
     name: 'QMK Userspace Build'
     uses: qmk/.github/.github/workflows/qmk_userspace_build.yml@main
     with:
-      # Use my fork of the QMK firmware repository
-      # qmk_repo: qmk/qmk_firmware
-      qmk_repo: Ardakilic/qmk_firmware
+      # Build against upstream QMK. My fork (Ardakilic/qmk_firmware) is not used as the build tree:
+      # its lib/chibios, lib/chibios-contrib and lib/pico-sdk submodules are stale, so every ChibiOS
+      # (RP2040/STM32) target fails with `hal.h: #error "obsolete or unknown configuration file"`.
+      qmk_repo: qmk/qmk_firmware
       qmk_ref: master
+      # Copy the keyboards that only exist in my fork into upstream QMK, at a pinned fork commit
+      # (fork master "chore: sync fork", 2026-09-24) so builds are reproducible. Bump FORK_SHA after
+      # changing one of these keyboards in the fork. The qmk.json keymaps come from this userspace.
+      preparation_command: |
+        FORK_SHA=7bed308a04e06ea586efa9d9b6ec553903594edb
+        FORK_KEYBOARDS="cost_crafter40 skywatch woodpecker yakamoz"
+        git -c init.defaultBranch=main init -q /tmp/qmk_fork
+        for kb in $FORK_KEYBOARDS; do echo "keyboards/$kb"; done | git -C /tmp/qmk_fork sparse-checkout set --stdin
+        git -C /tmp/qmk_fork fetch -q --depth 1 --filter=blob:none https://github.com/Ardakilic/qmk_firmware.git "$FORK_SHA"
+        git -C /tmp/qmk_fork checkout -q FETCH_HEAD
+        for kb in $FORK_KEYBOARDS; do
+          rm -rf "qmk_firmware/keyboards/$kb"
+          cp -R "/tmp/qmk_fork/keyboards/$kb" "qmk_firmware/keyboards/$kb"
+        done
 
   publish:
     name: 'QMK Userspace Publish'
     uses: qmk/.github/.github/workflows/qmk_userspace_publish.yml@main
-    if: always() && !cancelled()
+    # Only pushes to main replace the 'latest' release; feature branches just build.
+    if: always() && !cancelled() && github.ref == 'refs/heads/main'
     needs: build
