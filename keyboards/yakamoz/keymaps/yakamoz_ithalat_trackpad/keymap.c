@@ -515,11 +515,12 @@ static bool tp_driver_reads_next(void) {
 // replaces QMK's weak one in quantum/pointing_device/pointing_device.c with the same logic).
 // Between the release in matrix_scan_user() and the driver's next read (up to 11 ms without RDY),
 // that report would lack the pad's buttons and the host would see a held drag released and pressed
-// again. So it is sent with them, and they are taken out again for the driver right after.
+// again. So it is sent with them, and they are taken out again for the driver right after. They are
+// added after the key's transition, so that releasing a key does not release a button the pad holds.
 void pointing_device_keycode_handler(uint16_t keycode, bool pressed) {
     if (IS_MOUSEKEY_BUTTON(keycode)) {
         report_mouse_t report = pointing_device_get_report();
-        report.buttons        = pointing_device_handle_buttons(report.buttons | tp_released, pressed, keycode - QK_MOUSE_BUTTON_1);
+        report.buttons        = pointing_device_handle_buttons(report.buttons, pressed, keycode - QK_MOUSE_BUTTON_1) | tp_released;
         pointing_device_set_report(report);
         pointing_device_send();
         tp_drop_buttons(tp_released & (uint8_t)~tp_keyboard_buttons());

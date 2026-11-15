@@ -18,6 +18,8 @@ jobs:
   publish:
     name: 'QMK Userspace Publish'
     uses: qmk/.github/.github/workflows/qmk_userspace_publish.yml@main
-    # Only pushes to main replace the 'latest' release; other branches and manual runs just build.
-    if: always() && !cancelled() && github.event_name == 'push' && github.ref == 'refs/heads/main'
+    # Only pushes to main replace the 'latest' release, and only when every target built: the build
+    # job fails when any target fails, and the publisher deletes the old release first.
+    # Other branches and manual runs just build.
+    if: ${{ !cancelled() && needs.build.result == 'success' && github.event_name == 'push' && github.ref == 'refs/heads/main' }}
     needs: build
