@@ -59,7 +59,7 @@ enum trackball_keycodes {
 #define BACKTICK RALT(KC_BSLS)
 #define TILDE RALT(KC_RBRC)
 #define HASHTAG RALT(KC_3)
-#define LOCKSCREEN LCTL(LSFT(KC_PWR)) // Screen Lock shortcut for OSX
+#define LOCKSCREEN LCTL(LSFT(KC_SYSTEM_POWER)) // Screen Lock shortcut for OSX
 
 // Layer Keys
 #define LAYER_TAB LT(_TAB, KC_TAB)
@@ -289,7 +289,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // OLED Functions
 #ifdef OLED_ENABLE
 
-oled_rotation_t oled_init_kb(oled_rotation_t rotation) {
+oled_rotation_t oled_init_user(oled_rotation_t rotation) {
     if (is_keyboard_master()) {
         return OLED_ROTATION_180;  // flips the display 180 degrees if offhand
     }
@@ -338,10 +338,7 @@ bool render_status(void) {
     return false;
 }
 
-bool oled_task_kb(void) {
-    if (!oled_task_user()) {
-        return false;
-    }
+bool oled_task_user(void) {
     if (is_keyboard_master()) {
         render_status();  // Renders the current keyboard state (layer, lock, caps, scroll, etc)
     }

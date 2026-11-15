@@ -39,7 +39,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
 // Ardakilic additions
-#define TAPPING_FORCE_HOLD
+// NOTE: TAPPING_FORCE_HOLD removed (deprecated) - hold behavior is now default.
+#define QUICK_TAP_TERM 0
 #define TAPPING_TERM 200
 #define PERMISSIVE_HOLD
 // IGNORE_MOD_TAP_INTERRUPT is no longer necessary as it is now the default behavior of mod-tap keys.

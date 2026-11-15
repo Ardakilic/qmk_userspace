@@ -48,7 +48,7 @@ enum cost_crafter40_layers {
 #define HASHTAG RALT(KC_3)
 #define LESS_THAN KC_NONUS_BACKSLASH
 #define GREATER_THAN RALT(KC_1)
-#define LOCKSCREEN LCTL(LSFT(KC_PWR)) // Screen Lock shortcut for OSX
+#define LOCKSCREEN LCTL(LSFT(KC_SYSTEM_POWER)) // Screen Lock shortcut for OSX
 
 enum custom_keycodes {
     MOUSE_INFINITE_TOGGLE = SAFE_RANGE,
@@ -193,7 +193,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * └───┴───┴───┴───┴───┴───┴───┴───┴───┴───┘
  */
 [_NUMPAD] = LAYOUT(
-    _______, _______, _______, _______, KC_NUM,  KC_PSLS, KC_P7,   KC_P8,   KC_P9,   KC_PMNS,
+    _______, _______, _______, _______, KC_NUM_LOCK,  KC_PSLS, KC_P7,   KC_P8,   KC_P9,   KC_PMNS,
     _______, _______, _______, _______, _______, KC_PAST, KC_P4,   KC_P5,   KC_P6,   KC_PPLS,
     _______, _______, _______, _______, _______, KC_PEQL, KC_P1,   KC_P2,   KC_P3,   KC_PENT,
     _______, _______, _______, _______, KC_BSPC, KC_PDOT, KC_P0,   KC_P0,   KC_SLSH, KC_PENT
