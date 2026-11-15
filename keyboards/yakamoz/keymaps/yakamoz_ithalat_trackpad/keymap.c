@@ -244,6 +244,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *        pad button. SHOW_RESET (bit 7) set -> the pad was power-cycled (re-plugged between two
  *        checks) or its watchdog fired and lost the QMK settings -> re-initialise. The flag is
  *        acknowledged (System Control 0, 0x0431, bit 7 ACK_RESET) after every init.
+ *        A failed (re)init releases any pad button too, like an unplug.
  *        The read waits (at most TRACKPAD_ALIGN_MAX_WAIT_MS) for the pad's communication window:
  *        RDY high with POINTING_DEVICE_MOTION_PIN, otherwise one report period after the driver's
  *        last poll. It reads inside the window and leaves the window open; the driver's poll in the
@@ -261,6 +262,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *    POINTING_DEVICE_MOTION_PIN; without it at once, because the driver's 11 ms throttle returns
  *    before sending anything until that read. The pad re-asserts a held gesture (press-and-hold) on
  *    every read, so the host sees one press and one release; a tap is released one report later.
+ *    Until that read, a report sent by an MS_BTNx key (pointing_device_keycode_handler() below)
+ *    still carries the removed buttons, so a key does not release a drag on the host.
  *    Keyboard mouse buttons (mousekey) are never touched. Harmless on older QMK, where the driver
  *    ignores incoming buttons.
  *    Known limit: when one driver read fails (I2C error) during a press-and-hold, the driver
@@ -315,6 +318,7 @@ static uint16_t tp_interval    = TRACKPAD_HOTPLUG_INTERVAL_MS;
 static bool     tp_candidate   = false; // pad answered once, waiting TRACKPAD_HOTPLUG_SETTLE_MS
 static bool     tp_check_due   = false;
 static uint8_t  tp_pad_buttons = 0;     // buttons the pad put into the report that was just processed
+static uint8_t  tp_released    = 0;     // pad buttons removed from the report, not read again by the driver yet
 
 static bool trackpad_is_active(void) {
     return pointing_device_get_status() == POINTING_DEVICE_STATUS_SUCCESS;
@@ -343,6 +347,16 @@ static void tp_drop_buttons(uint8_t buttons) {
         report.buttons &= (uint8_t)~buttons;
         pointing_device_set_report(report);
     }
+}
+
+// The driver no longer reads the pad (unplugged, or its (re)initialisation failed), so
+// pointing_device_task() sends no more reports: release every pad button on the host now.
+// Buttons held by keys stay pressed.
+static void tp_release_pad_buttons(void) {
+    tp_drop_buttons((uint8_t)~tp_keyboard_buttons());
+    tp_pad_buttons = 0;
+    tp_released    = 0;
+    pointing_device_send();
 }
 
 // Read one register byte. The IQS5xx NACKs the first address while it is in a low-power mode and
@@ -390,6 +404,9 @@ static bool tp_window_open(void) {
 // (Re)initialise through QMK so that pointing_device_init_user() (CPI, reset ack) runs as well.
 static void tp_reinit(void) {
     pointing_device_init(); // blocks ~111 ms: driver soft reset + wait_ms(100) + wait_ms(11)
+    if (!trackpad_is_active()) {
+        tp_release_pad_buttons(); // init failed (status INIT_FAILED): a held drag would stay pressed
+    }
     tp_candidate  = false;
     tp_check_due  = false;
     tp_last_check = timer_read32();
@@ -435,9 +452,7 @@ static void trackpad_hotplug_task(void) {
         // Unplugged: stop the driver from polling a missing device every 11 ms and make sure no
         // pad button stays pressed on the host (pointing_device_task() no longer sends reports).
         pointing_device_set_status(POINTING_DEVICE_STATUS_FAILED);
-        tp_drop_buttons((uint8_t)~tp_keyboard_buttons());
-        tp_pad_buttons = 0;
-        pointing_device_send();
+        tp_release_pad_buttons();
         return;
     }
     if (info0 & TP_SHOW_RESET) {
@@ -476,6 +491,7 @@ report_mouse_t pointing_device_task_user(report_mouse_t mouse_report) {
 #    endif
 #    ifndef TRACKPAD_NO_TAP_LATCH_FIX
     tp_pad_buttons = mouse_report.buttons & (uint8_t)~tp_keyboard_buttons();
+    tp_released    = 0; // the driver has read the pad (with RDY it is only set in a pass that reads)
 #    endif
     return mouse_report;
 }
@@ -494,6 +510,21 @@ static bool tp_driver_reads_next(void) {
     return true;
 #        endif
 }
+
+// MS_BTNx keys send the report at once (quantum/action.c register_mouse() -> this handler, which
+// replaces QMK's weak one in quantum/pointing_device/pointing_device.c with the same logic).
+// Between the release in matrix_scan_user() and the driver's next read (up to 11 ms without RDY),
+// that report would lack the pad's buttons and the host would see a held drag released and pressed
+// again. So it is sent with them, and they are taken out again for the driver right after.
+void pointing_device_keycode_handler(uint16_t keycode, bool pressed) {
+    if (IS_MOUSEKEY_BUTTON(keycode)) {
+        report_mouse_t report = pointing_device_get_report();
+        report.buttons        = pointing_device_handle_buttons(report.buttons | tp_released, pressed, keycode - QK_MOUSE_BUTTON_1);
+        pointing_device_set_report(report);
+        pointing_device_send();
+        tp_drop_buttons(tp_released & (uint8_t)~tp_keyboard_buttons());
+    }
+}
 #    endif
 
 // Runs in matrix_task(), i.e. BEFORE pointing_device_task() of the same main-loop pass (see the
@@ -503,6 +534,7 @@ void matrix_scan_user(void) {
 #    ifndef TRACKPAD_NO_TAP_LATCH_FIX
     if (tp_pad_buttons && tp_driver_reads_next()) {
         tp_drop_buttons(tp_pad_buttons); // the driver re-asserts a held gesture in its read
+        tp_released    = tp_pad_buttons; // key reports keep them until then (pointing_device_keycode_handler())
         tp_pad_buttons = 0;
     }
 #    endif

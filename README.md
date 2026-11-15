@@ -33,10 +33,20 @@ This is a template repository which allows for an external set of QMK keymaps to
 
 ### CI notes for this userspace
 
-* The build uses upstream `qmk/qmk_firmware` (`master`). The keyboards that only exist in [my fork](https://github.com/Ardakilic/qmk_firmware) (`cost_crafter40`, `skywatch`, `woodpecker`, `yakamoz`) are copied in from a pinned fork commit by the `preparation_command` in `.github/workflows/build_binaries.yaml`. Bump `FORK_SHA` there after changing one of them in the fork.
-* The fork itself is not used as the build tree: its `lib/chibios*` and `lib/pico-sdk` submodules are out of date, so every ChibiOS (RP2040/STM32) board fails to compile against it.
-* Only pushes to `main` replace the `latest` release. Other branches only build; their firmware is attached to the workflow run as an artifact.
-* To build those keyboards locally, copy the same folders from the fork into your upstream `qmk_firmware/keyboards/` first.
+**TL;DR:** CI builds every `qmk.json` target against [my fork](https://github.com/Ardakilic/qmk_firmware) (`master`). Only pushes to `main` publish the `latest` release.
+
+* Base tree: `Ardakilic/qmk_firmware` at `master`, set in `.github/workflows/build_binaries.yaml`. The fork already has the keyboards that are not in upstream QMK (`cost_crafter40`, `skywatch`, `woodpecker`, `yakamoz`), so there is no `preparation_command`.
+* Keymaps come from this userspace. If the fork has a keymap folder with the same name (e.g. `keyboards/horizon/keymaps/ardakilic`), QMK quietly takes that folder's `config.h`/`rules.mk` instead, so keep these keymaps out of the fork.
+* The fork's submodules (`lib/chibios`, `lib/chibios-contrib`, `lib/pico-sdk`, `lib/googletest`) must match upstream QMK. If they fall behind, every ChibiOS (RP2040/STM32) board fails with `hal.h: #error "obsolete or unknown configuration file"`.
+* Publishing: only a `push` to `main` replaces the `latest` release. Other branches and manual (`workflow_dispatch`) runs only build; their firmware is attached to the run as the `Firmware` artifact.
+* Build locally against the fork:
+
+    ```sh
+    git clone --recurse-submodules https://github.com/Ardakilic/qmk_firmware.git
+    qmk config user.qmk_home="$(realpath qmk_firmware)"
+    qmk config user.overlay_dir="$(realpath qmk_userspace)"
+    qmk userspace-compile
+    ```
 
 ## Howto build locally
 
