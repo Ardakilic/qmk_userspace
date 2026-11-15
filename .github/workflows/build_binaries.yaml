@@ -10,10 +10,12 @@ jobs:
     name: 'QMK Userspace Build'
     uses: qmk/.github/.github/workflows/qmk_userspace_build.yml@main
     with:
-      # Build against my fork: it has the keyboards that are not in upstream QMK
-      # (cost_crafter40, skywatch, woodpecker, yakamoz). The keymaps come from this userspace.
-      qmk_repo: Ardakilic/qmk_firmware
+      # Upstream QMK, no fork. QMK only finds keyboards under qmk_firmware/keyboards/, so the keyboard
+      # definitions kept here (cost_crafter40, skywatch, woodpecker, yakamoz) are copied in first.
+      # The preparation_command runs after `qmk userspace-doctor`, before `qmk userspace-compile`.
+      qmk_repo: qmk/qmk_firmware
       qmk_ref: master
+      preparation_command: bash scripts/sync_keyboards.sh qmk_firmware
 
   publish:
     name: 'QMK Userspace Publish'

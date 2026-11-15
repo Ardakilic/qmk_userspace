@@ -2,6 +2,8 @@
 
 This is a template repository which allows for an external set of QMK keymaps to be defined and compiled. This is useful for users who want to maintain their own keymaps without having to fork the [main QMK repository](https://github.com/qmk/qmk_firmware). You must still fork the main QMK repository if writing firmware for a *new* keyboard.
 
+This repo doesn't need that fork: the 4 keyboards it builds that upstream QMK doesn't have live here too. See [Keyboards kept in this repo](#keyboards-kept-in-this-repo-no-qmk-fork).
+
 ## Notable keymaps
 
 * [`yakamoz:yakamoz_ithalat_trackpad`](keyboards/yakamoz/keymaps/yakamoz_ithalat_trackpad/README.md) -- my `yakamoz:ardakilic` keymap plus the Azoteq TPS65 trackpad of the [ithalat](https://github.com/Ardakilic/ithalat) wrist rest (hot-pluggable, on the OLED's I2C bus).
@@ -31,22 +33,78 @@ This is a template repository which allows for an external set of QMK keymaps to
 1. Wait for the actions run to complete
 1. Inspect the Releases tab on your repository for the latest firmware build
 
-### CI notes for this userspace
+### Keyboards kept in this repo (no QMK fork)
 
-**TL;DR:** CI builds every `qmk.json` target against [my fork](https://github.com/Ardakilic/qmk_firmware) (`master`). Only pushes to `main` publish the `latest` release.
+**TL;DR:** CI builds every `qmk.json` target on upstream [`qmk/qmk_firmware`](https://github.com/qmk/qmk_firmware) (`master`). The 4 keyboards upstream QMK doesn't have live here and get copied into `qmk_firmware` right before each build. No fork to maintain. Only pushes to `main` publish the `latest` release.
 
-* Base tree: `Ardakilic/qmk_firmware` at `master`, set in `.github/workflows/build_binaries.yaml`. The fork already has the keyboards that are not in upstream QMK (`cost_crafter40`, `skywatch`, `woodpecker`, `yakamoz`), so there is no `preparation_command`.
-* Keymaps come from this userspace. If the fork has a keymap folder with the same name (e.g. `keyboards/horizon/keymaps/ardakilic`), QMK quietly takes that folder's `config.h`/`rules.mk` instead, so keep these keymaps out of the fork.
-* The fork's submodules (`lib/chibios`, `lib/chibios-contrib`, `lib/pico-sdk`, `lib/googletest`) must match upstream QMK. If they fall behind, every ChibiOS (RP2040/STM32) board fails with `hal.h: #error "obsolete or unknown configuration file"`.
-* Publishing: only a `push` to `main` replaces the `latest` release. Other branches and manual (`workflow_dispatch`) runs only build; their firmware is attached to the run as the `Firmware` artifact.
-* Build locally against the fork:
+| Keyboard | Designer | Keymaps built |
+|---|---|---|
+| `cost_crafter40` | ozkan ([CostCrafter40-QMK](https://github.com/ozkan/CostCrafter40-QMK)) | `ardakilic` |
+| `skywatch` | ozkan ([skywatch](https://github.com/ozkan/skywatch)) | `arda` |
+| `woodpecker` | [Ender Piyale](https://github.com/enderpiyale) | `ardakilic` |
+| `yakamoz` | ozkan ([Yakamoz](https://github.com/ozkan/Yakamoz)) | `ardakilic`, `yakamoz_ithalat_trackpad` |
 
-    ```sh
-    git clone --recurse-submodules https://github.com/Ardakilic/qmk_firmware.git
-    qmk config user.qmk_home="$(realpath qmk_firmware)"
-    qmk config user.overlay_dir="$(realpath qmk_userspace)"
-    qmk userspace-compile
-    ```
+* Each is a full keyboard definition in `keyboards/<keyboard>/` (`keyboard.json`, `config.h`, `rules.mk`, `halconf.h`/`mcuconf.h`, `lib/`, ...), next to my keymaps in `keyboards/<keyboard>/keymaps/`.
+* Imported from my old fork (`Ardakilic/qmk_firmware` @ `f5cca70`), without the fork's keymaps. Designer credits (`manufacturer`/`maintainer`, readme, license headers) are unchanged.
+* `keyboards/yakamoz/user_song_list.h` comes from [ozkan/Yakamoz-qmk](https://github.com/ozkan/Yakamoz-qmk): it defines `STAR_WARS_IMPERIAL_MARCH`, the startup song set in `keyboards/yakamoz/config.h`.
+
+#### Why copy them?
+
+* External Userspace only overlays keymaps (`keyboards/*/keymaps/`, `layouts/`, `users/`). QMK only finds *keyboards* under `qmk_firmware/keyboards/`.
+* So `scripts/sync_keyboards.sh` copies every folder here that has a `keyboard.json` into `qmk_firmware/keyboards/` before the build.
+* It never copies `keymaps/`: keymaps inside `qmk_firmware` win over the userspace ones, so a copy there would silently replace mine.
+* It merges and never deletes. If upstream QMK ever adds a keyboard at the same path, it prints a `::warning::`. Then delete the copy here and use upstream's.
+
+#### How CI does it
+
+`.github/workflows/build_binaries.yaml`:
+
+```yaml
+qmk_repo: qmk/qmk_firmware
+qmk_ref: master
+preparation_command: bash scripts/sync_keyboards.sh qmk_firmware
+```
+
+* The reusable QMK workflow runs `preparation_command` after `qmk userspace-doctor` and before `qmk userspace-compile`, from this repo's root, with upstream QMK checked out in `./qmk_firmware`.
+* Publishing: only a `push` to `main` replaces the `latest` release, and only when every target built. Other branches and manual (`workflow_dispatch`) runs just build; their firmware is in the run's `Firmware` artifact.
+
+#### Build locally (docker, same steps as CI)
+
+```sh
+# one time: upstream QMK with submodules, next to this repo
+git clone --depth 1 --recurse-submodules --shallow-submodules \
+    https://github.com/qmk/qmk_firmware.git ../qmk_firmware
+
+scripts/build.sh                                   # all qmk.json targets (qmk userspace-compile)
+scripts/build.sh yakamoz:ardakilic skywatch:arda   # single targets (qmk compile, strict)
+QMK_HOME=~/src/qmk_firmware scripts/build.sh       # QMK clone somewhere else
+```
+
+* Runs `ghcr.io/qmk/qmk_cli:latest`: the sync, then the build. Nothing to install besides docker.
+* Firmware files land in this repo's root (git-ignored).
+* The copied keyboards stay in your local `qmk_firmware` (CI starts clean every run). Reset with `git -C ../qmk_firmware clean -fdq keyboards/`.
+
+#### Add or update a keyboard
+
+1. Put the whole keyboard folder in `keyboards/<keyboard>/`. Everything except `keymaps/` gets copied. Nested names work too (`keyboards/handwired/foo/`).
+1. Add the keymap in `keyboards/<keyboard>/keymaps/<keymap>/`.
+1. Add the target to `qmk.json`, by hand or with `qmk userspace-add -kb <keyboard> -km <keymap>` (it checks that the keyboard exists, so run the sync first).
+1. Check it with a strict single build: `scripts/build.sh <keyboard>:<keymap>`.
+1. To update a keyboard, edit its files here. The next build picks them up.
+
+#### Gotcha: `url` in `keyboard.json` must not be empty
+
+* QMK checks `keyboard.json` against its schema. With `"url": ""`, it ignores the whole file (`☒ Not including data from file: ... url: '' should be non-empty`), and `qmk compile` then fails with `No LAYOUTs defined` / `Invalid BOOTLOADER`.
+* `qmk userspace-compile` (what CI runs) skips that check, so CI can be green while `qmk compile` fails. Hence the strict single build above.
+* `cost_crafter40` and `skywatch` had empty URLs in the fork. They now point to ozkan's repos.
+
+#### The fork is no longer used
+
+* Nothing here uses `Ardakilic/qmk_firmware` anymore. It can be archived (Settings → General → Archive this repository).
+* Archive rather than delete: archived repos stay readable, so anything pinned to a fork commit keeps working.
+* It still holds 5 boards that aren't built here: `cheapis`, `domo`, `eswai/qol56`, `handwired/ardapad`, `handwired/ardapuke`.
+    * To build one again, copy its folder into `keyboards/` (see [Add or update a keyboard](#add-or-update-a-keyboard)).
+    * All but `domo` still use the old `info.json` format. Current QMK (and the sync) only treats a folder with a `keyboard.json` as a keyboard, so migrate those first.
 
 ## Howto build locally
 
@@ -60,9 +118,12 @@ This is a template repository which allows for an external set of QMK keymaps to
 
 Alternatively, if you configured your build targets above, you can use `qmk userspace-compile` to build all of your userspace targets at once.
 
+> [!NOTE]
+> `cost_crafter40`, `skywatch`, `woodpecker` and `yakamoz` aren't in upstream QMK, so both commands fail for them until you run `scripts/sync_keyboards.sh` (it copies them into your `qmk_firmware`). Or use `scripts/build.sh`, which does both: see [Build locally](#build-locally-docker-same-steps-as-ci).
+
 ## Extra info
 
-If you wish to point GitHub actions to a different repository, a different branch, or even a different keymap name, you can modify `.github/workflows/build_binaries.yml` to suit your needs.
+If you wish to point GitHub actions to a different repository, a different branch, or even a different keymap name, you can modify `.github/workflows/build_binaries.yaml` to suit your needs.
 
 To override the `build` job, you can change the following parameters to use a different QMK repository or branch:
 ```
