@@ -9,6 +9,7 @@
 #     qmk_firmware would win over the userspace one
 #   * files are merged into existing folders; nothing in qmk_firmware is deleted
 # Usage: scripts/sync_keyboards.sh [path/to/qmk_firmware]   (default: `qmk env QMK_FIRMWARE`)
+#   qmk_firmware must be a git clone (CI's checkout and `qmk setup` are)
 set -euo pipefail
 
 QMK_DIR=${1:-$(qmk env QMK_FIRMWARE)}
@@ -21,6 +22,12 @@ if [ ! -d "$QMK_DIR/keyboards" ]; then
     exit 1
 fi
 QMK_DIR=$(cd "$QMK_DIR" && pwd)
+# upstream_has needs qmk_firmware's own git metadata: --show-prefix is empty only at the top of a
+# work tree, so a plain folder is rejected, also one that sits inside another repo (this checkout).
+if [ -n "$(git -c safe.directory='*' -C "$QMK_DIR" rev-parse --show-prefix 2>/dev/null || echo x)" ]; then
+    echo "error: '$QMK_DIR' is not a git clone of qmk_firmware (git tells the sync which keyboards upstream has)" >&2
+    exit 1
+fi
 cd "$(dirname "$0")/.."
 if [ ! -d keyboards ]; then
     echo "No keyboards/ folder, nothing to copy."
@@ -28,13 +35,9 @@ if [ ! -d keyboards ]; then
 fi
 
 # True if upstream QMK already has this path (git-tracked in qmk_firmware). Files left behind by an
-# earlier local sync are untracked, so they don't count. Falls back to "exists" without git.
+# earlier local sync are untracked, so they don't count (plain "exists" would count them).
 upstream_has() {
-    if git -c safe.directory='*' -C "$QMK_DIR" rev-parse --git-dir >/dev/null 2>&1; then
-        git -c safe.directory='*' -C "$QMK_DIR" ls-files --error-unmatch -- "keyboards/$1" >/dev/null 2>&1
-    else
-        [ -e "$QMK_DIR/keyboards/$1" ]
-    fi
+    git -c safe.directory='*' -C "$QMK_DIR" ls-files --error-unmatch -- "keyboards/$1" >/dev/null 2>&1
 }
 
 paths=()

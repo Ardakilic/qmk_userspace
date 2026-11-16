@@ -57,6 +57,7 @@ Coding agents (and humans in a hurry): [AGENTS.md](AGENTS.md) has the repo rules
 * So `scripts/sync_keyboards.sh` copies every folder here that has a `keyboard.json` into `qmk_firmware/keyboards/` before the build.
 * It never copies `keymaps/`: keymaps inside `qmk_firmware` win over the userspace ones, so a copy there would silently replace mine.
 * It merges and never deletes. If upstream QMK ever adds a keyboard at the same path, it prints a `::warning::`. Then delete the copy here and use upstream's.
+* `qmk_firmware` must be a git clone: git tells it which folders are upstream's, so files from an earlier sync don't count as upstream.
 
 #### How CI does it
 
