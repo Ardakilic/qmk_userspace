@@ -29,9 +29,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // #define EE_HANDS
 
 /*
-#undef RGBLED_NUM
-#define RGBLIGHT_ANIMATIONS
-#define RGBLED_NUM 8
+// The LED count comes from the keyboard's keyboard.json (rgblight.led_count: 12).
+// To override it, use the current names (RGBLED_NUM is deprecated; RGBLIGHT_ANIMATIONS was removed,
+// enable effects one by one instead, e.g. #define RGBLIGHT_EFFECT_BREATHING):
+#undef RGBLIGHT_LED_COUNT
+#define RGBLIGHT_LED_COUNT 8
 #define RGBLIGHT_HUE_STEP 8
 #define RGBLIGHT_SAT_STEP 8
 #define RGBLIGHT_VAL_STEP 8
