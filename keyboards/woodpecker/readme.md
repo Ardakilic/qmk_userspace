@@ -1,20 +1,20 @@
 # woodpecker
 
-![woodpecker](imgur.com image replace me!)
+![woodpecker](https://i.imgur.com/R7WR0xK.jpeg)
 
-*A short description of the keyboard/project*
+5 row ortholinear keyboard, based on [Lumberelite](https://github.com/tjeffree/lumberelite) and [Lumberjack](https://github.com/peej/lumberjack-keyboard).
 
-* Keyboard Maintainer: [Ender Piyale](https://github.com/enderpiyale)
-* Hardware Supported: *The PCBs, controllers supported*
-* Hardware Availability: *Links to where you can find this hardware*
+* Keyboard Designer: [Özkan Çelik](https://github.com/ozkan) (PCB)
+* Hardware Supported: Woodpecker PCB, RP2040 controller
+* Hardware Availability: [Ardakilic/woodpecker-keyboard](https://github.com/Ardakilic/woodpecker-keyboard) (PCB, plates, shields)
 
 Make example for this keyboard (after setting up your build environment):
 
-    make woodpecker:default
+    make woodpecker:ardakilic
 
 Flashing example for this keyboard:
 
-    make woodpecker:default:flash
+    make woodpecker:ardakilic:flash
 
 See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_tools) and the [make instructions](https://docs.qmk.fm/#/getting_started_make_guide) for more information. Brand new to QMK? Start with our [Complete Newbs Guide](https://docs.qmk.fm/#/newbs).
 

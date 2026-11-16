@@ -43,11 +43,15 @@ Full guide: [ithalat wiring.md](https://github.com/Ardakilic/ithalat/blob/main/w
 
 ## Build
 
-Needs `keyboards/yakamoz` in your QMK tree (from [Ardakilic/qmk_firmware](https://github.com/Ardakilic/qmk_firmware)).
+The `yakamoz` keyboard definition lives in this repo (`keyboards/yakamoz/`). QMK only finds keyboards inside `qmk_firmware/keyboards/`, so copy it in first. CI does this with the same script.
 
 ```sh
-# once, inside this userspace clone
+# easiest: docker, same steps as CI
+scripts/build.sh yakamoz:yakamoz_ithalat_trackpad
+
+# or with your own QMK install, inside this userspace clone
 qmk config user.overlay_dir="$(realpath .)"
+scripts/sync_keyboards.sh                  # copies keyboards/yakamoz into qmk_firmware
 
 # build this keymap only
 qmk compile -kb yakamoz -km yakamoz_ithalat_trackpad

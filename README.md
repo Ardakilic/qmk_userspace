@@ -4,6 +4,8 @@ This is a template repository which allows for an external set of QMK keymaps to
 
 This repo doesn't need that fork: the 4 keyboards it builds that upstream QMK doesn't have live here too. See [Keyboards kept in this repo](#keyboards-kept-in-this-repo-no-qmk-fork).
 
+Coding agents (and humans in a hurry): [AGENTS.md](AGENTS.md) has the repo rules and the pre-PR checklist.
+
 ## Notable keymaps
 
 * [`yakamoz:yakamoz_ithalat_trackpad`](keyboards/yakamoz/keymaps/yakamoz_ithalat_trackpad/README.md) -- my `yakamoz:ardakilic` keymap plus the Azoteq TPS65 trackpad of the [ithalat](https://github.com/Ardakilic/ithalat) wrist rest (hot-pluggable, on the OLED's I2C bus).
@@ -41,11 +43,12 @@ This repo doesn't need that fork: the 4 keyboards it builds that upstream QMK do
 |---|---|---|
 | `cost_crafter40` | ozkan ([CostCrafter40-QMK](https://github.com/ozkan/CostCrafter40-QMK)) | `ardakilic` |
 | `skywatch` | ozkan ([skywatch](https://github.com/ozkan/skywatch)) | `arda` |
-| `woodpecker` | [Ender Piyale](https://github.com/enderpiyale) | `ardakilic` |
+| `woodpecker` | ozkan ([woodpecker-keyboard](https://github.com/Ardakilic/woodpecker-keyboard), hosted in my repo) | `ardakilic` |
 | `yakamoz` | ozkan ([Yakamoz](https://github.com/ozkan/Yakamoz)) | `ardakilic`, `yakamoz_ithalat_trackpad` |
 
 * Each is a full keyboard definition in `keyboards/<keyboard>/` (`keyboard.json`, `config.h`, `rules.mk`, `halconf.h`/`mcuconf.h`, `lib/`, ...), next to my keymaps in `keyboards/<keyboard>/keymaps/`.
-* Imported from my old fork (`Ardakilic/qmk_firmware` @ `f5cca70`), without the fork's keymaps. Designer credits (`manufacturer`/`maintainer`, readme, license headers) are unchanged.
+* Imported from my old fork (`Ardakilic/qmk_firmware` @ `f5cca70`), without the fork's keymaps. `manufacturer`/`maintainer` and license headers are unchanged.
+* `woodpecker`: PCB by [Özkan Çelik](https://github.com/ozkan), made at my request. The PCB, plates and shields live in my [woodpecker-keyboard](https://github.com/Ardakilic/woodpecker-keyboard) repo. Its QMK definition started in [Ender Piyale](https://github.com/enderpiyale)'s QMK fork (he and Kazim Kaba also made the shields).
 * `keyboards/yakamoz/user_song_list.h` comes from [ozkan/Yakamoz-qmk](https://github.com/ozkan/Yakamoz-qmk): it defines `STAR_WARS_IMPERIAL_MARCH`, the startup song set in `keyboards/yakamoz/config.h`.
 
 #### Why copy them?
@@ -96,7 +99,7 @@ QMK_HOME=~/src/qmk_firmware scripts/build.sh       # QMK clone somewhere else
 
 * QMK checks `keyboard.json` against its schema. With `"url": ""`, it ignores the whole file (`☒ Not including data from file: ... url: '' should be non-empty`), and `qmk compile` then fails with `No LAYOUTs defined` / `Invalid BOOTLOADER`.
 * `qmk userspace-compile` (what CI runs) skips that check, so CI can be green while `qmk compile` fails. Hence the strict single build above.
-* `cost_crafter40` and `skywatch` had empty URLs in the fork. They now point to ozkan's repos.
+* `cost_crafter40` and `skywatch` had empty URLs in the fork. They now point to ozkan's repos. `woodpecker` had no `url`; it now points to [woodpecker-keyboard](https://github.com/Ardakilic/woodpecker-keyboard).
 
 #### The fork is no longer used
 

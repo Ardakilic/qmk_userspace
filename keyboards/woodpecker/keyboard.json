@@ -1,6 +1,7 @@
 {
     "manufacturer": "--",
     "keyboard_name": "woodpecker",
+    "url": "https://github.com/Ardakilic/woodpecker-keyboard",
     "maintainer": "--",
     "bootloader": "rp2040",
     "processor": "RP2040",
