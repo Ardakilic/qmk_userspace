@@ -45,13 +45,16 @@ Full guide: [ithalat wiring.md](https://github.com/Ardakilic/ithalat/blob/main/w
 
 The `yakamoz` keyboard definition lives in this repo (`keyboards/yakamoz/`). QMK only finds keyboards inside `qmk_firmware/keyboards/`, so copy it in first. CI does this with the same script.
 
+> [!WARNING]
+> `scripts/build.sh` and `scripts/sync_keyboards.sh` both copy **every** keyboard definition kept here (`cost_crafter40`, `skywatch`, `woodpecker`, `yakamoz`), not just `yakamoz`. They overwrite files at the same paths in `qmk_firmware/keyboards/` (`keymaps/` is skipped), local edits included, and warn only when upstream QMK tracks the same keyboard. Make keyboard changes in this repo, and back up local edits in your QMK clone before running either.
+
 ```sh
 # easiest: docker, same steps as CI
 scripts/build.sh yakamoz:yakamoz_ithalat_trackpad
 
 # or with your own QMK install, inside this userspace clone
 qmk config user.overlay_dir="$(realpath .)"
-scripts/sync_keyboards.sh                  # copies keyboards/yakamoz into qmk_firmware
+scripts/sync_keyboards.sh                  # copies every keyboard kept here into qmk_firmware
 
 # build this keymap only
 qmk compile -kb yakamoz -km yakamoz_ithalat_trackpad

@@ -86,7 +86,15 @@ QMK_HOME=~/src/qmk_firmware scripts/build.sh       # QMK clone somewhere else
 
 * Runs `ghcr.io/qmk/qmk_cli:latest`: the sync, then the build. Nothing to install besides docker.
 * Firmware files land in this repo's root (git-ignored).
-* The copied keyboards stay in your local `qmk_firmware` (CI starts clean every run). Reset with `git -C ../qmk_firmware clean -fdq keyboards/`.
+* The copied keyboards stay in your local `qmk_firmware` (CI starts clean every run). To remove them, clean only the synced folders and review a dry run first:
+
+    ```sh
+    git -C ../qmk_firmware/keyboards clean -nd -- cost_crafter40 skywatch woodpecker yakamoz   # dry run: review the list
+    git -C ../qmk_firmware/keyboards clean -fd -- cost_crafter40 skywatch woodpecker yakamoz   # then delete
+    ```
+
+    * Don't clean all of `keyboards/`: that also deletes your own untracked keyboards and keymaps in the clone.
+    * Update the folder list when the boards kept here change.
 
 #### Add or update a keyboard
 

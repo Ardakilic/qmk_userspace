@@ -52,10 +52,16 @@ git clone --depth 1 --recurse-submodules --shallow-submodules \
     https://github.com/qmk/qmk_firmware.git ../qmk_firmware   # one time
 scripts/build.sh                      # all qmk.json targets (qmk userspace-compile)
 scripts/build.sh yakamoz:ardakilic    # single target(s), strict qmk compile
-git -C ../qmk_firmware clean -fdq keyboards/   # drop the synced boards from the local clone
+# drop the synced boards from the local clone: dry run (-n), review the list, then delete (-f)
+git -C ../qmk_firmware/keyboards clean -nd -- cost_crafter40 skywatch woodpecker yakamoz
+git -C ../qmk_firmware/keyboards clean -fd -- cost_crafter40 skywatch woodpecker yakamoz
 ```
 
 - Firmware lands in the repo root (`*.uf2`, `*.bin`, `*.hex` are git-ignored).
+- Cleaning the local clone:
+    - Clean only the synced board folders, never all of `keyboards/`: that also deletes the user's own untracked keyboards and keymaps in the clone.
+    - Review the dry run before deleting. It also lists anything of the user's inside those folders, such as their own `keymaps/<name>/`.
+    - Keep the folder list in step with the kept boards. Use the folder the sync copies: the `keyboard:` path it prints, or the `copied from` path when it shows one.
 
 ## Rules and gotchas
 
