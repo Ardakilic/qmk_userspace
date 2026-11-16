@@ -256,16 +256,23 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * 3. Tap latch (QMK >= 0.34.0, commit 0d401d1182 "Preserve Azoteq mouse buttons"): the driver now
  *    starts every report from the buttons of the previous report and only ever SETS bits, and
  *    pointing_device_send() keeps the buttons in the report it feeds back, so a tap's BUTTON1 is
- *    never released (see README.md). Workaround: pointing_device_task_user() records the
- *    buttons that no key holds (= produced by the pad), and matrix_scan_user() removes them from
- *    the pointing device report just before the driver reads the pad again: when RDY is high with
- *    POINTING_DEVICE_MOTION_PIN; without it at once, because the driver's 11 ms throttle returns
- *    before sending anything until that read. The pad re-asserts a held gesture (press-and-hold) on
- *    every read, so the host sees one press and one release; a tap is released one report later.
- *    Until that read, a report sent by an MS_BTNx key (pointing_device_keycode_handler() below)
- *    still carries the removed buttons, so a key does not release a drag on the host.
- *    Keyboard mouse buttons (mousekey) are never touched. Harmless on older QMK, where the driver
- *    ignores incoming buttons.
+ *    never released (see README.md). Workaround: matrix_scan_user() removes every button
+ *    from the pointing device report just before the driver reads the pad again: when RDY is high
+ *    with POINTING_DEVICE_MOTION_PIN; without it at once, because the driver's 11 ms throttle
+ *    returns before sending anything until that read. The driver's result then holds exactly the
+ *    pad's buttons, which pointing_device_task_user() records (including a button a key holds),
+ *    and pointing_device_task() adds the buttons that keys hold (mousekey) before it sends. With
+ *    RDY, pointing_device_task() samples RDY again later in the pass; if it rose in between, the
+ *    driver reads from a report that was not emptied. So in a pass where RDY was low,
+ *    matrix_scan_user() leaves only the recorded pad buttons in the report and
+ *    pointing_device_task_user() records the result too: such a read can add pad buttons (also one
+ *    a key holds) but not clear them; the next read from an emptied report does that. The pad
+ *    re-asserts a held gesture (press-and-hold) on every read, so the host sees one press and one
+ *    release; a tap is released one report later. Until that read, a report sent by an MS_BTNx key
+ *    (pointing_device_keycode_handler() below) still carries the removed buttons, so a key does not
+ *    release a drag on the host. A button that both a key and the pad hold stays pressed until both
+ *    have released it. Keyboard mouse buttons stay pressed while their keys are held. Harmless on
+ *    older QMK, where the driver ignores incoming buttons.
  *    Known limit: when one driver read fails (I2C error) during a press-and-hold, the driver
  *    returns only the incoming buttons, so the button is released for one read and pressed again
  *    at the next good read - the same as on QMK < 0.34.0, whose driver started from an empty report.
@@ -317,8 +324,11 @@ static uint32_t tp_due_since   = 0;     // when the pending (running-state) chec
 static uint16_t tp_interval    = TRACKPAD_HOTPLUG_INTERVAL_MS;
 static bool     tp_candidate   = false; // pad answered once, waiting TRACKPAD_HOTPLUG_SETTLE_MS
 static bool     tp_check_due   = false;
-static uint8_t  tp_pad_buttons = 0;     // buttons the pad put into the report that was just processed
+static uint8_t  tp_pad_buttons = 0;     // the pad's buttons as of the driver's last read (including ones a key holds)
 static uint8_t  tp_released    = 0;     // pad buttons removed from the report, not read again by the driver yet
+#    ifndef TRACKPAD_NO_TAP_LATCH_FIX
+static bool tp_read_now = false; // matrix_scan_user() emptied the report for a driver read in this pass
+#    endif
 
 static bool trackpad_is_active(void) {
     return pointing_device_get_status() == POINTING_DEVICE_STATUS_SUCCESS;
@@ -340,6 +350,7 @@ static uint8_t tp_keyboard_buttons(void) {
 #    endif
 }
 
+#    ifndef TRACKPAD_NO_TAP_LATCH_FIX
 // Remove the given buttons from the report that pointing_device_task() feeds back into the driver.
 static void tp_drop_buttons(uint8_t buttons) {
     report_mouse_t report = pointing_device_get_report();
@@ -348,12 +359,15 @@ static void tp_drop_buttons(uint8_t buttons) {
         pointing_device_set_report(report);
     }
 }
+#    endif
 
 // The driver no longer reads the pad (unplugged, or its (re)initialisation failed), so
 // pointing_device_task() sends no more reports: release every pad button on the host now.
-// Buttons held by keys stay pressed.
+// Buttons held by keys stay pressed (set here: matrix_scan_user() may have removed them).
 static void tp_release_pad_buttons(void) {
-    tp_drop_buttons((uint8_t)~tp_keyboard_buttons());
+    report_mouse_t report = pointing_device_get_report();
+    report.buttons        = tp_keyboard_buttons();
+    pointing_device_set_report(report);
     tp_pad_buttons = 0;
     tp_released    = 0;
     pointing_device_send();
@@ -490,15 +504,27 @@ report_mouse_t pointing_device_task_user(report_mouse_t mouse_report) {
     tp_last_poll = timer_read32();
 #    endif
 #    ifndef TRACKPAD_NO_TAP_LATCH_FIX
-    tp_pad_buttons = mouse_report.buttons & (uint8_t)~tp_keyboard_buttons();
-    tp_released    = 0; // the driver has read the pad (with RDY it is only set in a pass that reads)
+    if (tp_read_now) { // the driver read the pad from a report without buttons: these are all the pad's
+        tp_pad_buttons = mouse_report.buttons;
+        tp_released    = 0;
+    }
+#        ifdef POINTING_DEVICE_MOTION_PIN
+    else {
+        // RDY was low in matrix_scan_user(), but it may have risen before pointing_device_task()
+        // sampled it, and then the driver has read the pad from a report that held only the
+        // recorded pad buttons (matrix_scan_user() took every other button out). Either way the
+        // report holds only the pad's buttons: keep any that such a read added. A button the pad
+        // has let go is cleared by the next read from an emptied report.
+        tp_pad_buttons = mouse_report.buttons;
+    }
+#        endif
 #    endif
     return mouse_report;
 }
 
 #    ifndef TRACKPAD_NO_TAP_LATCH_FIX
 // True when the report will next be sent only after the driver has read the pad again, so that
-// removing the pad's buttons now cannot show up on the host as a release by itself.
+// removing buttons from it now cannot show up on the host as a release by itself.
 static bool tp_driver_reads_next(void) {
 #        ifdef POINTING_DEVICE_MOTION_PIN
     // pointing_device_task() reads the pad in this pass only while RDY is high, but sends on every
@@ -513,17 +539,19 @@ static bool tp_driver_reads_next(void) {
 
 // MS_BTNx keys send the report at once (quantum/action.c register_mouse() -> this handler, which
 // replaces QMK's weak one in quantum/pointing_device/pointing_device.c with the same logic).
-// Between the release in matrix_scan_user() and the driver's next read (up to 11 ms without RDY),
-// that report would lack the pad's buttons and the host would see a held drag released and pressed
-// again. So it is sent with them, and they are taken out again for the driver right after. They are
-// added after the key's transition, so that releasing a key does not release a button the pad holds.
+// matrix_scan_user() empties the report before every driver read, so that report would lack the
+// buttons that the pad and other keys hold, and the host would see them released. So it is sent
+// with every button the pad (tp_pad_buttons, tp_released) or a key (mousekey) still holds, added
+// after the key's own transition: releasing a key does not release a button the pad still holds,
+// and the pad lifting does not release a button a key still holds. Right after, the report goes
+// back to the pad's buttons only, for the driver.
 void pointing_device_keycode_handler(uint16_t keycode, bool pressed) {
     if (IS_MOUSEKEY_BUTTON(keycode)) {
         report_mouse_t report = pointing_device_get_report();
-        report.buttons        = pointing_device_handle_buttons(report.buttons, pressed, keycode - QK_MOUSE_BUTTON_1) | tp_released;
+        report.buttons        = pointing_device_handle_buttons(report.buttons, pressed, keycode - QK_MOUSE_BUTTON_1) | tp_pad_buttons | tp_released | tp_keyboard_buttons();
         pointing_device_set_report(report);
         pointing_device_send();
-        tp_drop_buttons(tp_released & (uint8_t)~tp_keyboard_buttons());
+        tp_drop_buttons((uint8_t)~tp_pad_buttons);
     }
 }
 #    endif
@@ -533,11 +561,24 @@ void pointing_device_keycode_handler(uint16_t keycode, bool pressed) {
 void matrix_scan_user(void) {
     trackpad_hotplug_task(); // first, so that a window it waited for is also used by the release below
 #    ifndef TRACKPAD_NO_TAP_LATCH_FIX
-    if (tp_pad_buttons && tp_driver_reads_next()) {
-        tp_drop_buttons(tp_pad_buttons); // the driver re-asserts a held gesture in its read
-        tp_released    = tp_pad_buttons; // key reports keep them until then (pointing_device_keycode_handler())
+    tp_read_now = tp_driver_reads_next();
+    if (tp_read_now) {
+        // All buttons, also the ones keys hold: the driver's result is then exactly the pad's
+        // buttons (it re-asserts a held gesture), even for a button a key holds as well.
+        tp_drop_buttons(0xFF);
+        tp_released |= tp_pad_buttons; // key reports keep them until then (pointing_device_keycode_handler())
         tp_pad_buttons = 0;
     }
+#        ifdef POINTING_DEVICE_MOTION_PIN
+    else {
+        // RDY can still rise before pointing_device_task() samples it again in this pass, and the
+        // driver then reads the pad from this report. Leave only the recorded pad buttons in it
+        // (as pointing_device_keycode_handler() does after its send), so that the driver's result
+        // still holds only the pad's buttons, also one a key holds. pointing_device_task() and
+        // pointing_device_keycode_handler() add the keys' buttons before they send.
+        tp_drop_buttons((uint8_t)~tp_pad_buttons);
+    }
+#        endif
 #    endif
 }
 #endif // POINTING_DEVICE_ENABLE
